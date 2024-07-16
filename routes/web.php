@@ -7,6 +7,10 @@ Route::get('/', function () {
     return view('appli.accueil');
 });
 
+Route::get('espaceadherent', function () {
+    return view('appli.espaceadherent');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
