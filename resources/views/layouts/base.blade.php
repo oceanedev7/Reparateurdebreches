@@ -17,7 +17,7 @@
             <div class="h-44 w-48 ml-12 py-6 z-10 ">
                 <img class="h-44 w-48 rounded shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]" src="{{ Storage::url('images/logonavbar.png') }}" alt="">
             </div>
-    
+ 
             <a href="{{route('accueil')}}" class="text-bleu-fonce font-black space-x-48 text-xl font-sans flex justify-between"> ACCUEIL </a>
             <a  href="{{ route('all-articles') }}" class="text-bleu-fonce font-black space-x-48 text-xl font-sans flex justify-between"> ARTICLES</a>
             <a href="" class="text-bleu-fonce font-black space-x-48 text-xl font-sans flex justify-between"> NOUS CONTACTER</a>
