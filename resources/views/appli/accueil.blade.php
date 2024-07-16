@@ -11,7 +11,6 @@
     <main>
 @section('content')
 <img class="h-4/5 w-full object-cover" src="{{ Storage::url('images/header-home.jpg') }}" alt="">
-
 @endsection
     </main>
 </body>
