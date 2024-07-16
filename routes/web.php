@@ -8,7 +8,11 @@ use App\Http\Controllers\ArticleController;
 
 Route::get('/', function () {
     return view('appli.accueil');
-});
+})->name('accueil');
+
+Route::get('/deveniradherent', function () {
+    return view('appli.deveniradherent');
+})->name('deveniradherent');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
