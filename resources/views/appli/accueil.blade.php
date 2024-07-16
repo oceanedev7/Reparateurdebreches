@@ -28,8 +28,6 @@
 </div>
 </div>
 
-
-
 <div class="w-full h-screen ">
     <div class="text-center text-bleu-fonce font-black text-4xl p-7"> CE QUI NOUS ANIME </div>
     <div class="text-center relative top-4"> Notre association est animée par une force d'engagement et de solidarité, <br/> nous contribuons à améliorer le bien-être et la qualité de vie des seniors souvent fragilisée. 
