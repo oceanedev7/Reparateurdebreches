@@ -120,13 +120,13 @@
                 </div>
         </div>
 
-        <div class="flex flex-row space-x-36 py-20 max-w-full max-h-full justify-center rounded-lg">
-            <div class="w-[350px] hover:bg-bleu-fonce bg-bleu-fonce"><a href="">
+        <div class="flex flex-row space-x-36 py-20 max-w-full max-h-full justify-center">
+            <div class="w-[320px] hover:bg-bleu-fonce bg-bleu-fonce rounded-lg"><a href="">
                 <img class="h-60 w-80 object-cover hover:opacity-40" src="{{ Storage::url('images/article.png') }}" alt="">
                 <div class="font-bold text-3xl text-white text-center">GERER LES <br> ARTICLES</div>
             </a></div>
             
-            <div class="w-[350px] hover:bg-bleu-fonce bg-bleu-fonce"><a href="">
+            <div class="w-[320px] hover:bg-bleu-fonce bg-bleu-fonce rounded-lg"><a href="">
                 <img class="h-60 w-80 object-cover hover:opacity-40" src="{{ Storage::url('images/anim.png') }}" alt="">
                 <div class="font-bold text-3xl text-white text-center">GERER LES EVENEMENTS</div>
             </a></div>
