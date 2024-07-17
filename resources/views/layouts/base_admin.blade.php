@@ -23,63 +23,68 @@
     </div>
 
     <!-- Dropdown -->
-    <div class="relative ml-3 z-10 flex items-center md:order-2 space-x-2 md:space-x-0 rtl:space-x-reverse">
+    <div class="relative ml-3 z-10 flex  items-center md:order-2 space-x-2 md:space-x-0 rtl:space-x-reverse">
+
+      <div class=" hidden w-full" id="navbar-hamburger" style="margin-top:350px; margin-right:5px;">
+        <ul class=" font-medium mt-4 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700 p-3 space-y-1">
+          <li>
+            <a href="#" class="block py-2 px-3 text-white bg-bleu-fonce rounded dark:bg-bleu-fonce"
+              aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Statistiques</a>
+          </li>
+
+          <li>
+            <a href="#"
+              class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
+              les actualités</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
+              les évènements</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
+              les newsletters</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
+              les articles</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
+              les adhérents</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Paramètres</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Deconnexion</a>
+          </li>
+        </ul>
+      </div>
       <button data-collapse-toggle="navbar-hamburger" type="button"
-        class="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-        aria-controls="navbar-hamburger" aria-expanded="false">
+        class="  inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-white rounded-lg  bg-bleu-fonce hover:bg-bleu focus:outline-none focus:ring-2 focus:ring-bleu-fonce dark:text-white dark:hover:bg-bleu dark:focus:ring-bleu-clair"
+        aria-controls="navbar-hamburger" aria-expanded="false" style="margin-right:15px;">
         <span class="sr-only">Open main menu</span>
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="M1 1h15M1 7h15M1 13h15" />
         </svg>
       </button>
-      <div class=" hidden w-full" id="navbar-hamburger" style="margin-top:330px;">
-        <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700 ">
-          <li>
-            <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded dark:bg-blue-600"
-              aria-current="page">Home</a>
-          </li>
-          <li>
-            <a href="#"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Statistique</a>
-          </li>
-
-          <li>
-            <a href="#"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
-              les actualités</a>
-          </li>
-          <li>
-            <a href="#"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
-              les évènements</a>
-          </li>
-          <li>
-            <a href="#"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
-              les newsletters</a>
-          </li>
-          <li>
-            <a href="#"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
-              les articles</a>
-          </li>
-          <li>
-            <a href="#"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
-              les adhérents</a>
-          </li>
-          <li>
-            <a href="#"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Deconnexion</a>
-          </li>
-        </ul>
-      </div>
     </div>
   </div>
   <div class="flex items-center justify-center bg-bleu-fonce">
     <h1 class="font-bold text-6xl absolute text-white" style="font-size:100px;">ADMINISTRATEUR</h1>
-    <img class=" w-full object-cover" style="height:150px; opacity:0.5;" src="{{ Storage::url('images/book.jpg') }}"
+    <img class=" w-full object-cover" style="height:250px; opacity:0.5;" src="{{ Storage::url('images/book.jpg') }}"
       alt="book">
   </div>
 
