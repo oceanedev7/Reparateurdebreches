@@ -14,10 +14,12 @@
     <div class="text-center text-bleu-fonce font-black text-4xl p-7 mt-12"> QUI SOMMES-NOUS ? </div>
 
 <div class="flex flex-row">
+
     <div class="relative ml-20 mt-20 h-80 w-96">
         <div class="bg-bleu-fonce rounded-lg absolute top-0 left-0 h-full w-full"></div>
-        <img class="rounded-lg object-cover relative bottom-6 left-6 h-full w-full z-10 mb-44" src="{{ Storage::url('images/quisommesnous.png') }}" alt="">
+        <img class="transition-transform duration-300 ease-in-out transform hover:translate-x-2 hover:-translate-y-2 rounded-lg object-cover relative bottom-6 left-6 h-full w-full z-10 mb-44" src="{{ Storage::url('images/quisommesnous.png') }}" alt="">
     </div>
+    
 
     <div class="text-bleu-fonce text-base flex items-center max-w-lg ml-40 mt-12"> 
 
@@ -53,10 +55,24 @@
             </div> 
 
 
-            <div class="bg-bleu-clair rounded-lg h-28 w-28 ml-96 flex items-center justify-center text-bleu-fonce text-4xl"><i class="fa-solid fa-puzzle-piece"></i></div>   
-            <div class="bg-bleu-clair rounded-lg h-28 w-28 mr-96 flex items-center justify-center text-bleu-fonce text-4xl"><i class="fa-solid fa-comments"></i></div> 
-            <div class="bg-bleu-clair rounded-lg h-28 w-28 ml-96 flex items-center justify-center text-bleu-fonce text-4xl"> <i class="fa-solid fa-basket-shopping"></i> </div> 
-            <div class="bg-bleu-clair rounded-lg h-28 w-28 mr-96 flex items-center justify-center text-bleu-fonce text-4xl"><i class="fa-solid fa-file-lines"></i></div>         
+            <div class="bg-bleu-clair rounded-lg h-28 w-28 ml-96 flex items-center justify-center text-bleu-fonce text-4xl">
+                <i class="fa-solid fa-puzzle-piece transition-transform duration-300 ease-in-out transform hover:scale-125"></i>
+            </div>
+            <div class="bg-bleu-clair rounded-lg h-28 w-28 mr-96 flex items-center justify-center text-bleu-fonce text-4xl">
+                <i class="fa-solid fa-comments transition-transform duration-300 ease-in-out transform hover:scale-125"></i>
+            </div>
+            <div class="bg-bleu-clair rounded-lg h-28 w-28 ml-96 flex items-center justify-center text-bleu-fonce text-4xl">
+                <i class="fa-solid fa-basket-shopping transition-transform duration-300 ease-in-out transform hover:scale-125"></i>
+            </div>
+            <div class="bg-bleu-clair rounded-lg h-28 w-28 mr-96 flex items-center justify-center text-bleu-fonce text-4xl">
+                <i class="fa-solid fa-file-lines transition-transform duration-300 ease-in-out transform hover:scale-125"></i>
+            </div>
+            
+            
+            
+            
+            
+            
             
       </div>
 </div>
