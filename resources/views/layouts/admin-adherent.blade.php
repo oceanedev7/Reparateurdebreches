@@ -85,11 +85,11 @@
       
     <header class="">
 
-        <div class="flex items-center justify-between h-1/5	">
-
-            <div class="h-44 w-48 ml-12 py-6 z-10 ">
+        <div class="flex items-center justify-between h-5/5">
+            <div class="h-40 w-48 ml-12 py-6 z-10">
                 <img class="h-44 w-48 rounded shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]" src="{{ Storage::url('images/logonavbar.png') }}" alt="">
             </div>
+        </div>
     </header>
 
     <main>

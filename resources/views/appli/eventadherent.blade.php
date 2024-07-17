@@ -109,33 +109,10 @@
             <h1 class="font-bold text-6xl absolute text-white z-10">ESPACE ADHERENT</h1>
                 <img class="h-96 w-full object-cover opacity-40" src="{{ Storage::url('images/maison.png') }}" alt="">
         </div>
-
-        <div class="flex flex-col ml-32 mr-32 text-justify p-24 space-y-10 text-bleu-fonce">
-            <div class="text-5xl font-black ml-10 space-y-6">Bienvenue sur votre <br> espace adhérent...
-            </div>
-                <div class="ml-32">Nous sommes ravis de vous accueillir au sein de notre association dédiée aux personnes âgées. Votre adhésion marque le début d’une belle aventure au sein d’une communauté chaleureuse et bienveillante.
-                    Notre mission est de vous offrir un espace de convivialité, de partage et de soutien où chacun peut s’épanouir. Grâce à une variété d’activités culturelles, sociales et de loisirs, nous espérons enrichir votre quotidien et créer des liens précieux entre nos membres.
-                    Nous vous invitons à participer à nos prochaines rencontres et événements, qui sont des occasions idéales pour faire connaissance et s’intégrer pleinement à notre groupe.
-                    Dans cet espace vous pourrez ajouter des articles et inscrire des personnes agées à des évènements.
-                </div>
-        </div>
-
-        <div class="flex flex-row space-x-36 py-20 max-w-full max-h-full justify-center rounded-lg">
-            <div class="w-[350px] hover:bg-bleu-fonce bg-bleu-fonce"><a href="">
-                <img class="h-60 w-80 object-cover hover:opacity-40" src="{{ Storage::url('images/article.png') }}" alt="">
-                <div class="font-bold text-3xl text-white text-center">GERER LES <br> ARTICLES</div>
-            </a></div>
-            
-            <div class="w-[350px] hover:bg-bleu-fonce bg-bleu-fonce"><a href="">
-                <img class="h-60 w-80 object-cover hover:opacity-40" src="{{ Storage::url('images/anim.png') }}" alt="">
-                <div class="font-bold text-3xl text-white text-center">GERER LES EVENEMENTS</div>
-            </a></div>
-        
-        </div>
-
     </main>  
+    
     <footer class="bg-bleu-fonce w-full h-20 pt-6 mt-4 text-center text-white">
         &copy; Réparateurs de brèches 2024 | Tous droits réservés.
     </footer>
-</body>
-</html>
+    </body>
+    </html>
