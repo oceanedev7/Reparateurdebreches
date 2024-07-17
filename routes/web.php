@@ -30,9 +30,9 @@ Route::get('/dashboard', function () {
 // Route admin des pages de gestion
 Route::middleware('can:isAdmin')->group(
     function () {
-        Route::get('/dashboard/articles', function () {
-            return view('admin_pages.dashboard_article');
-        })->name('dashboard_article');
+        Route::get('/dashboard/actualite', function () {
+            return view('admin_pages.dashboard_actualite');
+        })->name('dashboard_actualite');
     }
 
 );

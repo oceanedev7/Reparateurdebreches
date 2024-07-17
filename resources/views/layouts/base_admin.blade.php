@@ -37,7 +37,7 @@
           </li>
 
           <li>
-            <a href="{{route('dashboard_article')}}"
+            <a href="{{route('dashboard_actualite')}}"
               class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
               les actualités</a>
           </li>
