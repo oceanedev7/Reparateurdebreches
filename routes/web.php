@@ -11,6 +11,14 @@ Route::get('/deveniradherent', function () {
     return view('appli.deveniradherent');
 })->name('deveniradherent');
 
+Route::get('/agenda', function () {
+    return view('appli.agenda');
+})->name('agenda');
+
+Route::get('/evenement', function () {
+    return view('appli.evenement');
+})->name('evenement');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
