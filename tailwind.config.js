@@ -26,6 +26,17 @@ export default {
             boxShadow: {
                 xl: "0 10px 15px -5px rgb(0 0 0 / 0.5), 10px 10px 10px 0px rgb(0 0 0 / 0.5);",
             },
+
+
+            animation: {
+                caroussel: 'caroussel 20s linear infinite', 
+              },
+              keyframes: {
+                caroussel: {
+                  '0%': { transform: 'translateX(0)' },
+                  '100%': { transform: 'translateX(-100%)' },
+                },
+              },
         },
     },
 
