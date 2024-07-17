@@ -15,6 +15,24 @@ Route::get('/deveniradherent', function () {
 })->name('deveniradherent');
 
 
+Route::get('/agenda', function () {
+    return view('appli.agenda');
+})->name('agenda');
+
+Route::get('/evenement', function () {
+    return view('appli.evenement');
+})->name('evenement');
+
+Route::get('/les-actualites', function () {
+    return view('appli.lesactus');
+})->name('les-actus');
+
+Route::get('/actualite', function () {
+    return view('appli.actu');
+})->name('actu');
+
+
+
 Route::get('/articles', [ArticleController::class, 'index'])->name('all-articles');
 
 //Routes adhérent
@@ -23,6 +41,7 @@ Route::get('espaceadherent', function () {
 });
 
 // Routes admin (page accueil +pages de gestion)
+
 Route::get('/dashboard', function () {
     return view('dashboard2');
 })->middleware(['auth', 'verified'])->middleware('can:isAdmin')->name('dashboard2');
