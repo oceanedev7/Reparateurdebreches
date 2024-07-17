@@ -19,13 +19,12 @@ export default {
             colors: {
                 "bleu-fonce": "#002A63",
                 "bleu-clair": "#C9D6F7",
-                "bleu": "#A4BCF9",
+                bleu: "#A4BCF9",
                 "gris-clair": "#E8E8E8",
                 "gris-fonce": "#898989",
-
-
-
-               
+            },
+            boxShadow: {
+                xl: "0 10px 15px -5px rgb(0 0 0 / 0.5), 10px 10px 10px 0px rgb(0 0 0 / 0.5);",
             },
         },
     },
