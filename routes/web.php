@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ArticleController;
+
+
 
 Route::get('/', function () {
     return view('appli.accueil');
@@ -22,3 +25,6 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
+Route::get('/articles', [ArticleController::class, 'index'])->name('all-articles');
