@@ -67,10 +67,7 @@
             <div class="bg-bleu-clair rounded-lg h-28 w-28 mr-96 flex items-center justify-center text-bleu-fonce text-4xl">
                 <i class="fa-solid fa-file-lines transition-transform duration-300 ease-in-out transform hover:scale-125"></i>
             </div>
-            
-            
-            
-            
+    
             
             
             
@@ -160,22 +157,41 @@
 </div>
 </div>
 
-<div class="h-96 w-full">
+<div class="h-80 w-full">
     <div class="text-center text-bleu-fonce font-black text-5xl"> ILS NOUS SOUTIENNENT </div> 
 
-<div class="max-h-24 flex flex-row">
-    <img class="max-h-24" src="{{ Storage::url('images/logogammvert.png') }}" alt="">
-    <img class="max-h-24" src="{{ Storage::url('images/logoctm.png') }}" alt="">
-    <img class="max-h-24" src="{{ Storage::url('images/logocarrefour.png') }}" alt="">
-    <img class="max-h-24" src="{{ Storage::url('images/logoleclerc.png') }}" alt="">
-    <img class="max-h-12" src="{{ Storage::url('images/logodecathlon.png') }}" alt="">
-    <img class="max-h-24" src="{{ Storage::url('images/logocultura.jpg') }}" alt="">
-</div> 
+<div class="overflow-hidden whitespace-nowrap relative top-16 ">
+    <div class="flex items-center animate-caroussel">
+      <img class="max-h-24 mx-2" src="{{ Storage::url('images/logogammvert.png') }}" alt="Logo Gamm Vert">
+      <img class="max-h-24 mx-2" src="{{ Storage::url('images/logoctm.png') }}" alt="Logo CTM">
+      <img class="max-h-24 mx-2" src="{{ Storage::url('images/logocarrefour.png') }}" alt="Logo Carrefour">
+      <img class="max-h-24 mx-2" src="{{ Storage::url('images/logoleclerc.png') }}" alt="Logo Leclerc">
+      <img class="max-h-12 mx-2" src="{{ Storage::url('images/logodecathlon.png') }}" alt="Logo Decathlon">
+      <img class="max-h-24 mx-2" src="{{ Storage::url('images/logocultura.jpg') }}" alt="Logo Cultura">
+
+      <img class="max-h-24 mx-2" src="{{ Storage::url('images/logogammvert.png') }}" alt="Logo Gamm Vert">
+      <img class="max-h-24 mx-2" src="{{ Storage::url('images/logoctm.png') }}" alt="Logo CTM">
+      <img class="max-h-24 mx-2" src="{{ Storage::url('images/logocarrefour.png') }}" alt="Logo Carrefour">
+      <img class="max-h-24 mx-2" src="{{ Storage::url('images/logoleclerc.png') }}" alt="Logo Leclerc">
+      <img class="max-h-12 mx-2" src="{{ Storage::url('images/logodecathlon.png') }}" alt="Logo Decathlon">
+      <img class="max-h-24 mx-2" src="{{ Storage::url('images/logocultura.jpg') }}" alt="Logo Cultura">
+    </div>
+  </div>
+
 </div>
 
 
 
+  
+
 @endsection
     </main>
+
+    <script>
+        document.addEventListener('logos', () => {
+          const vitesse = 20; 
+          document.querySelector('.animate-caroussel').style.animationDuration = `${vitesse}s`;
+        });
+      </script>
 </body>
 </html>
