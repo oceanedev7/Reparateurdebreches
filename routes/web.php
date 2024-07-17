@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DonationController;
 
 
 
@@ -28,3 +29,6 @@ require __DIR__.'/auth.php';
 
 
 Route::get('/articles', [ArticleController::class, 'index'])->name('all-articles');
+
+Route::get('/faire-un-don', [DonationController::class, 'showForm'])->name('donation.form');
+Route::post('/faire-un-don', [DonationController::class, 'processDonation'])->name('donation.process');
