@@ -95,7 +95,7 @@
 
     <div class="bg-bleu-clair h-3/5">
         <button class="">
-            <a href="" class="bg-white text-bleu-fonce py-2 px-6 text-center rounded text-lg font-bold absolute right-12 mt-64">+ voir toutes les actualités</a>
+            <a href="{{route('les-actus')}}" class="bg-white text-bleu-fonce py-2 px-6 text-center rounded text-lg font-bold absolute right-12 mt-64">+ voir toutes les actualités</a>
           </button>
     </div>
 

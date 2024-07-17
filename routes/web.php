@@ -22,6 +22,14 @@ Route::get('/evenement', function () {
     return view('appli.evenement');
 })->name('evenement');
 
+Route::get('/les-actualites', function () {
+    return view('appli.lesactus');
+})->name('les-actus');
+
+Route::get('/actualite', function () {
+    return view('appli.actu');
+})->name('actu');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

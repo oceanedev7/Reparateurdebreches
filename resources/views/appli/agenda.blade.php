@@ -1,7 +1,7 @@
 @extends('layouts.vue')
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
 <body>
 
 
-    
+
     @section('content')
 <div class="flex items-center justify-center bg-bleu-fonce">
     <h1 class="font-bold text-5xl absolute text-white z-10">AGENDA</h1>
