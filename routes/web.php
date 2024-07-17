@@ -15,8 +15,8 @@ Route::get('/deveniradherent', function () {
 })->name('deveniradherent');
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+    return view('dashboard2');
+})->middleware(['auth', 'verified'])->name('dashboard2');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -24,7 +24,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
 require __DIR__.'/auth.php';
 
 
 Route::get('/articles', [ArticleController::class, 'index'])->name('all-articles');
+
