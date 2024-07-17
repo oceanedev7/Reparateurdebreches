@@ -14,7 +14,13 @@ Route::get('/deveniradherent', function () {
     return view('appli.deveniradherent');
 })->name('deveniradherent');
 
+
 Route::get('/articles', [ArticleController::class, 'index'])->name('all-articles');
+
+//Routes adhérent
+Route::get('espaceadherent', function () {
+    return view('appli.espaceadherent');
+});
 
 // Routes admin (page accueil +pages de gestion)
 Route::get('/dashboard', function () {
