@@ -113,7 +113,7 @@
    <div class="flex flex-row space-x-16 mt-40">
     <a class="bg-bleu-fonce rounded-lg h-60 w-80 absolute left-12 mt-10  ">
         <img class="w-full rounded-lg object-cover h-full opacity-40" src="{{ Storage::url('images/header-home.jpg') }}" alt="">
-        <div class="relative bottom-44 left-4 mt-20 flex flex-col ">
+        <div class="relative bottom-44 left-4 mt-20 flex flex-col">
         <div class="text-white font-black text-2xl ml-6 mt-2"> TITRE </div>
         <div class="text-white font-bold ml-6 text-2xl h-mx-12 truncate">12/08/2024 </div>
         </div>

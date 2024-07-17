@@ -10,7 +10,6 @@
 </head>
 <body>
 
-
 @section('content')
 <div class="flex items-center justify-center bg-bleu-fonce">
     <h1 class="font-bold text-5xl absolute text-white z-10">DEVENIR ADHÉRENT</h1>
@@ -45,7 +44,6 @@
             De plus, s’engager dans une association implique également de découvrir des nouvelles perspectives et d’élargir ces compétences.
         </div>
         </div>
-
     </div>
 </div>
 

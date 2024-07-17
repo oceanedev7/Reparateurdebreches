@@ -17,9 +17,10 @@
             <div class="h-44 w-48 ml-12 py-6 z-10 ">
                 <img class="h-44 w-48 rounded shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]" src="{{ Storage::url('images/logonavbar.png') }}" alt="">
             </div>
-    
+ 
             <a href="{{route('accueil')}}" class="text-bleu-fonce font-black space-x-48 text-xl font-sans flex justify-between"> ACCUEIL </a>
-            <a  href="" class="text-bleu-fonce font-black space-x-48 text-xl font-sans flex justify-between"> ARTICLES</a>
+            <a  href="{{ route('all-articles') }}" class="text-bleu-fonce font-black space-x-48 text-xl font-sans flex justify-between"> ARTICLES</a>
+
             <a href="" class="text-bleu-fonce font-black space-x-48 text-xl font-sans flex justify-between"> NOUS CONTACTER</a>
     
             <div class="mt-5 flex lg:ml-4 lg:mt-0 mr-12">
@@ -75,12 +76,14 @@
         
     <footer class="bg-bleu-fonce w-full h-80 flex flex-wrap items-center justify-between p-8 relative">
         <div class="absolute top-[-2.5rem] left-1/2 transform -translate-x-1/2 z-10 text-center">
-            <div class="bg-bleu-clair h-20 p-4 rounded-lg text-white flex items-center justify-center space-x-4">
+            <div class="bg-bleu-clair h-20 p-4 rounded-lg  flex items-center justify-center space-x-4">
                 <p class="text-base font-bold text-bleu-fonce">Inscrivez-vous et restez <br/> informé de nos actualités !</p>
-                <input type="email" placeholder="Adresse email" class="p-2 rounded border-none	"/>
-                <button class="ml-3 hidden sm:block">
+                <form>
+                <input type="email"  placeholder="Adresse email" class="p-2 rounded border-none "/>
+                <button class="ml-3">
                     <a href="" class="bg-bleu-fonce text-white py-2 px-4 text-center rounded text-base font-bold"> Je m'inscris </a>
                   </button>
+                </form>
             </div>
         </div>
     
