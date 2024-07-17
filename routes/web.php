@@ -14,6 +14,10 @@ Route::get('/deveniradherent', function () {
     return view('appli.deveniradherent');
 })->name('deveniradherent');
 
+Route::get('espaceadherent', function () {
+    return view('appli.espaceadherent');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard2');
 })->middleware(['auth', 'verified'])->name('dashboard2');
