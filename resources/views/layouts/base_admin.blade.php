@@ -28,8 +28,8 @@
       <div class=" hidden w-full" id="navbar-hamburger" style="margin-top:350px; margin-right:5px;">
         <ul class=" font-medium mt-4 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700 p-3 space-y-1">
           <li>
-            <a href="#" class="block py-2 px-3 text-white bg-bleu-fonce rounded dark:bg-bleu-fonce"
-              aria-current="page">Home</a>
+            <a href="{{route('dashboard2')}}"
+              class="block py-2 px-3 text-white bg-bleu-fonce rounded dark:bg-bleu-fonce" aria-current="page">Home</a>
           </li>
           <li>
             <a href="#"
@@ -37,7 +37,7 @@
           </li>
 
           <li>
-            <a href="#"
+            <a href="{{route('dashboard_article')}}"
               class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
               les actualités</a>
           </li>

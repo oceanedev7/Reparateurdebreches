@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
 
 
-
+// Routes visiteur
 Route::get('/', function () {
     return view('appli.accueil');
 })->name('accueil');
@@ -14,9 +14,22 @@ Route::get('/deveniradherent', function () {
     return view('appli.deveniradherent');
 })->name('deveniradherent');
 
+Route::get('/articles', [ArticleController::class, 'index'])->name('all-articles');
+
+// Routes admin (page accueil +pages de gestion)
 Route::get('/dashboard', function () {
     return view('dashboard2');
 })->middleware(['auth', 'verified'])->middleware('can:isAdmin')->name('dashboard2');
+
+// Route admin des pages de gestion
+Route::middleware('can:isAdmin')->group(
+    function () {
+        Route::get('/dashboard/articles', function () {
+            return view('admin_pages.dashboard_article');
+        })->name('dashboard_article');
+    }
+
+);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -28,5 +41,5 @@ Route::middleware('auth')->group(function () {
 require __DIR__ . '/auth.php';
 
 
-Route::get('/articles', [ArticleController::class, 'index'])->name('all-articles');
+
 
