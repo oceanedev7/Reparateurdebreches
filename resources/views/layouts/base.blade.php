@@ -20,6 +20,7 @@
  
             <a href="{{route('accueil')}}" class="text-bleu-fonce font-black space-x-48 text-xl font-sans flex justify-between"> ACCUEIL </a>
             <a  href="{{ route('all-articles') }}" class="text-bleu-fonce font-black space-x-48 text-xl font-sans flex justify-between"> ARTICLES</a>
+
             <a href="" class="text-bleu-fonce font-black space-x-48 text-xl font-sans flex justify-between"> NOUS CONTACTER</a>
     
             <div class="mt-5 flex lg:ml-4 lg:mt-0 mr-12">
