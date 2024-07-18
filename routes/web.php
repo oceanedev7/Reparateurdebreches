@@ -35,6 +35,10 @@ Route::get('/validerunadherent', function () {
     return view('admin_pages.validadherent');
 })->name('validerunadherent');
 
+Route::get('/nouscontacter', function () {
+    return view('appli.contact');
+})->name('contact');
+
 Route::get('/articles', [ArticleController::class, 'index'])->name('all-articles');
 
 //Routes adhérent
