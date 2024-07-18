@@ -37,45 +37,45 @@
     </form>
 
 
-<div class="grid grid-cols-2 md:grid-cols-3 gap-4 justify-items-center ">
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-5 justify-items-center ">
     <div>
-        <h5>article 1</h5>
-        <img class="h-40 max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="">
+        <h5 class="text-center text-lg">article 1</h5>
+        <img class="h-40 max-w-full rounded-lg" src="{{ Storage::url('Images/header-home.jpg') }}" alt="">
         <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-1 mr-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">modifier</a>
         <a href="#" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-1 mr-1 dark:bg-red-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-red-800">supprimer</a>
     </div>
     <div>
-        <h5>article 2</h5>
-        <img class="h-40 max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
+        <h5 class="text-center text-lg">article 2</h5>
+        <img class="h-40 max-w-full rounded-lg"  src="{{ Storage::url('Images/header-home.jpg') }}" alt="">
         <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">modifier</a>
         <a href="#" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-1 dark:bg-red-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-red-800">supprimer</a>
 
     </div>
     <div>
-        <h5>article 3</h5>
-        <img class="h-40 max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
+        <h5 class="text-center text-lg">article 3</h5>
+        <img class="h-40 max-w-full rounded-lg"  src="{{ Storage::url('Images/header-home.jpg') }}" alt="">
         <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-1.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">modifier</a>
         <a href="#" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-1.5 dark:bg-red-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-red-800">supprimer</a>
 
 
     </div>
     <div>
-        <h5>article 4</h5>
-        <img class="h-40 max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
+        <h5 class="text-center text-lg">article 4</h5>
+        <img class="h-40 max-w-full rounded-lg"  src="{{ Storage::url('Images/header-home.jpg') }}" alt="">
         <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">modifier</a>
         <a href="#" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-1 dark:bg-red-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-red-800">supprimer</a>
 
     </div>
     <div>
-         <h5>article 5</h5>
-        <img class="h-40 max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
+         <h5 class="text-center text-lg">article 5</h5>
+        <img class="h-40 max-w-full rounded-lg"  src="{{ Storage::url('Images/header-home.jpg') }}" alt="">
         <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">modifier</a>
         <a href="#" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-1 dark:bg-red-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-red-800">supprimer</a>
 
     </div>
     <div>
-        <h5>article 6</h5>
-        <img class="h-40 max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
+        <h5 class="text-center text-lg">article 6</h5>
+        <img class="h-40 max-w-full rounded-lg"  src="{{ Storage::url('Images/header-home.jpg') }}" alt="">
         <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">modifier</a>
         <a href="#" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-1 dark:bg-red-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-red-800">supprimer</a>
 
