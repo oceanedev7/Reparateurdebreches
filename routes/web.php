@@ -31,7 +31,9 @@ Route::get('/actualite', function () {
     return view('appli.actu');
 })->name('actu');
 
-
+Route::get('/validerunadherent', function () {
+    return view('admin_pages.validadherent');
+})->name('validerunadherent');
 
 Route::get('/articles', [ArticleController::class, 'index'])->name('all-articles');
 
