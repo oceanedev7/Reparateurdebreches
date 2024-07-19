@@ -127,10 +127,10 @@
             <div class="flex flex-col items-center">
                 <div class="font-bold text-white text-lg mb-4">Suivez-nous</div> 
                 <div class="flex space-x-2">   
-                    <a href="#" class="w-8 h-8 bg-white text-white bg-opacity-30 rounded-md flex items-center justify-center">
+                    <a href="https://www.facebook.com" class="w-8 h-8 bg-white text-white bg-opacity-30 rounded-md flex items-center justify-center">
                         <i class="fa-brands fa-facebook-f"></i>
                     </a>
-                    <a href="#" class="w-8 h-8 bg-white text-white bg-opacity-30 rounded-md flex items-center justify-center">
+                    <a href="https://www.instagram.com" class="w-8 h-8 bg-white text-white bg-opacity-30 rounded-md flex items-center justify-center">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
                 </div>
@@ -138,10 +138,9 @@
         </div>
         
         <div class="absolute bottom-0 left-0 space-x-32 w-full text-center py-4 bg-bleu-fonce">
-            <a href="#" class="text-sm text-white mx-2">Mentions légales</a>
-            <a href="#" class="text-sm text-white mx-2">CGV</a>
-            <a href="#" class="text-sm text-white mx-2">Confidentialités</a>
-            <a href="#" class="text-sm text-white mx-2">Plan du site</a>
+            <a href="{{ route('mentionslegales') }}" class="text-sm text-white mx-2">Mentions légales</a>
+            <a href="{{ route('cgv') }}" class="text-sm text-white mx-2">CGV</a>
+            <a href="{{ route('confidentialites') }}" class="text-sm text-white mx-2">Confidentialités</a>
         </div>
     </footer>
     

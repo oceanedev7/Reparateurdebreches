@@ -42,6 +42,17 @@ Route::get('/nouveladherent/{id}', [InscriptionController::class, 'destroy'])->n
 
 Route::get('/validerinscription/{id}', [InscriptionController::class, 'show'])->name('validerinscription');
 
+Route::get('/mentionslegales', function () {
+    return view('appli.mentionslegales');
+})->name('mentionslegales');
+
+Route::get('/cgv', function () {
+    return view('appli.cgv');
+})->name('cgv');
+
+Route::get('/confidentialites', function () {
+    return view('appli.confidentialites');
+})->name('confidentialites');
 
 Route::get('/nouscontacter', function () {
     return view('appli.contact');
