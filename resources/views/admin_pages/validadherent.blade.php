@@ -43,7 +43,7 @@
                 <td>{{$inscription->code_postal}}  </td> 
                 <td>{{$inscription->pays}}  </td> 
                 <td class="text-green-600"><a href=""><i class="fa-solid fa-square-check"></i></a></td>
-                <td class="text-red-600"><a href=""><i class="fa-solid fa-square-xmark"></i> </a></td>
+                <td class="text-red-600"><a href="{{route('supprimerdemandeadherent' , $inscription->id)}}"><i class="fa-solid fa-square-xmark"></i> </a></td>
             </tr> 
             @endforeach
         </tbody>
