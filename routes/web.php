@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\ActualiteController;
+use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\EvenementController;
+use App\Http\Controllers\ParamètreController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
@@ -38,11 +40,7 @@ Route::get('/actualite', function () {
 // Route::get('/validerunadherent', function () {
 //     return view('admin_pages.validadherent');
 // })->name('validerunadherent');
-Route::get('/validerunadherent', [InscriptionController::class, 'index']);
-Route::post('/nouveladherent', [InscriptionController::class, 'create'])->name('nouveladherent');
-Route::get('/nouveladherent/{id}', [InscriptionController::class, 'destroy'])->name('supprimerdemandeadherent');
 
-Route::get('/validerinscription/{id}', [InscriptionController::class, 'show'])->name('validerinscription');
 
 Route::get('/mentionslegales', function () {
     return view('appli.mentionslegales');
@@ -93,6 +91,14 @@ Route::middleware('can:isAdmin')->group(
         Route::post('/dashboard/evenement/update/confirm/{id}', [EvenementController::class, 'updateConfirmEvenement'])->name('updateConfirmEvenement');
         Route::get('/dashboard/evenement/delete/{id}', [EvenementController::class, 'delete'])->name('deleteEvenement');
 
+        Route::get('/validerunadherent', [InscriptionController::class, 'index'])->name('dashboardValidationAdherent');
+        Route::post('/nouveladherent', [InscriptionController::class, 'create'])->name('nouveladherent');
+        Route::get('/nouveladherent/{id}', [InscriptionController::class, 'destroy'])->name('supprimerdemandeadherent');
+        Route::get('/validerinscription/{id}', [InscriptionController::class, 'show'])->name('validerinscription');
+
+        Route::get('/dashboard/parametre', [ParamètreController::class, 'index'])->name('dashboard_parametre');
+        Route::post('/dashboard/parametre/confirm', [ParamètreController::class, 'updateConfirmParametre'])->name('updateConfirmParametre');
+        Route::get('/dashboard/reset', [PasswordResetLinkController::class, 'store'])->name('newPassword');
     }
 
 );
