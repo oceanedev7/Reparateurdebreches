@@ -8,7 +8,8 @@
     <title>@section('Accueil')</title>
 </head>
 <body>
-    
+  
+
     <main>
 @section('content')
 <div class="w-full h-screen ">
@@ -182,7 +183,7 @@
 </div>
 
 
-{{-- <button onclick="topFunction()" id="btt" class="text-bleu-fonce mr-20 text-6xl"><i class="fa-solid fa-circle-arrow-up"></i></button> --}}
+<button onclick="backToTop()" id="bouton" class="fixed bottom-4 right-4 z-50 text-gris-fonce text-3xl"><i class="fa-solid fa-circle-arrow-up"></i></button>
   
 
 
@@ -195,24 +196,19 @@
           document.querySelector('.animate-caroussel').style.animationDuration = `${vitesse}s`;
         });
 
+var bouton = document.getElementById("bouton");
 
+function scroll() {
+  if (document.documentElement.scrollTop > 100) {
+    bouton.style.display = "block";
+  } else {
+    bouton.style.display = "none";
+  }
+}
 
-//         var mybutton = document.getElementById("myBtn");
-
-// window.onscroll = function() {scrollFunction()};
-
-// function scrollFunction() {
-//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//     mybutton.style.display = "block";
-//   } else {
-//     mybutton.style.display = "none";
-//   }
-// }
-
-// function topFunction() {
-//   document.body.scrollTop = 0; 
-//   document.documentElement.scrollTop = 0; 
-// }
-      </script>
+function backToTop() {
+  document.documentElement.scrollTop = 0; 
+}
+</script>
 </body>
 </html>
