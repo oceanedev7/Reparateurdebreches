@@ -18,9 +18,9 @@
 </div>
 @endsection
 
-@section('main')
+ @section('main')
 
-<div class="w-full pb-24">
+<div class="w-full pb-24 ">
     <div class="flex flex-col ml-24 mr-24 text-justify p-12  space-y-16">
 
         <div class="space-y-6"> 
@@ -61,22 +61,30 @@
 
 </form>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div class="flex flex-col items-center  mt-24">
+        <div class="font-black text-bleu-fonce text-xl mb-4">NOS COORDONNÉES</div>
+        <div class="space-y-6">
+            <div class="flex flex-row space-x-4">
+                <div class="font-black text-bleu-fonce text-lg">Adresse :</div>
+                <div class="text-base text-bleu-fonce text-lg">12 Rue des Colibris, Quartier Paradis, 97232 Lamentin</div>
+            </div>
+    
+            <div class="flex flex-row space-x-4">
+                <div class="font-black text-bleu-fonce text-lg">Numéro de téléphone :</div>
+                <div class="text-base text-bleu-fonce text-lg">0596 65 87 95</div>
+            </div>
+            
+            <div class="flex flex-row space-x-4">
+                <div class="font-black text-bleu-fonce text-lg">Adresse e-mail :</div>
+                <div class="text-base text-bleu-fonce text-lg">reparateurs@de-breches.org</div>
+            </div>
+        </div>
+    </div>
+    
 </div>
 
-@endsection
+
+@endsection 
 
     
 </body>
