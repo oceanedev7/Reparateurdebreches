@@ -13,6 +13,7 @@ class Actualite extends Model
         'titre',
         'contenu',
         'photo',
+        'id_user',
     ];
 
     public function user()
