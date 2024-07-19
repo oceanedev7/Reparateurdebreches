@@ -37,12 +37,12 @@
           </li>
 
           <li>
-            <a href="{{route('dashboard_article')}}"
+            <a href="{{route('dashboard_actualite')}}"
               class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
               les actualités</a>
           </li>
           <li>
-            <a href="#"
+            <a href="{{route('dashboard_evenement')}}"
               class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
               les évènements</a>
           </li>
@@ -60,6 +60,12 @@
             <a href="#"
               class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
               les adhérents</a>
+          </li>
+          <li>
+            <a href="#"
+              class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Demande
+              de contact
+            </a>
           </li>
           <li>
             <a href="#"
