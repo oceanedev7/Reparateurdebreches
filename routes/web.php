@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
-
+use App\Http\Controllers\EmailController;
 
 // Routes visiteur
 Route::get('/', function () {
@@ -30,6 +30,17 @@ Route::get('/les-actualites', function () {
 Route::get('/actualite', function () {
     return view('appli.actu');
 })->name('actu');
+
+Route::get('/validerunadherent', function () {
+    return view('admin_pages.validadherent');
+})->name('validerunadherent');
+
+Route::get('/nouscontacter', function () {
+    return view('appli.contact');
+})->name('contact');
+
+Route::get('/envoi-email', [EmailController::class, 'index'])->name('contactmail');
+Route::post('/nouscontacter', [EmailController::class, 'store'])->name('contact');
 
 
 
