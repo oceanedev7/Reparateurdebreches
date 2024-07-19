@@ -29,12 +29,29 @@
                 </div>
             </div>
         </div>
-        
+
+        <button onclick="backToTop()" id="bouton" class="fixed bottom-4 right-4 z-50 text-gris-fonce text-3xl"><i class="fa-solid fa-circle-arrow-up"></i></button>
+
         @endsection
     
 
 
+  <script>
+       
+var bouton = document.getElementById("bouton");
 
+function scroll() {
+  if (document.documentElement.scrollTop > 50) {
+    bouton.style.display = "block";
+  } else {
+    bouton.style.display = "none";
+  }
+}
+
+function backToTop() {
+  document.documentElement.scrollTop = 0; 
+}
+</script>
 
 </body>
 </html>

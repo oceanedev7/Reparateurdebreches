@@ -10,46 +10,52 @@
 </head>
 <body>
     
-    <h1 class="text-center font-black text-xl"> VALIDER UN ADHÉRENT </h1>
+    <div class="overflow-x-auto mt-8 space-y-6">
 
-    <table class="border-collapse border border-slate-400">
-        <thead>
-            <tr>
-                <th>Nom</th>
-                <th>Prénom</th>
-                <th>Genre</th>
-                <th>Date de naissance</th>
-                <th>Adresse e-mail</th>
-                <th>Numéro de téléphone</th>
-                <th>Adresse postale</th>
-                <th>Ville</th>
-                <th>Code postal</th>
-                <th>Pays</th>
-                <th>Valider</th>
-                <th>Refuser</th>
-            </tr>
-        </thead>
-        <tbody> 
-            @foreach ($inscriptions as $inscription)
-            <tr>
-                <td>{{$inscription->nom}} </td>
-                <td> {{$inscription->prenom}} </td>
-                <td>{{$inscription->genre}}  </td>  
-                <td> {{$inscription->date_naissance}}  </td> 
-                <td> {{$inscription->email}} </td>
-                <td>{{$inscription->numero_telephone}}  </td> 
-                <td>{{$inscription->adresse_postale}}  </td> 
-                <td> {{$inscription->ville}} </td> 
-                <td>{{$inscription->code_postal}}  </td> 
-                <td>{{$inscription->pays}}  </td> 
-                <td class="text-green-600"><a href=""><i class="fa-solid fa-square-check"></i></a></td>
-                <td class="text-red-600"><a href="{{route('supprimerdemandeadherent' , $inscription->id)}}"><i class="fa-solid fa-square-xmark"></i> </a></td>
-            </tr> 
-            @endforeach
-        </tbody>
-    </table>
+        <h1 class="text-center font-black text-xl text-bleu-fonce">VALIDER UN ADHÉRENT</h1>
 
-
+        <table class="min-w-full border-collapse border border-gris-clair">
+            <thead>
+                <tr class="bg-bleu-clair text-bleu-fonce">
+                    <th class="border border-gris-clair px-4 py-2">Nom</th>
+                    <th class="border border-gris-clair px-4 py-2">Prénom</th>
+                    <th class="border border-gris-clair px-4 py-2">Genre</th>
+                    <th class="border border-gris-clair px-4 py-2">Date de naissance</th>
+                    <th class="border border-gris-clair px-4 py-2">Adresse e-mail</th>
+                    <th class="border border-gris-clair px-4 py-2">Numéro de téléphone</th>
+                    <th class="border border-gris-clair px-4 py-2">Adresse postale</th>
+                    <th class="border border-gris-clair px-4 py-2">Ville</th>
+                    <th class="border border-gris-clair px-4 py-2">Code postal</th>
+                    <th class="border border-gris-clair px-4 py-2">Pays</th>
+                    <th class="border border-gris-clair px-4 py-2">Valider</th>
+                    <th class="border border-gris-clair px-4 py-2">Refuser</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($inscriptions as $inscription)
+                <tr class="even:bg-gris-clair odd:bg-white text-bleu-fonce">
+                    <td class="border border-gris-clair px-4 py-2">{{$inscription->nom}}</td>
+                    <td class="border border-gris-clair px-4 py-2">{{$inscription->prenom}}</td>
+                    <td class="border border-gris-clair px-4 py-2">{{$inscription->genre}}</td>
+                    <td class="border border-gris-clair px-4 py-2">{{$inscription->date_naissance}}</td>
+                    <td class="border border-gris-clair px-4 py-2">{{$inscription->email}}</td>
+                    <td class="border border-gris-clair px-4 py-2">{{$inscription->numero_telephone}}</td>
+                    <td class="border border-gris-clair px-4 py-2">{{$inscription->adresse_postale}}</td>
+                    <td class="border border-gris-clair px-4 py-2">{{$inscription->ville}}</td>
+                    <td class="border border-gris-clair px-4 py-2">{{$inscription->code_postal}}</td>
+                    <td class="border border-gris-clair px-4 py-2">{{$inscription->pays}}</td>
+                    <td class="border border-gris-clair px-4 py-2 text-center text-green-600">
+                        <a href=""><i class="fa-solid fa-square-check"></i></a>
+                    </td>
+                    <td class="border border-gris-clair px-4 py-2 text-center text-red-600">
+                        <a href="{{route('supprimerdemandeadherent' , $inscription->id)}}"><i class="fa-solid fa-square-xmark"></i></a>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+    
     
 </body>
 </html>

@@ -84,21 +84,21 @@
           <div class="text-center text-bleu-fonce font-black text-5xl"> ACTUALITÉS </div> 
           <div class="flex flex-row space-x-16">   
             
-            <a class="bg-bleu-fonce rounded-lg h-80 w-80 absolute left-12 mt-10">
+            <a class="bg-white rounded-lg h-80 w-80 absolute left-12 mt-10">
                 <img class="w-full rounded-lg object-cover h-3/5" src="{{ Storage::url('images/header-home.jpg') }}" alt="">
                 <div class="font-bold text-lg ml-10 mt-2"> TITRE </div>
                 <div class="ml-6 mt-2 h-mx-12 truncate"> Nous proposons des services d’assistance pour les gestes de la vie courante (courses, ménage, préparation des repas…) afin de faciliter le quotidien des seniors. 
                     Elles peuvent également proposer un service d’accompagnement pour garantir l'accès aux soins et aux loisirs. </div>
             </a>
              
-            <a class="bg-gris-clair rounded-lg h-80 w-80 absolute mt-10 left-96">
+            <a class="bg-white rounded-lg h-80 w-80 absolute mt-10 left-96">
                 <img class="w-full rounded-lg object-cover h-3/5" src="{{ Storage::url('images/header-home.jpg') }}" alt="">
                 <div class="font-bold text-lg ml-10 mt-2"> TITRE </div>
                 <div class="ml-6 mt-2 h-mx-12 truncate"> Nous proposons des services d’assistance pour les gestes de la vie courante (courses, ménage, préparation des repas…) afin de faciliter le quotidien des seniors. 
                     Elles peuvent également proposer un service d’accompagnement pour garantir l'accès aux soins et aux loisirs. </div>
             </a>
         
-            <a class="bg-gris-fonce rounded-lg h-80 w-80 absolute right-12 mt-10">
+            <a class="bg-white rounded-lg h-80 w-80 absolute right-12 mt-10">
                 <img class="w-full rounded-lg object-cover h-3/5" src="{{ Storage::url('images/header-home.jpg') }}" alt="">
                 <div class="font-bold text-lg ml-10 mt-2"> TITRE </div>
                 <div class="ml-6 mt-2 h-mx-12 truncate"> Nous proposons des services d’assistance pour les gestes de la vie courante (courses, ménage, préparation des repas…) afin de faciliter le quotidien des seniors. 
@@ -199,7 +199,7 @@
 var bouton = document.getElementById("bouton");
 
 function scroll() {
-  if (document.documentElement.scrollTop > 100) {
+  if (document.documentElement.scrollTop > 50) {
     bouton.style.display = "block";
   } else {
     bouton.style.display = "none";
