@@ -52,28 +52,28 @@
     <div class="text-center text-bleu-fonce font-black text-4xl mb-6"> FORMULAIRE D'INSCRIPTION </div>
 
     <div class="px-24 pb-24">
-        <form class="w-full max-w-xl flex flex-col mx-auto space-y-6">
+        <form  method="post" action="{{ route('nouveladherent') }}"    class="w-full max-w-xl flex flex-col mx-auto space-y-6">
             @csrf
 
             <div class="flex flex-row space-x-4">
-                <input class="flex-grow bg-bleu placeholder:text-bleu-fonce border-none rounded-lg" placeholder="Nom" type="text">
-                <input class="flex-grow bg-bleu placeholder:text-bleu-fonce border-none rounded-lg" placeholder="Prénom" type="text">
-                <select class="flex-grow bg-bleu placeholder:text-bleu-fonce border-none rounded-lg">
+                <input name="nom" class="flex-grow bg-bleu placeholder:text-bleu-fonce border-none rounded-lg" placeholder="Nom" type="text">
+                <input name="prenom" class="flex-grow bg-bleu placeholder:text-bleu-fonce border-none rounded-lg" placeholder="Prénom" type="text">
+                <select name="genre" class="flex-grow bg-bleu placeholder:text-bleu-fonce border-none rounded-lg">
                     <option>--</option>
-                    <option>Femme</option>
-                    <option>Homme</option>
+                    <option value="Femme">Femme</option>
+                    <option value="Homme">Homme</option>
                 </select>
             </div>
 
-            <input class="bg-bleu placeholder:text-bleu-fonce border-none rounded-lg" placeholder="Date de naissance" type="text">
-            <input class="bg-bleu placeholder:text-bleu-fonce border-none rounded-lg" placeholder="Adresse e-mail" type="text">
-            <input class="bg-bleu placeholder:text-bleu-fonce border-none rounded-lg" placeholder="Numéro de téléphone" type="text">
-            <input class="bg-bleu placeholder:text-bleu-fonce border-none rounded-lg" placeholder="Adresse postale" type="text">
+            <input name="date_naissance" class="bg-bleu placeholder:text-bleu-fonce border-none rounded-lg" placeholder="Date de naissance" type="text">
+            <input name="email" class="bg-bleu placeholder:text-bleu-fonce border-none rounded-lg" placeholder="Adresse e-mail" type="text">
+            <input name="numero_telephone" class="bg-bleu placeholder:text-bleu-fonce border-none rounded-lg" placeholder="Numéro de téléphone" type="text">
+            <input name="adresse_postale" class="bg-bleu placeholder:text-bleu-fonce border-none rounded-lg" placeholder="Adresse postale" type="text">
 
             <div class="flex flex-row space-x-4">
-                <input class="w-1/3 bg-bleu placeholder:text-bleu-fonce border-none rounded-lg" placeholder="Ville" type="text">
-                <input class="w-1/3 bg-bleu placeholder:text-bleu-fonce border-none rounded-lg" placeholder="Code postal" type="text">
-                <input class="w-1/3 bg-bleu placeholder:text-bleu-fonce border-none rounded-lg" placeholder="Pays" type="text">
+                <input  name="ville" class="w-1/3 bg-bleu placeholder:text-bleu-fonce border-none rounded-lg" placeholder="Ville" type="text">
+                <input  name="code_postal" class="w-1/3 bg-bleu placeholder:text-bleu-fonce border-none rounded-lg" placeholder="Code postal" type="text">
+                <input  name="pays" class="w-1/3 bg-bleu placeholder:text-bleu-fonce border-none rounded-lg" placeholder="Pays" type="text">
             </div>
 
             <div class="flex justify-end">
