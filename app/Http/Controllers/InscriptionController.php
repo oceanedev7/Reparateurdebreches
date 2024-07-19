@@ -22,11 +22,12 @@ class InscriptionController extends Controller
      */
     public function create(Request $request)
     {
+        //   dd($request);
         $request->validate([
             'nom' => 'required|string',
             'prenom' => 'required|string',
             'genre'=> 'required|string',
-            'date_naissance' =>'required|integer',
+            'date_naissance' =>'required|date',
            'email' => 'required|email',
            'numero_telephone' => 'required|string',
            'adresse_postale' => 'required|string',
@@ -54,7 +55,8 @@ class InscriptionController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $inscription = User::findOrFail($id);
+        return view('test', compact('inscription'));
     }
 
     /**

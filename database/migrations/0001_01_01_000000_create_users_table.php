@@ -16,7 +16,7 @@ return new class extends Migration {
             $table->string('prenom')->nullable();
             $table->string('nom');
             $table->string('genre')->nullable();
-            $table->integer('date_naissance')->nullable();
+            $table->date('date_naissance')->nullable();
             $table->string('email')->unique();
             $table->string('numero_telephone')->nullable();
             $table->string('adresse_postale')->nullable();
@@ -25,7 +25,7 @@ return new class extends Migration {
             $table->string('pays')->nullable();
 
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('password')->default('default_password');
             $table->rememberToken();
             $table->timestamps();
 
