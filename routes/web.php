@@ -45,7 +45,7 @@ Route::get('/nouscontacter', function () {
     return view('appli.contact');
 })->name('contact');
 
-Route::get('/envoi-email', [EmailController::class, 'index'])->name('contactmail');
+Route::get('/demandedecontact', [EmailController::class, 'index'])->name('contactmail');
 Route::post('/nouscontacter', [EmailController::class, 'store'])->name('contact');
 
 

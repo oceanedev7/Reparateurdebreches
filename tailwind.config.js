@@ -19,7 +19,7 @@ export default {
             colors: {
                 "bleu-fonce": "#002A63",
                 "bleu-clair": "#C9D6F7",
-                bleu: "#A4BCF9",
+                "bleu": "#A4BCF9",
                 "gris-clair": "#E8E8E8",
                 "gris-fonce": "#898989",
             },
