@@ -93,7 +93,7 @@
         </div>
         <div
             class="my-14 max-w-md bg-white border border-bleu-fonce rounded-lg shadow-xl hover:bg-bleu focus:outline-none focus:ring-2 focus:ring-bleu-fonce dark:hover:bg-bleu dark:focus:ring-bleu-clair hover:scale-105">
-            <a href="#">
+            <a href="{{route('dashboardValidationAdherent')}}">
                 <img class="rounded-t-lg w-full object-cover" style="height:200px;"
                     src="{{ Storage::url('images/quisommesnous.png') }}" alt="reunion" />
 
@@ -106,7 +106,7 @@
         </div>
         <div
             class="my-14 max-w-md bg-white border border-bleu-fonce rounded-lg shadow-xl hover:bg-bleu focus:outline-none focus:ring-2 focus:ring-bleu-fonce dark:hover:bg-bleu dark:focus:ring-bleu-clair hover:scale-105">
-            <a href="#">
+            <a href="{{route('contactmail')}}">
                 <img class="rounded-t-lg w-full object-cover" style="height:200px;"
                     src="{{ Storage::url('images/quisommesnous.png') }}" alt="reunion" />
 
@@ -114,6 +114,19 @@
 
                     <h5 class="mb-2 text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
                         DEMANDE DE CONTACT</h5>
+                </div>
+            </a>
+        </div>
+        <div
+            class="my-14 max-w-md bg-white border border-bleu-fonce rounded-lg shadow-xl hover:bg-bleu focus:outline-none focus:ring-2 focus:ring-bleu-fonce dark:hover:bg-bleu dark:focus:ring-bleu-clair hover:scale-105">
+            <a href="{{route('dashboard_parametre')}}">
+                <img class="rounded-t-lg w-full object-cover" style="height:200px;"
+                    src="{{ Storage::url('images/quisommesnous.png') }}" alt="reunion" />
+
+                <div class="p-5 bg-bleu-fonce">
+
+                    <h5 class="mb-2 text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        PARAMETRES DU COMPTE</h5>
                 </div>
             </a>
         </div>
