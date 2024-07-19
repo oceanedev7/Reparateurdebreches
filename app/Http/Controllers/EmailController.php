@@ -39,10 +39,11 @@ class EmailController extends Controller
             'email' => 'required|email',
             'message' => 'required|string',
         ]);
-    
+
         $contact = Demandedecontact::create($request->all());
-    
+
         Mail::to('reparateurs@de-breches.org')->send(new Contact($request->except('_token')));
+      
     
         return view('appli.contact', ['emails' => [$contact]]);
     }

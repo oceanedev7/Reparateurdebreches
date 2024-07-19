@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\EmailController;
+use App\Http\Controllers\InscriptionController;
+
 
 // Routes visiteur
 Route::get('/', function () {
@@ -31,9 +33,12 @@ Route::get('/actualite', function () {
     return view('appli.actu');
 })->name('actu');
 
-Route::get('/validerunadherent', function () {
-    return view('admin_pages.validadherent');
-})->name('validerunadherent');
+// Route::get('/validerunadherent', function () {
+//     return view('admin_pages.validadherent');
+// })->name('validerunadherent');
+Route::get('/validerunadherent', [InscriptionController::class, 'index'])->name('validerunadherent');
+Route::post('/validerunadherent', [InscriptionController::class, 'create'])->name('nouveladherent');
+
 
 Route::get('/nouscontacter', function () {
     return view('appli.contact');

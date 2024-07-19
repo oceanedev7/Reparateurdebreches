@@ -30,22 +30,22 @@
             </tr>
         </thead>
         <tbody> 
-            {{-- @foreach ( as ) --}}
+            @foreach ($inscriptions as $inscription)
             <tr>
-                <td> </td>
-                <td> </td>
-                <td> </td>  
-                <td>  </td> 
-                <td> </td>
-                <td> </td> 
-                <td> </td> 
-                <td> </td> 
-                <td> </td> 
-                <td> </td> 
+                <td>{{$inscription->nom}} </td>
+                <td> {{$inscription->prenom}} </td>
+                <td>{{$inscription->genre}}  </td>  
+                <td> {{$inscription->date_naissance}}  </td> 
+                <td> {{$inscription->email}} </td>
+                <td>{{$inscription->numero_telephone}}  </td> 
+                <td>{{$inscription->adresse_postale}}  </td> 
+                <td> {{$inscription->ville}} </td> 
+                <td>{{$inscription->code_postal}}  </td> 
+                <td>{{$inscription->pays}}  </td> 
                 <td class="text-green-600"><a href=""><i class="fa-solid fa-square-check"></i></a></td>
                 <td class="text-red-600"><a href=""><i class="fa-solid fa-square-xmark"></i> </a></td>
             </tr> 
-            {{-- @endforeach --}}
+            @endforeach
         </tbody>
     </table>
 
