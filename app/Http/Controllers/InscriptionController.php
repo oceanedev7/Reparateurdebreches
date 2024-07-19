@@ -78,6 +78,9 @@ class InscriptionController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $delete  = User::findOrFail($id);
+        $delete->delete();
+
+        return redirect("/validerunadherent");
     }
 }

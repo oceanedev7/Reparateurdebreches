@@ -37,7 +37,8 @@ Route::get('/actualite', function () {
 //     return view('admin_pages.validadherent');
 // })->name('validerunadherent');
 Route::get('/validerunadherent', [InscriptionController::class, 'index'])->name('validerunadherent');
-Route::post('/validerunadherent', [InscriptionController::class, 'create'])->name('nouveladherent');
+Route::post('/nouveladherent', [InscriptionController::class, 'create'])->name('nouveladherent');
+Route::get('/nouveladherent/{id}', [InscriptionController::class, 'destroy'])->name('supprimerdemandeadherent');
 
 
 Route::get('/nouscontacter', function () {
