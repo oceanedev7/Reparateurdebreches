@@ -52,7 +52,7 @@
     <div class="text-center text-bleu-fonce font-black text-4xl mb-6"> FORMULAIRE D'INSCRIPTION </div>
 
     <div class="px-24 pb-24">
-        <form  method="post" action="{{ route('nouveladherent') }}"    class="w-full max-w-xl flex flex-col mx-auto space-y-6">
+        <form  method="post" action="{{ route('nouveladherent') }}"   class="w-full max-w-xl flex flex-col mx-auto space-y-6">
             @csrf
 
             <div class="flex flex-row space-x-4">
@@ -65,7 +65,7 @@
                 </select>
             </div>
 
-            <input name="date_naissance" class="bg-bleu placeholder:text-bleu-fonce border-none rounded-lg" placeholder="Date de naissance" type="text">
+            <input name="date_naissance" class="bg-bleu placeholder:text-bleu-fonce border-none rounded-lg" placeholder="Date de naissance" type="date">
             <input name="email" class="bg-bleu placeholder:text-bleu-fonce border-none rounded-lg" placeholder="Adresse e-mail" type="text">
             <input name="numero_telephone" class="bg-bleu placeholder:text-bleu-fonce border-none rounded-lg" placeholder="Numéro de téléphone" type="text">
             <input name="adresse_postale" class="bg-bleu placeholder:text-bleu-fonce border-none rounded-lg" placeholder="Adresse postale" type="text">

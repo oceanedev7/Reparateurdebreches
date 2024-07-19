@@ -9,35 +9,8 @@
     <title>Demande de contact</title>
 </head>
 <body>
-{{-- 
-    <h1>Contact Information</h1>
-    @if (isset($emails) && count($emails) > 0)
-    @foreach ($emails as $contact)
-        <div>
-            <p><strong>Nom:</strong> {{ $contact['nom'] }}</p>
-            <p><strong>Email:</strong> {{ $contact['email'] }}</p>
-            <p><strong>Message:</strong> {{ $contact['message'] }}</p>
-            <hr>
-        </div>
-    @endforeach
-    @endif --}}
 
-
-    {{-- <h1 class="text-center font-black text-3xl text-bleu-fonce p-2 mb-8">Contact Information</h1>
-
-@if (isset($emails) && count($emails) > 0)
-    @foreach ($emails as $contact)
-        <div class="bg-white p-6 mb-6 shadow-lg rounded-lg border border-gris-clair">
-            <p class="text-bleu-fonce font-semibold"><strong>Nom:</strong> {{ $contact['nom'] }}</p>
-            <p class="text-bleu-fonce font-semibold"><strong>Email:</strong> {{ $contact['email'] }}</p>
-            <p class="text-bleu-fonce font-semibold"><strong>Message:</strong> {{ $contact['message'] }}</p>
-            <hr class="mt-4 border-t-2 border-gris-clair">
-        </div>
-    @endforeach
-@endif --}}
-
-
-<h1 class="text-center font-black text-3xl text-bleu-fonce p-16">Contact Information</h1>
+<h1 class="text-center font-black text-3xl text-bleu-fonce p-16">Demandes de contact</h1>
 
 @if (isset($emails) && count($emails) > 0)
     @foreach ($emails as $contact)

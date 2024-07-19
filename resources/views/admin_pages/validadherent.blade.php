@@ -10,7 +10,7 @@
 </head>
 <body>
     
-    <div class="overflow-x-auto mt-8 space-y-6">
+    <div class="overflow-x-auto mt-8  space-y-6">
 
         <h1 class="text-center font-black text-xl text-bleu-fonce">VALIDER UN ADHÉRENT</h1>
 
@@ -37,7 +37,7 @@
                     <td class="border border-gris-clair px-4 py-2">{{$inscription->nom}}</td>
                     <td class="border border-gris-clair px-4 py-2">{{$inscription->prenom}}</td>
                     <td class="border border-gris-clair px-4 py-2">{{$inscription->genre}}</td>
-                    <td class="border border-gris-clair px-4 py-2">{{$inscription->date_naissance}}</td>
+                    <td class="border border-gris-clair px-4 py-2">{{$inscription->date_naissance}} </td>
                     <td class="border border-gris-clair px-4 py-2">{{$inscription->email}}</td>
                     <td class="border border-gris-clair px-4 py-2">{{$inscription->numero_telephone}}</td>
                     <td class="border border-gris-clair px-4 py-2">{{$inscription->adresse_postale}}</td>
@@ -45,7 +45,7 @@
                     <td class="border border-gris-clair px-4 py-2">{{$inscription->code_postal}}</td>
                     <td class="border border-gris-clair px-4 py-2">{{$inscription->pays}}</td>
                     <td class="border border-gris-clair px-4 py-2 text-center text-green-600">
-                        <a href=""><i class="fa-solid fa-square-check"></i></a>
+                        <a href="{{ route('validerinscription', $inscription->id) }}"><i class="fa-solid fa-square-check"></i></a>
                     </td>
                     <td class="border border-gris-clair px-4 py-2 text-center text-red-600">
                         <a href="{{route('supprimerdemandeadherent' , $inscription->id)}}"><i class="fa-solid fa-square-xmark"></i></a>
