@@ -32,20 +32,20 @@
 
     </div>
 
-<form class="w-full max-w-xl flex flex-col mx-auto space-y-4">
+<form method="post" action="{{route('contact')}}" class="w-full max-w-xl flex flex-col mx-auto space-y-4">
     @csrf
     
     <label>Nom</label>
-    <input class="border-bleu rounded-lg border-2" type="text">
+    <input  name="nom" class="border-bleu rounded-lg border-2" type="text">
 
     <label>Prénom</label>
-    <input class="border-bleu rounded-lg border-2" type="text">
+    <input name="prenom" class="border-bleu rounded-lg border-2" type="text">
     
     <label>Adresse e-mail</label>
-    <input class="border-bleu rounded-lg border-2" type="text">
+    <input name="email" class="border-bleu rounded-lg border-2" type="text">
     
     <label>Message</label>
-    <textarea class="border-bleu rounded-lg border-2 resize-none h-44	" ></textarea>
+    <textarea name="message" class="border-bleu rounded-lg border-2 resize-none h-44	" ></textarea>
 
     <div class="flex flex-row space-x-4 space-y-4"> 
      <input class="mt-6" type="checkbox" name="" id=""> 

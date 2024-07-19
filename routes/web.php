@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
-
+use App\Http\Controllers\EmailController;
 
 // Routes visiteur
 Route::get('/', function () {
@@ -38,6 +38,11 @@ Route::get('/validerunadherent', function () {
 Route::get('/nouscontacter', function () {
     return view('appli.contact');
 })->name('contact');
+
+Route::get('/envoi-email', [EmailController::class, 'index'])->name('contactmail');
+Route::post('/nouscontacter', [EmailController::class, 'store'])->name('contact');
+
+
 
 Route::get('/articles', [ArticleController::class, 'index'])->name('all-articles');
 
