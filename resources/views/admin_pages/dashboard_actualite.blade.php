@@ -45,7 +45,7 @@
                     <img class="rounded-t-lg w-full object-cover" style="height:200px;"
                         src="{{ Storage::url('Images/' . $actualite->photo) }}" alt="photo actualite" />
 
-                    <div class="p-5 bg-bleu-fonce">
+                    <div class="p-5 bg-blue-700">
 
                         <h5 class="mb-2 text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
                             {{$actualite->titre}}
