@@ -1,9 +1,5 @@
 import './bootstrap';
 import 'flowbite';
-<<<<<<< HEAD
-=======
-
->>>>>>> main
 
 import Alpine from 'alpinejs';
 
