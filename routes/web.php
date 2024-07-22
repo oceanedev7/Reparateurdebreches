@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\InscriptionController;
-
+use App\Http\Controllers\NewsletterController;
 
 // Routes visiteur
 Route::get('/', function () {
@@ -105,6 +105,11 @@ Route::middleware('can:isAdmin')->group(
         Route::post('/dashboard/article/nouveau', [ArticleController::class, 'store'])->name('newArticle');
         Route::post('/dashboard/article/update/confirm/{id}', [ArticleController::class, 'updateConfirmArticle'])->name('updateConfirmArticle');
         Route::post('/dashboard/article/delete/{id}', [ArticleController::class, 'updateConfirmArticle'])->name('updateConfirmArticle');
+
+        Route::get('/dashboard/newsletter', [NewsletterController::class, 'index'])->name('dashboard_newsletter');
+        Route::post('/dashboard/newsletter/nouveau',[NewsletterController::class,'store'])->name('newNewsletter');
+        Route::post('/dashboard/newsletter/delete/{id}', [NewsletterController::class, 'updateConfirmNewsletter'])->name('updateConfirmNewsletter');
+
 
 
     }
