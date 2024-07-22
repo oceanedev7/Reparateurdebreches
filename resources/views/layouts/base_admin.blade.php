@@ -52,6 +52,7 @@
               les newsletters</a>
           </li>
           <li>
+            {{-- lien qui connecte la page gerer les articles --}}
             <a href="{{route('dashboard_article')}}"
               class="block py-2 px-3 text-white rounded hover:bg-blue-400 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
               les articles</a>

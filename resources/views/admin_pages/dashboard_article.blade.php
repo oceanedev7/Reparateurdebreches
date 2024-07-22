@@ -32,6 +32,7 @@
 
 
 <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-5 justify-items-center ">
+   @if (isset($articles)&& count($articles)>0)
     @foreach ($articles as $acticle)
 <div>
     <h5 class="text-center text-lg">article 1</h5>
@@ -41,5 +42,6 @@
 </div>
 
 </div>
-
+@endforeach
+@endif
 @endsection

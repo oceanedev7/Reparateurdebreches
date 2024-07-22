@@ -9,9 +9,9 @@ class ArticleController extends Controller{
 
     public function index()
     {
-
+// afficher la page gérer les articles
             $articles = Article::all();
-            return view('admin_pages.dashboard_article', compact('article'));
+            return view('admin_pages.dashboard_article', compact('articles'));
         }
         public function store(Request $request)
         {
