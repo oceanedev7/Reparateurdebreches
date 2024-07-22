@@ -47,7 +47,7 @@
             </div>
             <div id="card-errors" role="alert"></div>
         </div>
-        <button type="submit" class="btn btn-primary mt-3">Faire un don</button>
+        <button type="submit" class="btn btn-primary mt-3">Valider</button>
     </form>
 </div>
 
