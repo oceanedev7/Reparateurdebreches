@@ -24,3 +24,4 @@ require __DIR__.'/auth.php';
 
 
 Route::get('/articles', [ArticleController::class, 'index'])->name('all-articles');
+Route::get('/article', [ArticleController::class, 'article'])->name('article');

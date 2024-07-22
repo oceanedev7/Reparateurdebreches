@@ -12,4 +12,10 @@ class ArticleController extends Controller{
         $articles = Article::all();
         return view('appli.all-articles', compact('articles'));
     }
+
+    public function article()
+    {
+        $articles = Article::all();
+        return view('appli.article', compact('articles'));
+    }
 }
