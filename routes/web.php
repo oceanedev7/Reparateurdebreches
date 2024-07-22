@@ -8,12 +8,12 @@ Route::get('/', function () {
     return view('appli.accueil');
 });
 
-// Route::get('espaceadherent', function () {
-//     return view('appli.espaceadherent');
-// });
-// Route::get('eventadherent', function () {
-//     return view('appli.eventadherent');
-// })->name('event');
+Route::get('espaceadherent', function () {
+    return view('appli.espaceadherent');
+});
+Route::get('eventadherent', function () {
+    return view('appli.eventadherent');
+})->name('event');
 
 
 Route::get('/dashboard', function () {
@@ -28,5 +28,6 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/formulaire',[FormEventController::class, 'index'])->name('form');
 Route::post('/formulaire', [FormEventController::class, 'create'])->name('formulaire');
+Route::get('edit/{id}/delete', [FormEventController::class,'destroy'])->name('deleteinscrit');
 
 require __DIR__.'/auth.php';

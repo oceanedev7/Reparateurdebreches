@@ -26,4 +26,11 @@ class FormEventController extends Controller
         formevents::create($request->all());
         return redirect("formulaire");
     }
+
+    public function destroy(string $id){
+        $forms=formevents::findOrFail($id);
+        $forms->delete();
+
+        return redirect("formulaire");
+    }
 }

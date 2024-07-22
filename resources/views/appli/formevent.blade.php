@@ -14,94 +14,52 @@
                 <div class="h-44 w-48 ml-12 py-6 z-10">
                     <img class="h-44 w-48 rounded shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]" src="{{ Storage::url('images/logonavbar.png') }}" alt="">
                 </div>
-                <div class="flex">
-                </div>
-    
-                <!-- Settings Dropdown -->
-                <div class="hidden sm:flex sm:items-center sm:ms-6">
-                    <x-dropdown align="right" width="48">
-                        <x-slot name="trigger">
-                            <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-bleu-fonce hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
-                                {{-- <div>{{ Auth::user()->name }}</div> --}}
-    
-                                <div class="ms-1">
-                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                    </svg>
-                                </div>
-                            </button>
-                        </x-slot>
-    
-                        <x-slot name="content">
-                            <x-dropdown-link :href="route('profile.edit')">
-                                {{ __('Profil') }}
-                            </x-dropdown-link>
-    
-                            <!-- Authentication -->
-                            <form method="POST" action="{{ route('logout') }}">
-                                @csrf
-    
-                                <x-dropdown-link :href="route('logout')"
-                                        onclick="event.preventDefault();
-                                                    this.closest('form').submit();">
-                                    {{ __('Se déconnecter') }}
-                                </x-dropdown-link>
-                            </form>
-                        </x-slot>
-                    </x-dropdown>
-                </div>
-    
-                <!-- Hamburger -->
-                <div class="-me-2 flex items-center sm:hidden">
-                    <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
-                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                            <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                            <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
             </div>
-    
-        <!-- Responsive Navigation Menu -->
-        <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
-            <!-- Responsive Settings Options -->
-            <div class="pt-4 pb-1 border-t border-gray-200">
-                <div class="px-4">
-                    {{-- <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                    <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div> --}}
-                </div>
-    
-                <div class="mt-3 space-y-1">
-                    <x-responsive-nav-link :href="route('profile.edit')">
-                        {{ __('Profil') }}
-                    </x-responsive-nav-link>
-    
-                    <!-- Authentication -->
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-    
-                        <x-responsive-nav-link :href="route('logout')"
-                                onclick="event.preventDefault();
-                                            this.closest('form').submit();">
-                            {{ __('Se déconnecter') }}
-                        </x-responsive-nav-link>
-                    </form>
-                </div>
-            </div>
-        </div>
     <header class="">
-            <div class="mt-5 flex lg:ml-4 lg:mt-0 mr-12">
-              <!-- Dropdown -->
-              <div class="relative ml-3 sm:hidden">
-                <button type="button" class="inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:ring-gray-400" id="mobile-menu-button" aria-expanded="false" aria-haspopup="true">
-                    <i class="fa-solid fa-bars"></i>
-                  <svg class="-mr-1 ml-1.5 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-                  </svg>
-                </button>
-              </div>
+        <div class="relative ml-3 z-10 flex  items-center md:order-2 space-x-2 md:space-x-0 rtl:space-x-reverse">
+
+            <div class=" hidden w-full" id="navbar-hamburger" style="margin-top:350px; margin-right:5px;">
+              <ul class=" font-medium mt-4 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700 p-3 space-y-1">
+                <li>
+                  <a href="#"
+                    class="block py-2 px-3 text-white bg-bleu-fonce rounded dark:bg-bleu-fonce" aria-current="page">Home</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Statistiques</a>
+                </li>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
+                    les newsletters</a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Paramètres</a>
+                </li>
+                <li>
+                  <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+      
+                    <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
+                                                      this.closest('form').submit();">
+                      {{ __('Deconnexion') }}
+                    </x-dropdown-link>
+                  </form>
+                </li>
+              </ul>
             </div>
-        </div>
+            <button data-collapse-toggle="navbar-hamburger" type="button"
+              class="  inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-white rounded-lg  bg-bleu-fonce hover:bg-bleu focus:outline-none focus:ring-2 focus:ring-bleu-fonce dark:text-white dark:hover:bg-bleu dark:focus:ring-bleu-clair"
+              aria-controls="navbar-hamburger" aria-expanded="false" style="margin-right:15px;">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15" />
+              </svg>
+            </button>
+          </div>
     </header>
     <main>
         <div class="flex items-center justify-center bg-bleu-fonce mb-6">
@@ -137,30 +95,29 @@
             </div>
         </form>
     <div class="flex justify-center pb-20">
-        <div class="bg-bleu-fonce h-40 w-[650px] text-center rounded-lg pt-4">
+        <div class="bg-bleu-fonce w-[750px] text-center rounded-lg pt-4">
             <h2 class="text-white text-2xl font-bold pb-2">LISTE DES INSCRITS</h2>
             {{-- <hr class="border-t-2 border-white w-3/4 mx-auto"> --}}
-            <div class="flex flex-row space-x-24 text-white font-bold justify-center">
+            <div class="grid grid-cols-4 text-white font-bold justify-center pr-16 p-2">
                 <span>Nom</span>
                 <span>Prénom</span>
                 <span>Email</span>
                 <span>Numéro de téléphone</span>
             </div>
-            <div class="border-t border-white w-3/4 mx-auto p-2"></div>
+            <div class="border-t border-white w-3/4 mx-auto p-4"></div>
             @if (isset($inscrits) && count($inscrits)>0)
             @foreach ($inscrits as $form)
-            <div class="text-white flex flex-row justify-center ">
-                <ul class="">{{$form->nom}}</ul>
-                <ul>{{$form->prenom}}</ul> 
-                <ul>{{$form->email}}</ul> 
-                <ul class="">{{$form->numero_telephone}}</ul>
-            </div>  
+            <div class="text-white grid grid-cols-4 justify-center pr-10 mb-2">
+                <div class="">{{$form->nom}}</div>
+                <div>{{$form->prenom}}</div> 
+                <div>{{$form->email}}</div>
+                <div class="">{{$form->numero_telephone}} <a href="{{ route('deleteinscrit', $form->id) }}"><i class="fa-solid pl-4 fa-trash"></i></a></div>
+            </div>
+        @endforeach
+        @endif  
         </div>
     </div>
-    
-    
-    @endforeach
-    @endif
+
 </main>
 
     <footer class="bg-bleu-fonce w-full h-20 pt-6 mt-4 text-center text-white">
