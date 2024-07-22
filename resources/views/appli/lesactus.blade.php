@@ -22,13 +22,14 @@
 
 <div class="grid grid-cols-3 gap-12 p-20 justify-center ">
 
-            <a  href="{{route('actu')}}" class="bg-bleu-fonce rounded-lg h-80 w-80 ">
-                <img class="w-full rounded-lg object-cover h-3/5" src="{{ Storage::url('images/header-home.jpg') }}" alt="">
-                <div class="font-bold text-lg ml-10 mt-2"> TITRE </div>
-                <div class="ml-6 mt-2 h-mx-12 truncate"> Nous proposons des services d’assistance pour les gestes de la vie courante (courses, ménage, préparation des repas…) afin de faciliter le quotidien des seniors. 
-                    Elles peuvent également proposer un service d’accompagnement pour garantir l'accès aux soins et aux loisirs. </div>
-            </a>
+           @foreach ($actualites as $actualite)
 
+            <a  href="{{route('actu', $actualite->id)}}" class="bg-bleu-fonce rounded-lg h-80 w-80 ">
+                <img class="w-full rounded-lg object-cover h-3/5"  src="{{ Storage::url($actualite->photo)}}">
+                <div class="font-black text-2xl ml-6 mt-2 text-white"> {{ $actualite->titre}} </div>
+             
+            </a>
+@endforeach
 </div>
 
 

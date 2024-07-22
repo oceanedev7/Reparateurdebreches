@@ -1,13 +1,17 @@
 <?php
 
+
+use App\Http\Controllers\ActuAccueilController;
 use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\ParametreController;
+
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\EmailController;
+use App\Http\Controllers\EventAccueilController;
 use App\Http\Controllers\InscriptionController;
 
 
@@ -21,21 +25,28 @@ Route::get('/deveniradherent', function () {
 })->name('deveniradherent');
 
 
-Route::get('/agenda', function () {
-    return view('appli.agenda');
-})->name('agenda');
+// Route::get('/agenda', function () {
+//     return view('appli.agenda');
+// })->name('agenda');
+Route::get('/agenda', [EventAccueilController::class, 'index'])->name('agenda');
+Route::get('/evenement/{id}', [EventAccueilController::class, 'show'])->name('evenement');
 
-Route::get('/evenement', function () {
-    return view('appli.evenement');
-})->name('evenement');
 
-Route::get('/les-actualites', function () {
-    return view('appli.lesactus');
-})->name('les-actus');
 
-Route::get('/actualite', function () {
-    return view('appli.actu');
-})->name('actu');
+// Route::get('/evenement', function () {
+//     return view('appli.evenement');
+// })->name('evenement');
+
+// Route::get('/les-actualites', function () {
+//     return view('appli.lesactus');
+// })->name('les-actus');
+Route::get('/les-actualites', [ActuAccueilController::class, 'index'])->name('les-actus');
+Route::get('/actualite/{id}', [ActuAccueilController::class, 'show'])->name('actu');
+
+
+// Route::get('/actualite', function () {
+//     return view('appli.actu');
+// })->name('actu');
 
 // Route::get('/validerunadherent', function () {
 //     return view('admin_pages.validadherent');

@@ -22,14 +22,15 @@
         <div class="w-full flex justify-center">
             <div class="flex flex-col text-justify p-24 space-y-20 max-w-6xl">
                 <div class="space-y-14 text-center">
-                    <div class="text-bleu-fonce font-black text-4xl">titre</div>
+                    <div class="text-bleu-fonce font-black text-4xl">{{$evenement->titre}}</div>
                     <div class="text-bleu-fonce text-lg text-justify">
-                        Contenu
+                      {{$evenement->description}}
                     </div>
                 </div>
             </div>
         </div>
 
+        
         <button onclick="backToTop()" id="bouton" class="fixed bottom-4 right-4 z-50 text-gris-fonce text-3xl"><i class="fa-solid fa-circle-arrow-up"></i></button>
 
         @endsection
