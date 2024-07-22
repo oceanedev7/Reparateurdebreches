@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ActuAccueilController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
@@ -25,13 +26,16 @@ Route::get('/evenement', function () {
     return view('appli.evenement');
 })->name('evenement');
 
-Route::get('/les-actualites', function () {
-    return view('appli.lesactus');
-})->name('les-actus');
+// Route::get('/les-actualites', function () {
+//     return view('appli.lesactus');
+// })->name('les-actus');
+Route::get('/les-actualites', [ActuAccueilController::class, 'index'])->name('les-actus');
+Route::get('/actualite/{id}', [ActuAccueilController::class, 'show'])->name('actu');
 
-Route::get('/actualite', function () {
-    return view('appli.actu');
-})->name('actu');
+
+// Route::get('/actualite', function () {
+//     return view('appli.actu');
+// })->name('actu');
 
 // Route::get('/validerunadherent', function () {
 //     return view('admin_pages.validadherent');

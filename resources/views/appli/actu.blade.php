@@ -20,11 +20,10 @@
     <div class="w-full flex justify-center">
         <div class="flex flex-col text-justify p-24 space-y-20 max-w-6xl">
             <div class="space-y-14 ">
-                <div class="text-bleu-fonce font-black text-4xl">titre</div>
+                <div class="text-bleu-fonce font-black text-4xl">{{ $actualite->titre}}</div>
                 <hr class="border-t-2 border-bleu-fonce w-1/4"> 
                 <div class="text-bleu-fonce text-lg">
-                    Nous proposons des services d’assistance pour les gestes de la vie courante (courses, ménage, préparation des repas…) afin de faciliter le quotidien des seniors. 
-                    Elles peuvent également proposer un service d’accompagnement pour garantir l'accès aux soins et aux loisirs. 
+                  {{ $actualite->contenu}}
                 </div>
             </div>
         </div>
