@@ -15,7 +15,7 @@ class Article extends Model
         'description',
 
 
-        
+
     ];
 
     public function user()
@@ -23,7 +23,7 @@ class Article extends Model
         return $this->belongsTo(User::class);
     }
 
-    
+
     public function commentaires()
     {
         return $this->hasMany(Commentaire::class);

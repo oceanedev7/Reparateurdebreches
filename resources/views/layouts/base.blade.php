@@ -66,7 +66,7 @@
 
                     <!--
                   Dropdown menu, show/hide based on menu state.
-          
+
                   Entering: "transition ease-out duration-200"
                     From: "transform opacity-0 scale-95"
                     To: "transform opacity-100 scale-100"
