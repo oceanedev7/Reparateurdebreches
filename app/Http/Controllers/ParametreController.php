@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 
-class ParamètreController extends Controller
+class ParametreController extends Controller
 {
     public function index()
     {
