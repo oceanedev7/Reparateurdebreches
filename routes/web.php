@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\EmailController;
+use App\Http\Controllers\EventAccueilController;
 use App\Http\Controllers\InscriptionController;
 
 
@@ -18,13 +19,17 @@ Route::get('/deveniradherent', function () {
 })->name('deveniradherent');
 
 
-Route::get('/agenda', function () {
-    return view('appli.agenda');
-})->name('agenda');
+// Route::get('/agenda', function () {
+//     return view('appli.agenda');
+// })->name('agenda');
+Route::get('/agenda', [EventAccueilController::class, 'index'])->name('agenda');
+Route::get('/evenement/{id}', [EventAccueilController::class, 'show'])->name('evenement');
 
-Route::get('/evenement', function () {
-    return view('appli.evenement');
-})->name('evenement');
+
+
+// Route::get('/evenement', function () {
+//     return view('appli.evenement');
+// })->name('evenement');
 
 // Route::get('/les-actualites', function () {
 //     return view('appli.lesactus');

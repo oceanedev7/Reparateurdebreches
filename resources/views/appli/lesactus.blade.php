@@ -26,8 +26,8 @@
 
             <a  href="{{route('actu', $actualite->id)}}" class="bg-bleu-fonce rounded-lg h-80 w-80 ">
                 <img class="w-full rounded-lg object-cover h-3/5"  src="{{ Storage::url($actualite->photo)}}">
-                <div class="font-black text-2xl ml-10 mt-2 text-white"> {{ $actualite->titre}} </div>
-                <div class="ml-4 mt-2 h-mx-12 truncate text-white">{{ $actualite->contenu}}  </div>
+                <div class="font-black text-2xl ml-6 mt-2 text-white"> {{ $actualite->titre}} </div>
+             
             </a>
 @endforeach
 </div>
