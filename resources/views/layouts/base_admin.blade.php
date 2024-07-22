@@ -95,8 +95,8 @@
     </div>
   </div>
   <div class="flex items-center justify-center bg-bleu-fonce">
-    <h1 class="font-bold text-6xl absolute text-white" style="font-size:100px;">ADMINISTRATEUR</h1>
-    <img class=" w-full object-cover" style="height:250px; opacity:0.5;" src="{{ Storage::url('images/book.jpg') }}"
+    <h1 class="font-bold text-6xl absolute text-black" style="font-size:100px;">ADMINISTRATEUR</h1>
+    <img class=" w-full object-cover" style="height:250px; opacity:0.5;" src="{{ Storage::url('Images/pikaso_texttoimage_35mm-film-photography-Grouping-of-hardcover-books-.jpg') }}"
       alt="book">
   </div>
 
