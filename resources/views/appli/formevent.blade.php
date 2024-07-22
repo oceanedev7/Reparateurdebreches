@@ -103,37 +103,66 @@
             </div>
         </div>
     </header>
-
     <main>
-        <div class="flex items-center justify-center bg-bleu-fonce">
+        <div class="flex items-center justify-center bg-bleu-fonce mb-6">
             <h1 class="font-bold text-6xl absolute text-white z-10">ESPACE ADHERENT</h1>
                 <img class="h-96 w-full object-cover opacity-40" src="{{ Storage::url('images/maison.png') }}" alt="">
         </div>
 
-        <div class="flex flex-col ml-32 mr-32 text-justify p-24 space-y-10 text-bleu-fonce">
-            <div class="text-5xl font-black ml-10 space-y-6">Bienvenue sur votre <br> espace adhérent...
-            </div>
-                <div class="ml-32">Nous sommes ravis de vous accueillir au sein de notre association dédiée aux personnes âgées. Votre adhésion marque le début d’une belle aventure au sein d’une communauté chaleureuse et bienveillante.
-                    Notre mission est de vous offrir un espace de convivialité, de partage et de soutien où chacun peut s’épanouir. Grâce à une variété d’activités culturelles, sociales et de loisirs, nous espérons enrichir votre quotidien et créer des liens précieux entre nos membres.
-                    Nous vous invitons à participer à nos prochaines rencontres et événements, qui sont des occasions idéales pour faire connaissance et s’intégrer pleinement à notre groupe.
-                    Dans cet espace vous pourrez ajouter des articles et inscrire des personnes agées dans nos évènements.
-                </div>
-        </div>
+        <h1 class="font-bold text-4xl text-bleu-fonce text-center py-10 mb-4">INSCRIRE UN(E) PARTICIPANT(E)</h1>
 
-        <div class="flex flex-row space-x-36 py-18 mb-20 max-w-full max-h-full justify-center">
-            <div class="w-[320px] h-[240px] hover:bg-bleu-fonce bg-bleu-fonce rounded-lg relative"><a href="">
-                <img class="h-60 w-80 object-cover absolute" src="{{ Storage::url('images/article.png') }}" alt="">
-                <div class="font-bold w-full p-4 rounded-b-lg hover:bg-bleu-fonce text-3xl text-white bg-bleu-fonce pl-4 absolute bg-opacity-65 bottom-0">GERER LES <br> ARTICLES</div>
-            </a></div>
-            
-            <div class="w-[320px] h-[240px] hover:bg-bleu-fonce bg-bleu-fonce rounded-lg relative"><a href="{{ route('event') }}">
-                <img class="h-60 w-80 object-cover absolute" src="{{ Storage::url('images/anim.png') }}" alt="">
-                <div class="font-bold w-full text-3xl p-4 rounded-b-lg text-white bg-bleu-fonce pl-4 hover:bg-bleu-fonce absolute bg-opacity-65 bottom-0">GERER LES EVENEMENTS</div>
-            </a></div>
         
+        <form method="POST" action="{{ route('formulaire') }}">
+            @csrf
+            <div class="max-w-sm mx-auto">
+                <div class="flex flex-row space-x-10 justify-center mb-6">
+                    <div class="">
+                        <input type="text" id="nom" class="bg-bleu border-none text-black text-sm rounded-lg focus:ring-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:placeholder-black dark:text-white placeholder-bleu-fonce dark:focus:ring-blue-500" placeholder="Nom" name="nom" required />
+                    </div>
+                    <div class="">
+                        <input type="text" id="prenom" class="bg-bleu text-black border-none text-sm rounded-lg focus:ring-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:placeholder-black dark:text-white placeholder-bleu-fonce dark:focus:ring-blue-500" placeholder="Prénom" name="prenom" required />
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <input type="email" id="email" class="bg-bleu text-gray-900 border-none text-sm rounded-lg focus:ring-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:placeholder-gray-400 dark:text-white placeholder-bleu-fonce dark:focus:ring-blue-500" placeholder="Adresse e-mail" name="email"/>
+                </div>
+                <div class="max-w-sm mx-auto">
+                    <div class="">
+                        <input type="text" id="numero_telephone" aria-describedby="helper-text-explanation" class="bg-bleu text-gray-900 text-sm rounded-lg p-2.5 focus:ring-blue-500 border-none block w-full dark:bg-gray-700 dark:placeholder-bleu-fonce placeholder-bleu-fonce dark:text-white dark:focus:ring-blue-500" placeholder="Numéro de téléphone" name="numero_telephone" required />
+                    </div>
+                </div>
+                <div class="flex justify-end">
+                    <button type="submit" class="text-white mt-6 mb-20 border-none bg-bleu-fonce hover:bg-bleu-fonce focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 text-center mb-2 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 placeholder-bleu-fonce dark:focus:ring-blue-800 hover:opacity-80">AJOUTER</button>
+                </div>
+            </div>
+        </form>
+    <div class="flex justify-center pb-20">
+        <div class="bg-bleu-fonce h-40 w-[650px] text-center rounded-lg pt-4">
+            <h2 class="text-white text-2xl font-bold pb-2">LISTE DES INSCRITS</h2>
+            {{-- <hr class="border-t-2 border-white w-3/4 mx-auto"> --}}
+            <div class="flex flex-row space-x-24 text-white font-bold justify-center">
+                <span>Nom</span>
+                <span>Prénom</span>
+                <span>Email</span>
+                <span>Numéro de téléphone</span>
+            </div>
+            <div class="border-t border-white w-3/4 mx-auto p-2"></div>
+            @if (isset($inscrits) && count($inscrits)>0)
+            @foreach ($inscrits as $form)
+            <div class="text-white flex flex-row justify-center ">
+                <ul class="">{{$form->nom}}</ul>
+                <ul>{{$form->prenom}}</ul> 
+                <ul>{{$form->email}}</ul> 
+                <ul class="">{{$form->numero_telephone}}</ul>
+            </div>  
         </div>
+    </div>
+    
+    
+    @endforeach
+    @endif
+</main>
 
-    </main>  
     <footer class="bg-bleu-fonce w-full h-20 pt-6 mt-4 text-center text-white">
         &copy; Réparateurs de brèches 2024 | Tous droits réservés.
     </footer>

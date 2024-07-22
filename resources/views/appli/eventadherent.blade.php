@@ -21,7 +21,7 @@
                 <div class="hidden sm:flex sm:items-center sm:ms-6">
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">
-                            <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                            <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-bleu-fonce hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
                                 {{-- <div>{{ Auth::user()->name }}</div> --}}
     
                                 <div class="ms-1">
@@ -103,16 +103,34 @@
             </div>
         </div>
     </header>
-
     <main>
         <div class="flex items-center justify-center bg-bleu-fonce">
             <h1 class="font-bold text-6xl absolute text-white z-10">ESPACE ADHERENT</h1>
                 <img class="h-96 w-full object-cover opacity-40" src="{{ Storage::url('images/maison.png') }}" alt="">
         </div>
-    </main>  
-    
+
+        <h1 class="font-bold text-4xl text-bleu-fonce text-center py-10">GESTION DES EVENEMENTS</h1>
+
+        <h1 class="font-bold text-3xl px-20 py-4">JUILLET</h1>
+        <div class="grid grid-cols-3 gap-12 px-16 justify-center">
+
+            <a href="{{ route('formulaire') }}" class="bg-bleu-fonce rounded-lg h-60 w-80 absolute overflow-hidden">
+                <img class="w-full rounded-lg object-cover h-full opacity-40" src="{{ Storage::url('images/header-home.jpg') }}" alt=""></a>
+                <div class="bottom-44 left-4 mt-20 flex flex-col z-10"><a href="{{ route('formulaire') }}">
+                    <div class="text-white font-black text-2xl ml-6 mt-20"> TITRE </div>
+                    <div class="text-white font-bold ml-6 text-2xl h-mx-12 truncate">12/08/2024 </div></a>
+            <div class="text-center py-8">
+                <a href="{{ route('formulaire') }}"><button type="button" class=" bg-bleu hover:bg-blue-800 w-30 focus:ring-4 focus:ring-blue-300 font-bold rounded px-5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">AJOUTER UN PARTICIPANT</button></a>
+            </div>
+                </div>
+                <div class="overlay">
+                </div>
+        </div>
+    </main>
+
+
     <footer class="bg-bleu-fonce w-full h-20 pt-6 mt-4 text-center text-white">
         &copy; Réparateurs de brèches 2024 | Tous droits réservés.
     </footer>
-    </body>
-    </html>
+</body>
+</html>
