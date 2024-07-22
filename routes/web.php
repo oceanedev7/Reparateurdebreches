@@ -6,14 +6,13 @@ use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\ParametreController;
-
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\EventAccueilController;
 use App\Http\Controllers\InscriptionController;
-
+use App\Http\Controllers\NewsletterController;
 
 // Routes visiteur
 Route::get('/', function () {
@@ -110,6 +109,19 @@ Route::middleware('can:isAdmin')->group(
         Route::get('/dashboard/parametre', [ParametreController::class, 'index'])->name('dashboard_parametre');
         Route::post('/dashboard/parametre/confirm', [ParametreController::class, 'updateConfirmParametre'])->name('updateConfirmParametre');
         Route::get('/dashboard/reset', [PasswordResetLinkController::class, 'store'])->name('newPassword');
+
+        Route::get('/dashboard/article', [ArticleController::class, 'index'])->name('dashboard_article');
+        Route::get('/dashboard/article/update/{id}', [ArticleController::class, 'update'])->name('updateArticle');
+        Route::post('/dashboard/article/nouveau', [ArticleController::class, 'store'])->name('newArticle');
+        Route::post('/dashboard/article/update/confirm/{id}', [ArticleController::class, 'updateConfirmArticle'])->name('updateConfirmArticle');
+        Route::post('/dashboard/article/delete/{id}', [ArticleController::class, 'updateConfirmArticle'])->name('updateConfirmArticle');
+
+        Route::get('/dashboard/newsletter', [NewsletterController::class, 'index'])->name('dashboard_newsletter');
+        Route::post('/dashboard/newsletter/nouveau',[NewsletterController::class,'store'])->name('newNewsletter');
+        Route::post('/dashboard/newsletter/delete/{id}', [NewsletterController::class, 'updateConfirmNewsletter'])->name('updateConfirmNewsletter');
+
+
+
     }
 
 );

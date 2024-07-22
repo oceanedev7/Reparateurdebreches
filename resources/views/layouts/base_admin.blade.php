@@ -31,7 +31,7 @@
     
      
       <div class=" hidden w-full" id="navbar-hamburger" style="margin-top:350px; margin-right:5px;">
-        <ul class=" font-medium mt-4 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700 p-3 space-y-1">
+        <ul class=" font-medium mt-4 rounded-lg bg-blue-600 dark:bg-gray-800 dark:border-gray-700 p-3 space-y-1">
           <li>
             <a href="{{route('dashboard2')}}"
               class="block py-2 px-3 text-white bg-bleu-fonce rounded dark:bg-bleu-fonce" aria-current="page">Accueil</a>
@@ -89,7 +89,7 @@
         </ul>
       </div>
       <button data-collapse-toggle="navbar-hamburger" type="button"
-        class="  inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-white rounded-lg  bg-bleu-fonce hover:bg-bleu focus:outline-none focus:ring-2 focus:ring-bleu-fonce dark:text-white dark:hover:bg-bleu dark:focus:ring-bleu-clair"
+        class="  inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-white rounded-lg  bg-blue-600 hover:bg-blue focus:outline-none focus:ring-2 focus:ring-bleu-fonce dark:text-white dark:hover:bg-bleu dark:focus:ring-bleu-clair"
         aria-controls="navbar-hamburger" aria-expanded="false" style="margin-right:15px;">
         <span class="sr-only">Open main menu</span>
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -99,9 +99,9 @@
       </button>
     </div>
   </div>
-  <div class="flex items-center justify-center bg-bleu-fonce">
-    <h1 class="font-bold text-6xl absolute text-white" style="font-size:100px;">ADMINISTRATEUR</h1>
-    <img class=" w-full object-cover" style="height:250px; opacity:0.5;" src="{{ Storage::url('images/book.jpg') }}"
+  <div class="flex items-center justify-center bg-blue-800">
+    <h1 class="font-extrabold text-6xl absolute text-white" style="font-size:100px;">ADMINISTRATEUR</h1>
+    <img class=" w-full object-cover" style="height:250px; opacity:0.5;" src="{{ Storage::url('Images/pikaso_texttoimage_35mm-film-photography-Grouping-of-hardcover-books-.jpg') }}"
       alt="book">
   </div>
 
@@ -111,10 +111,10 @@
   @yield('content')
 </main>
 
-<footer class="bg-bleu-fonce w-full h-10 flex flex-wrap items-center  p-8 relative">
+<footer class="bg-blue-700 w-full h-10 flex flex-wrap items-center  p-8 relative">
 
 
-  <div class="absolute bottom-0 left-0  w-full text-center py-4 bg-bleu-fonce">
+  <div class="absolute bottom-0 left-0  w-full text-center py-4 bg-blue-700">
     <a href="#" class="text-lg text-white mx-2">Réparateur de brèches 2024</a>
     <a href="#" class="text-lg text-white mx-2">-</a>
     <a href="#" class="text-lg text-white mx-2">Tous droits réservés</a>
