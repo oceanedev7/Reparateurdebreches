@@ -36,30 +36,37 @@
     @csrf
     
     <label>Nom</label>
-    <input  name="nom" class="border-bleu rounded-lg border-2" type="text">
+    <input name="nom" class="border-bleu rounded-lg border-2" type="text" required/>
 
     <label>Prénom</label>
-    <input name="prenom" class="border-bleu rounded-lg border-2" type="text">
+    <input name="prenom" class="border-bleu rounded-lg border-2" type="text" required/>
     
     <label>Adresse e-mail</label>
-    <input name="email" class="border-bleu rounded-lg border-2" type="text">
+    <input name="email" class="border-bleu rounded-lg border-2" type="text" required />
     
     <label>Message</label>
-    <textarea name="message" class="border-bleu rounded-lg border-2 resize-none h-44	" ></textarea>
+    <textarea name="message" class="border-bleu rounded-lg border-2 resize-none h-44" required></textarea>
 
     <div class="flex flex-row space-x-4 space-y-4"> 
-     <input class="mt-6" type="checkbox" name="" id=""> 
+     <input class="mt-6" type="checkbox" name="approve" value="valeur" onclick="ChangeStatut(form)"/> 
      <div> En envoyant ce formulaire, j’accepte que mes données personnelles 
-            soient utilisées pour mener à bien ma demande
+           soient utilisées pour mener à bien ma demande 
+          <span class="text-orange-700 font-bold">*</span>
     </div>
-
-    </div>
+ </div>
 
     <div class="flex justify-end">
-        <button class="bg-bleu-fonce text-white py-2 px-4 text-center rounded text-lg font-bold">ENVOYER</button>
+        <input type="submit" value="ENVOYER" name="validation" class="bg-bleu-fonce text-white py-2 px-4 text-center rounded text-lg font-bold" disabled/>
     </div>
-
 </form>
+
+    <script>
+        function ChangeStatut(formulaire) {
+        if(formulaire.approve.checked == true) {formulaire.validation.disabled = false }
+        if(formulaire.approve.checked == false) {formulaire.validation.disabled = true }
+        }
+    </script>
+
 
     <div class="flex flex-col items-center  mt-24">
         <div class="font-black text-bleu-fonce text-xl mb-4">NOS COORDONNÉES</div>
