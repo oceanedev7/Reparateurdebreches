@@ -3,7 +3,7 @@
 use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\EvenementController;
-use App\Http\Controllers\ParamètreController;
+use App\Http\Controllers\ParametreController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
@@ -96,8 +96,8 @@ Route::middleware('can:isAdmin')->group(
         Route::get('/nouveladherent/{id}', [InscriptionController::class, 'destroy'])->name('supprimerdemandeadherent');
         Route::get('/validerinscription/{id}', [InscriptionController::class, 'show'])->name('validerinscription');
 
-        Route::get('/dashboard/parametre', [ParamètreController::class, 'index'])->name('dashboard_parametre');
-        Route::post('/dashboard/parametre/confirm', [ParamètreController::class, 'updateConfirmParametre'])->name('updateConfirmParametre');
+        Route::get('/dashboard/parametre', [ParametreController::class, 'index'])->name('dashboard_parametre');
+        Route::post('/dashboard/parametre/confirm', [ParametreController::class, 'updateConfirmParametre'])->name('updateConfirmParametre');
         Route::get('/dashboard/reset', [PasswordResetLinkController::class, 'store'])->name('newPassword');
     }
 
