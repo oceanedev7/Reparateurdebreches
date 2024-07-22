@@ -24,7 +24,8 @@
 
     
 
-<div class="grid grid-cols-3 gap-12 p-20 justify-center">@foreach ($evenements as $evenement)
+<div class="grid grid-cols-3 gap-12 p-20 justify-center">
+    @foreach ($evenements as $evenement)
     <a href="{{route('evenement', $evenement->id)}}" class="bg-bleu-fonce rounded-lg h-60 w-80 relative overflow-hidden">
         <img class="w-full rounded-lg object-cover h-full opacity-40" src="{{ Storage::url($evenement->photo) }}" alt="">
         <div class="relative bottom-44 left-4 mt-20 flex flex-col z-10">
@@ -32,7 +33,8 @@
             <div class="text-white font-bold ml-6 text-xl h-mx-12 truncate">{{$evenement->date}} </div>
         </div>
         <div class="overlay"></div>
-    </a>@endforeach
+    </a>
+    @endforeach
 </div>
 
 
