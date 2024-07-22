@@ -26,50 +26,50 @@
     <div class="relative ml-3 z-10 flex  items-center md:order-2 space-x-2 md:space-x-0 rtl:space-x-reverse">
 
       <div class=" hidden w-full" id="navbar-hamburger" style="margin-top:350px; margin-right:5px;">
-        <ul class=" font-medium mt-4 rounded-lg bg-gray-800 dark:bg-gray-800 dark:border-gray-700 p-3 space-y-1">
+        <ul class=" font-medium mt-4 rounded-lg bg-blue-600 dark:bg-gray-800 dark:border-gray-700 p-3 space-y-1">
           <li>
             <a href="{{route('dashboard2')}}"
-              class="block py-2 px-3 text-white bg-bleu-fonce rounded dark:bg-bleu-fonce" aria-current="page">Home</a>
+              class="block py-2 px-3 text-white bg-blue-800 rounded dark:bg-blue-800" aria-current="page">Home</a>
           </li>
           <li>
             <a href="#"
-              class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Statistiques</a>
+              class="block py-2 px-3 text-white rounded hover:bg-blue-400 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Statistiques</a>
           </li>
 
           <li>
             <a href="{{route('dashboard_actualite')}}"
-              class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
+              class="block py-2 px-3 text-white rounded hover:bg-blue-400 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
               les actualités</a>
           </li>
           <li>
             <a href="{{route('dashboard_evenement')}}"
-              class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
+              class="block py-2 px-3 text-white rounded hover:bg-blue-400 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
               les évènements</a>
           </li>
           <li>
             <a href="#"
-              class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
+              class="block py-2 px-3 text-white rounded hover:bg-blue-400 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
               les newsletters</a>
           </li>
           <li>
             <a href="#"
-              class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
+              class="block py-2 px-3 text-white rounded hover:bg-blue-400 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
               les articles</a>
           </li>
           <li>
             <a href="{{route('dashboardValidationAdherent')}}"
-              class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
+              class="block py-2 px-3 text-white rounded hover:bg-blue-400 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
               les adhérents</a>
           </li>
           <li>
             <a href="{{route('contactmail')}}"
-              class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Demande
+              class="block py-2 px-3 text-white rounded hover:bg-blue-400 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Demande
               de contact
             </a>
           </li>
           <li>
             <a href="{{route('dashboard_parametre')}}"
-              class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Paramètres</a>
+              class="block py-2 px-3 text-white rounded hover:bg-blue-400 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Paramètres</a>
           </li>
           <li>
             <form method="POST" action="{{ route('logout') }}">
@@ -94,8 +94,8 @@
       </button>
     </div>
   </div>
-  <div class="flex items-center justify-center bg-bleu-fonce">
-    <h1 class="font-bold text-6xl absolute text-black" style="font-size:100px;">ADMINISTRATEUR</h1>
+  <div class="flex items-center justify-center bg-blue-800">
+    <h1 class="font-extrabold text-6xl absolute text-white" style="font-size:100px;">ADMINISTRATEUR</h1>
     <img class=" w-full object-cover" style="height:250px; opacity:0.5;" src="{{ Storage::url('Images/pikaso_texttoimage_35mm-film-photography-Grouping-of-hardcover-books-.jpg') }}"
       alt="book">
   </div>
@@ -106,10 +106,10 @@
   @yield('content')
 </main>
 
-<footer class="bg-bleu-fonce w-full h-10 flex flex-wrap items-center  p-8 relative">
+<footer class="bg-blue-700 w-full h-10 flex flex-wrap items-center  p-8 relative">
 
 
-  <div class="absolute bottom-0 left-0  w-full text-center py-4 bg-bleu-fonce">
+  <div class="absolute bottom-0 left-0  w-full text-center py-4 bg-blue-700">
     <a href="#" class="text-lg text-white mx-2">Réparateur de brèches 2024</a>
     <a href="#" class="text-lg text-white mx-2">-</a>
     <a href="#" class="text-lg text-white mx-2">Tous droits réservés</a>
