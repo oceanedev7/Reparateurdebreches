@@ -7,13 +7,13 @@
     <div class="flex flex-col justify-between items-center">
         <h2 class="font-bold text-center  text-bleu-fonce my-14 " style="font-size:50px; width:1020px;">
             GESTION DES EVENEMENTS</h2>
-        <form class="max-w-md mx-auto" style="width:500px;" method="post" action="{{route('newEvenement')}}">
+        <form  enctype="multipart/form-data" class="max-w-md mx-auto" style="width:500px;" method="post" action="{{route('newEvenement')}}">
             @csrf
 
             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="photo"></label>
             <input
                 class="block w-full text-xl font-bold text-bleu-fonce  border-bleu-fonce rounded-lg cursor-pointer bg-white dark:text-bleu-fonce focus:outline-none dark:bg-white dark:border-gray-600 dark:placeholder-bleu-fonce"
-                aria-describedby="user_avatar_help" id="photo" name="photo" type="file">
+                aria-describedby="user_avatar_help" id="photo" name="photo" type="file"  accept="image/*"/>
 
 
             <label for="titre" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
@@ -47,7 +47,7 @@
                 class="my-14 max-w-md bg-white border border-bleu-fonce rounded-lg shadow-xl hover:bg-bleu focus:outline-none focus:ring-2 focus:ring-bleu-fonce dark:hover:bg-bleu dark:focus:ring-bleu-clair hover:scale-105">
                 <a href="#">
                     <img class="rounded-t-lg w-full object-cover" style="height:200px;"
-                        src="{{ Storage::url('Images/' . $evenement->photo) }}" alt="photo evenement" />
+                        src="{{ Storage::url($evenement->photo) }}" alt="photo evenement" />
 
                     <div class="p-5 bg-bleu-fonce">
 

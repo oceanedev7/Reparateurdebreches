@@ -29,7 +29,7 @@ class ActualiteController extends Controller
 
         $request->validate([
             'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
-            'titre' => 'required|string|max:255',
+            'titre' => 'required|string',
             'contenu' => 'required|string',
         ]);
 
