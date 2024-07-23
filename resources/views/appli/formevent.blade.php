@@ -9,6 +9,8 @@
     <title>@yield('title')</title>
 </head>
 <body>
+
+
     <div class="flex items-center justify-between	h-44">
 
         <div class="h-44 w-48 ml-12 py-6 z-10 ">
@@ -73,6 +75,8 @@
             <h1 class="font-bold text-6xl absolute text-white z-10">ESPACE ADHERENT</h1>
                 <img class="h-96 w-full object-cover opacity-40" src="{{ Storage::url('images/maison.png') }}" alt="">
         </div>
+
+        <a href="{{route('event')}}" class="underline"><i class="fa-solid fa-arrow-left underline"></i> Retour à la page d'accueil </a>
 
         <h1 class="font-bold text-4xl text-bleu-fonce text-center py-10 mb-4">INSCRIRE UN(E) PARTICIPANT(E)</h1>
 

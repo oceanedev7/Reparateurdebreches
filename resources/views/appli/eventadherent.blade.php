@@ -76,21 +76,22 @@
 
         <h1 class="font-bold text-4xl text-bleu-fonce text-center py-10">GESTION DES EVENEMENTS</h1>
 
-        <h1 class="font-bold text-3xl px-20 py-4">JUILLET</h1>
+        <h1 class="font-bold text-3xl px-20 py-4">JUILLET</h1>  @foreach ($events as $event)
         <div class="grid grid-cols-3 gap-12 px-16 justify-center">
-
-            <a href="{{ route('formulaire') }}" class="bg-bleu-fonce rounded-lg h-60 w-80 absolute overflow-hidden">
-                <img class="w-full rounded-lg object-cover h-full opacity-40" src="{{ Storage::url('images/header-home.jpg') }}" alt=""></a>
+            <a href="{{ route('formulaire', $event->id) }}" class="bg-bleu-fonce rounded-lg h-60 w-80 absolute overflow-hidden">
+                <img class="w-full rounded-lg object-cover h-full opacity-40" src="{{ Storage::url($event->photo) }}" alt=""></a>
                 <div class="bottom-44 left-4 mt-20 flex flex-col z-10"><a href="{{ route('formulaire') }}">
-                    <div class="text-white font-black text-2xl ml-6 mt-20"> TITRE </div>
-                    <div class="text-white font-bold ml-6 text-2xl h-mx-12 truncate">12/08/2024 </div></a>
+                    <div class="text-white font-black text-2xl ml-6 mt-20"> {{$event->titre}} </div>
+                    <div class="text-white font-bold ml-6 text-2xl h-mx-12 truncate">{{$event->date}} </div></a>
             <div class="text-center py-8">
                 <a href="{{ route('formulaire') }}"><button type="button" class=" bg-bleu hover:bg-blue-800 w-30 focus:ring-4 focus:ring-blue-300 font-bold rounded px-5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">AJOUTER UN PARTICIPANT</button></a>
             </div>
                 </div>
                 <div class="overlay">
                 </div>
-        </div>
+
+          
+        </div>@endforeach
     </main>
 
 

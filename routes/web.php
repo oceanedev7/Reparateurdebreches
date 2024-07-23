@@ -90,9 +90,9 @@ Route::get('/articles', [ArticleController::class, 'index'])->name('all-articles
 Route::get('espaceadherent', function () {
     return view('appli.espaceadherent');
 })->name('espaceadherent');
-Route::get('eventadherent', function () {
-    return view('appli.eventadherent');
-})->name('event');
+// Route::get('eventadherent', function () {
+//     return view('appli.eventadherent');
+// })->name('event');
 
 
 // Routes admin (page accueil +pages de gestion)
@@ -152,6 +152,9 @@ Route::middleware('auth')->group(function () {
 Route::get('/formulaire',[FormEventController::class, 'index'])->name('form');
 Route::post('/formulaire', [FormEventController::class, 'create'])->name('formulaire');
 Route::get('edit/{id}/delete', [FormEventController::class,'destroy'])->name('deleteinscrit');
+Route::get('eventadherent', [FormEventController::class,'showEvents'])->name('event');
+Route::get('formulaire/{id}', [FormEventController::class,'show'])->name('formulaire-inscrit');
+
 
 require __DIR__.'/auth.php';
 

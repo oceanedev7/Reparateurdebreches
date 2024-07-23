@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\formevents;
+use App\Models\Evenement;
 use Illuminate\Http\Request;
 
 class FormEventController extends Controller
@@ -10,7 +11,6 @@ class FormEventController extends Controller
 
     public function index(){
         $forms = formevents::all();
-
     return view('appli.formevent', ['inscrits'=>$forms]);
     }
 
@@ -33,4 +33,20 @@ class FormEventController extends Controller
 
         return redirect("formulaire");
     }
+
+public function showEvents(){
+    $events = Evenement::all();
+return view('appli.eventadherent', ['events'=>$events]);
 }
+
+
+public function show(string $id)
+    {
+        formevents::findOrFail($id);
+        return view('appli.formevent');
+    }
+
+
+
+}
+
