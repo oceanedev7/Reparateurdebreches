@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@section('Accueil')</title>
 </head>
 <body>
   
+    @section('title', 'Accueil')
 
     <main>
 @section('content')
@@ -115,7 +115,7 @@
         <div class="flex flex-row justify-center space-x-8">
             @foreach($evenements as $evenement)
             <a href="{{ route('evenement', $evenement->id) }}" class="bg-bleu-fonce rounded-lg h-60 w-80 relative">
-                <img class="w-full rounded-lg object-cover h-full opacity-40" src="{{ Storage::url($evenement->photo) }}" alt="">
+                <img class="w-full rounded-lg object-cover h-full opacity-30" src="{{ Storage::url($evenement->photo) }}" alt="">
                 <div class="absolute bottom-4 left-4 flex flex-col">
                     <div class="text-white font-black text-2xl mt-2"> {{ $evenement->titre }} </div>
                     <div class="text-white font-bold text-xl mt-2 truncate"> {{ $evenement->date }} </div>
