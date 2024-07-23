@@ -1,29 +1,33 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Actualite;
+use App\Models\Evenement;
+
 use Illuminate\Http\Request;
 
-class ActuAccueilController extends Controller
+class AccueilController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
-    { 
-        $actualites = Actualite::all();
-    //    dd($actualites);
-        return view('appli.lesactus', ['actualites' => $actualites]);
+    {
+        $actualites = Actualite::orderBy('id', 'desc')->take(3)->get();
+        $evenements = Evenement::orderBy('id', 'desc')->take(3)->get();
+    
+        return view('appli.accueil', [
+            'actualites' => $actualites,
+            'evenements' => $evenements
+        ]);
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function recentActus()
+    public function create()
     {
-        $actualites = Actualite::orderBy('id', 'desc')->take(3)->get();
-        return view('appli.accueil', ['actualites' => $actualites]);
+        //
     }
 
     /**
@@ -39,8 +43,7 @@ class ActuAccueilController extends Controller
      */
     public function show(string $id)
     {
-        $actualite = Actualite::findOrFail($id);
-        return view('appli.actu', compact('actualite'));
+        //
     }
 
     /**

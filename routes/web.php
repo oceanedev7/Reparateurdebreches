@@ -6,18 +6,28 @@ use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\ParametreController;
+
+use App\Http\Controllers\AccueilController;
+
+
+
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\EventAccueilController;
 use App\Http\Controllers\InscriptionController;
+
+
+Route::get('/', [AccueilController::class, 'index'])->name('accueil');
+
 use App\Http\Controllers\NewsletterController;
 
+
 // Routes visiteur
-Route::get('/', function () {
-    return view('appli.accueil');
-})->name('accueil');
+// Route::get('/', function () {
+//     return view('appli.accueil');
+// })->name('accueil');
 
 Route::get('/deveniradherent', function () {
     return view('appli.deveniradherent');

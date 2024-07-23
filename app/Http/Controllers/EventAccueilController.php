@@ -30,9 +30,10 @@ class EventAccueilController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function recentEvent(Request $request)
     {
-        //
+        $evenements = Evenement::orderBy('id', 'desc')->take(3)->get();
+        return view('appli.accueil', ['evenements' => $evenements]);
     }
 
     /**
