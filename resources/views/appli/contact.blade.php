@@ -6,10 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@section('Nous contacter')</title>
+    
 </head>
 <body>
-
+    @section('title', 'Nous contacter')
 
     @section('content')
 <div class="flex items-center justify-center bg-bleu-fonce">
@@ -19,6 +19,9 @@
 @endsection
 
  @section('main')
+
+ <a href="{{route('accueil')}}" class="underline text-bleu-fonce"><i class="fa-solid fa-arrow-left underline mt-8 ml-8 text-bleu-fonce"></i> Retour à la page d'accueil </a>
+
 
 <div class="w-full pb-24 ">
     <div class="flex flex-col ml-24 mr-24 text-justify p-12  space-y-16">
