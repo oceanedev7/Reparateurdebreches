@@ -12,6 +12,7 @@ use App\Http\Controllers\AccueilController;
 
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\FormEventController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\EmailController;
@@ -88,7 +89,11 @@ Route::get('/articles', [ArticleController::class, 'index'])->name('all-articles
 //Routes adhérent
 Route::get('espaceadherent', function () {
     return view('appli.espaceadherent');
-});
+})->name('espaceadherent');
+Route::get('eventadherent', function () {
+    return view('appli.eventadherent');
+})->name('event');
+
 
 // Routes admin (page accueil +pages de gestion)
 
@@ -144,7 +149,15 @@ Route::middleware('auth')->group(function () {
 });
 
 
+Route::get('/formulaire',[FormEventController::class, 'index'])->name('form');
+Route::post('/formulaire', [FormEventController::class, 'create'])->name('formulaire');
+Route::get('edit/{id}/delete', [FormEventController::class,'destroy'])->name('deleteinscrit');
+
+require __DIR__.'/auth.php';
+
+
 require __DIR__ . '/auth.php';
+
 
 
 
