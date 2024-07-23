@@ -82,30 +82,15 @@
     <div class="h-2/5 p-7">
           <div class="text-center font-bold text-4xl ml-64"> ...à la une </div>
           <div class="text-center text-bleu-fonce font-black text-5xl"> ACTUALITÉS </div> 
-          <div class="flex flex-row space-x-16">   
-            
-            <a class="bg-white rounded-lg h-80 w-80 absolute left-12 mt-10">
-                <img class="w-full rounded-lg object-cover h-3/5" src="{{ Storage::url('images/header-home.jpg') }}" alt="">
-                <div class="font-bold text-lg ml-10 mt-2"> TITRE </div>
-                <div class="ml-6 mt-2 h-mx-12 truncate"> Nous proposons des services d’assistance pour les gestes de la vie courante (courses, ménage, préparation des repas…) afin de faciliter le quotidien des seniors. 
-                    Elles peuvent également proposer un service d’accompagnement pour garantir l'accès aux soins et aux loisirs. </div>
-            </a>
-             
-            <a class="bg-white rounded-lg h-80 w-80 absolute mt-10 left-96">
-                <img class="w-full rounded-lg object-cover h-3/5" src="{{ Storage::url('images/header-home.jpg') }}" alt="">
-                <div class="font-bold text-lg ml-10 mt-2"> TITRE </div>
-                <div class="ml-6 mt-2 h-mx-12 truncate"> Nous proposons des services d’assistance pour les gestes de la vie courante (courses, ménage, préparation des repas…) afin de faciliter le quotidien des seniors. 
-                    Elles peuvent également proposer un service d’accompagnement pour garantir l'accès aux soins et aux loisirs. </div>
-            </a>
-        
-            <a class="bg-white rounded-lg h-80 w-80 absolute right-12 mt-10">
-                <img class="w-full rounded-lg object-cover h-3/5" src="{{ Storage::url('images/header-home.jpg') }}" alt="">
-                <div class="font-bold text-lg ml-10 mt-2"> TITRE </div>
-                <div class="ml-6 mt-2 h-mx-12 truncate"> Nous proposons des services d’assistance pour les gestes de la vie courante (courses, ménage, préparation des repas…) afin de faciliter le quotidien des seniors. 
-                    Elles peuvent également proposer un service d’accompagnement pour garantir l'accès aux soins et aux loisirs. </div>
-            </a>
-
-          </div> 
+          <div class="flex flex-row justify-center space-x-8 mt-12">
+            @foreach($actualites as $actualite)
+                <a class="bg-white rounded-lg max-w-xs h-80 flex flex-col" href="{{ route('actu', $actualite->id) }}">
+                    <img class="w-full rounded-lg object-cover h-3/5" src="{{ Storage::url($actualite->photo) }}" alt="{{ $actualite->titre }}">
+                    <div class="font-bold text-lg text-center px-2 mt-4 ">{{ $actualite->titre }}</div>
+                    <div class=" max-w-xs truncate mt-2 ml-4">{{ $actualite->contenu }}</div>
+                </a>
+            @endforeach
+        </div>
     </div>
 
     <div class="bg-bleu-clair h-3/5">
@@ -119,38 +104,26 @@
 
 <div class="w-full h-screen">
 
-<div class="bg-bleu-clair h-2/4 flex flex-row space-x-36"> 
-    <div class="relative top-8">
-    <div class=" font-bold text-4xl ml-24"> rendez-vous </div>
-    <div class=" text-white font-black text-5xl ml-24 "> AGENDA </div>
+    <div class="bg-bleu-clair h-2/4 flex flex-col items-start px-24"> 
+       
+        <div class="mt-8 mb-10">
+       
+            <div class="font-bold text-4xl">rendez-vous</div>
+            <div class="text-white font-black text-5xl">AGENDA</div>
+        </div>
+    
+        <div class="flex flex-row justify-center space-x-8">
+            @foreach($evenements as $evenement)
+            <a href="{{ route('evenement', $evenement->id) }}" class="bg-bleu-fonce rounded-lg h-60 w-80 relative">
+                <img class="w-full rounded-lg object-cover h-full opacity-40" src="{{ Storage::url($evenement->photo) }}" alt="">
+                <div class="absolute bottom-4 left-4 flex flex-col">
+                    <div class="text-white font-black text-2xl mt-2"> {{ $evenement->titre }} </div>
+                    <div class="text-white font-bold text-xl mt-2 truncate"> {{ $evenement->date }} </div>
+                </div>
+            </a>
+            @endforeach
+        </div>
     </div>
-
-   <div class="flex flex-row space-x-16 mt-40">
-    <a class="bg-bleu-fonce rounded-lg h-60 w-80 absolute left-12 mt-10  ">
-        <img class="w-full rounded-lg object-cover h-full opacity-40" src="{{ Storage::url('images/header-home.jpg') }}" alt="">
-        <div class="relative bottom-44 left-4 mt-20 flex flex-col">
-        <div class="text-white font-black text-2xl ml-6 mt-2"> TITRE </div>
-        <div class="text-white font-bold ml-6 text-2xl h-mx-12 truncate">12/08/2024 </div>
-        </div>
-    </a>
-
-    <a class="bg-bleu-fonce rounded-lg h-60 w-80 absolute mt-10 left-96 ">
-        <img class="w-full rounded-lg object-cover h-full opacity-40" src="{{ Storage::url('images/header-home.jpg') }}" alt="">
-        <div class="relative bottom-44 left-4 mt-20 flex flex-col ">
-        <div class="text-white font-black text-2xl ml-6 mt-2"> TITRE </div>
-        <div class="text-white font-bold ml-6 text-2xl h-mx-12 truncate">12/08/2024 </div>
-        </div>
-    </a>
-
-    <a class="bg-bleu-fonce rounded-lg h-60 w-80 absolute right-12 mt-10 ">
-        <img class="w-full rounded-lg object-cover h-full opacity-40" src="{{ Storage::url('images/header-home.jpg') }}" alt="">
-        <div class="relative bottom-44 left-4 mt-20 flex flex-col ">
-        <div class="text-white font-black text-2xl ml-6 mt-2"> TITRE </div>
-        <div class="text-white font-bold ml-6 text-2xl h-mx-12 truncate">12/08/2024 </div>
-        </div>
-    </a>
-</div>
-</div>
 
 <div class="h-2/4"> 
 <button>
