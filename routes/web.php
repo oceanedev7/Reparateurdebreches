@@ -6,6 +6,7 @@ use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\ParametreController;
+use App\Http\Controllers\AccueilController;
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -14,6 +15,7 @@ use App\Http\Controllers\EmailController;
 use App\Http\Controllers\EventAccueilController;
 use App\Http\Controllers\InscriptionController;
 
+Route::get('/', [AccueilController::class, 'index'])->name('accueil');
 
 // Routes visiteur
 // Route::get('/', function () {
@@ -42,7 +44,6 @@ Route::get('/evenement/{id}', [EventAccueilController::class, 'show'])->name('ev
 // })->name('les-actus');
 Route::get('/les-actualites', [ActuAccueilController::class, 'index'])->name('les-actus');
 Route::get('/actualite/{id}', [ActuAccueilController::class, 'show'])->name('actu');
-Route::get('/', [ActuAccueilController::class, 'recentActus'])->name('accueil');
 
 
 // Route::get('/actualite', function () {

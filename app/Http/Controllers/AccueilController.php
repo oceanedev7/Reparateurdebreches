@@ -1,22 +1,25 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Actualite;
 use App\Models\Evenement;
+
 use Illuminate\Http\Request;
 
-class EventAccueilController extends Controller
+class AccueilController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        
-        $evenements = Evenement::all();
-        //    dd($actualites);
-            return view('appli.agenda', ['evenements' => $evenements]);
+        $actualites = Actualite::orderBy('id', 'desc')->take(3)->get();
+        $evenements = Evenement::orderBy('id', 'desc')->take(3)->get();
     
+        return view('appli.accueil', [
+            'actualites' => $actualites,
+            'evenements' => $evenements
+        ]);
     }
 
     /**
@@ -24,18 +27,15 @@ class EventAccueilController extends Controller
      */
     public function create()
     {
-        $evenements = Evenement::all();
-        //    dd($actualites);
-            return view('appli.eventadherent', ['evenements' => $evenements]);
+        //
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function recentEvent(Request $request)
+    public function store(Request $request)
     {
-        $evenements = Evenement::orderBy('id', 'desc')->take(3)->get();
-        return view('appli.accueil', ['evenements' => $evenements]);
+        //
     }
 
     /**
@@ -43,8 +43,7 @@ class EventAccueilController extends Controller
      */
     public function show(string $id)
     {
-        $evenement = Evenement::findOrFail($id);
-        return view('appli.evenement', compact('evenement'));
+        //
     }
 
     /**
