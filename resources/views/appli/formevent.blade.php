@@ -9,58 +9,65 @@
     <title>@yield('title')</title>
 </head>
 <body>
-        <div class="contenair">
-            <div class="flex justify-between items-center h-32">
-                <div class="h-44 w-48 ml-12 py-6 z-10">
-                    <img class="h-44 w-48 rounded shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]" src="{{ Storage::url('images/logonavbar.png') }}" alt="">
-                </div>
-            </div>
-    <header class="">
-        <div class="relative ml-3 z-10 flex  items-center md:order-2 space-x-2 md:space-x-0 rtl:space-x-reverse">
+    <div class="flex items-center justify-between	h-44">
 
-            <div class=" hidden w-full" id="navbar-hamburger" style="margin-top:350px; margin-right:5px;">
-              <ul class=" font-medium mt-4 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700 p-3 space-y-1">
-                <li>
-                  <a href="#"
-                    class="block py-2 px-3 text-white bg-bleu-fonce rounded dark:bg-bleu-fonce" aria-current="page">Home</a>
-                </li>
-                <li>
-                  <a href="#"
-                    class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Statistiques</a>
-                </li>
-                </li>
-                <li>
-                  <a href="#"
-                    class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
-                    les newsletters</a>
-                </li>
-                <li>
-                  <a href="#"
-                    class="block py-2 px-3 text-white rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Paramètres</a>
-                </li>
-                <li>
-                  <form method="POST" action="{{ route('logout') }}">
-                    @csrf
+        <div class="h-44 w-48 ml-12 py-6 z-10 ">
+          <img class="h-44 w-48 rounded shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]"
+            src="{{ Storage::url('images/logonavbar.png') }}" alt="logo">
+        </div>
+    
+        <!-- Dropdown -->
+        
       
-                    <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
-                                                      this.closest('form').submit();">
-                      {{ __('Deconnexion') }}
-                    </x-dropdown-link>
-                  </form>
-                </li>
-              </ul>
-            </div>
-            <button data-collapse-toggle="navbar-hamburger" type="button"
-              class="  inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-white rounded-lg  bg-bleu-fonce hover:bg-bleu focus:outline-none focus:ring-2 focus:ring-bleu-fonce dark:text-white dark:hover:bg-bleu dark:focus:ring-bleu-clair"
-              aria-controls="navbar-hamburger" aria-expanded="false" style="margin-right:15px;">
-              <span class="sr-only">Open main menu</span>
-              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M1 1h15M1 7h15M1 13h15" />
-              </svg>
-            </button>
+         
+        <div class="relative ml-3 z-10 flex  items-center md:order-2 space-x-2 md:space-x-0 rtl:space-x-reverse">
+          
+        
+         
+          <div class=" hidden w-full" id="navbar-hamburger" style="margin-top:350px; margin-right:5px;">
+            <ul class=" font-medium mt-4 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700 p-3 space-y-1">
+              <li>
+                <a href="{{route('espaceadherent')}}"
+                  class="block py-2 px-3 text-white bg-bleu-fonce rounded dark:bg-bleu-fonce" aria-current="page">Acceuil</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="block py-2 px-3 text-bleu-fonce rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
+                  les articles</a>
+              </li>
+              <li>
+                <a href="{{route('event')}}"
+                  class="block py-2 px-3 text-bleu-fonce rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
+                  les évènements</a>
+              </li>
+              </li>
+              <li>
+                <a href=""
+                  class="block py-2 px-3 text-bleu-fonce rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Paramètres</a>
+              </li>
+              <li>
+                <form method="POST" action="{{ route('logout') }}">
+                  @csrf
+    
+                  <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
+                                                    this.closest('form').submit();">
+                    {{ __('Deconnexion') }}
+                  </x-dropdown-link>
+                </form>
+              </li>
+            </ul>
           </div>
-    </header>
+          <button data-collapse-toggle="navbar-hamburger" type="button"
+            class="  inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-white rounded-lg  bg-bleu-fonce hover:bg-bleu focus:outline-none focus:ring-2 focus:ring-bleu-fonce dark:text-white dark:hover:bg-bleu dark:focus:ring-bleu-clair"
+            aria-controls="navbar-hamburger" aria-expanded="false" style="margin-right:15px;">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+          </button>
+        </div>
+      </div>
     <main>
         <div class="flex items-center justify-center bg-bleu-fonce mb-6">
             <h1 class="font-bold text-6xl absolute text-white z-10">ESPACE ADHERENT</h1>

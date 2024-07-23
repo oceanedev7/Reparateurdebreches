@@ -10,7 +10,7 @@ Route::get('/', function () {
 
 Route::get('espaceadherent', function () {
     return view('appli.espaceadherent');
-});
+})->name('espaceadherent');
 Route::get('eventadherent', function () {
     return view('appli.eventadherent');
 })->name('event');
