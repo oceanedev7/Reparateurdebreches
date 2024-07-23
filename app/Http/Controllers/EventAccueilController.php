@@ -24,9 +24,7 @@ class EventAccueilController extends Controller
      */
     public function create()
     {
-        $evenements = Evenement::all();
-        //    dd($actualites);
-            return view('appli.eventadherent', ['evenements' => $evenements]);
+        //    
     }
 
     /**
