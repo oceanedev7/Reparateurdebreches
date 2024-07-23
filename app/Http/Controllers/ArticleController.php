@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 
 class ArticleController extends Controller{
 
@@ -11,18 +13,39 @@ class ArticleController extends Controller{
     {
 // afficher la page gérer les articles
             $articles = Article::all();
+            // dd($articles);
             return view('admin_pages.dashboard_article', compact('articles'));
         }
         public function store(Request $request)
         {
 
-            $post = Article::create([
-                'id_user' => auth()->id(),
-                'titre' => $request->input('titre'),
-                'contenu' => $request->input('contenu'),
-                'photo' => $request->input('photo'),
+            // $post = Article::create([
+            //     'id_user' => auth()->id(),
+            //     'titre' => $request->input('titre'),
+            //     'contenu' => $request->input('contenu'),
+            //     'photo' => $request->input('photo'),
+            // ]);
+            // return redirect('/dashboard/article');
+
+            $request->validate([
+                'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+                'titre' => 'required|string',
+                'description' => 'required|string',
             ]);
-            return redirect('/dashboard/article');
+    
+            if ($request->hasFile('photo')) {
+                $path = $request->file('photo')->store('public/images');
+                $photoPath = Storage::url($path);
+    
+                $post = Article::create([
+                    'id_user' => auth()->id(),
+                    'titre' => $request->input('titre'),
+                    'description' => $request->input('description'),
+                    'photo' => $path,
+                ]);
+    
+                return redirect()->back()->with('photoPath', $photoPath);
+            }
         }
 
         public function update($id)
