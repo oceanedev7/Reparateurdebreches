@@ -164,10 +164,6 @@
     </main>
 
     <script>
-        document.addEventListener('logos', () => {
-          const vitesse = 20; 
-          document.querySelector('.animate-caroussel').style.animationDuration = `${vitesse}s`;
-        });
 
 var bouton = document.getElementById("bouton");
 
