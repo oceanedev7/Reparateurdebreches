@@ -16,9 +16,9 @@ use App\Http\Controllers\InscriptionController;
 
 
 // Routes visiteur
-Route::get('/', function () {
-    return view('appli.accueil');
-})->name('accueil');
+// Route::get('/', function () {
+//     return view('appli.accueil');
+// })->name('accueil');
 
 Route::get('/deveniradherent', function () {
     return view('appli.deveniradherent');
@@ -42,6 +42,7 @@ Route::get('/evenement/{id}', [EventAccueilController::class, 'show'])->name('ev
 // })->name('les-actus');
 Route::get('/les-actualites', [ActuAccueilController::class, 'index'])->name('les-actus');
 Route::get('/actualite/{id}', [ActuAccueilController::class, 'show'])->name('actu');
+Route::get('/', [ActuAccueilController::class, 'recentActus'])->name('accueil');
 
 
 // Route::get('/actualite', function () {

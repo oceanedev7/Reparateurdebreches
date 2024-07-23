@@ -82,30 +82,15 @@
     <div class="h-2/5 p-7">
           <div class="text-center font-bold text-4xl ml-64"> ...à la une </div>
           <div class="text-center text-bleu-fonce font-black text-5xl"> ACTUALITÉS </div> 
-          <div class="flex flex-row space-x-16">   
-            
-            <a class="bg-white rounded-lg h-80 w-80 absolute left-12 mt-10">
-                <img class="w-full rounded-lg object-cover h-3/5" src="{{ Storage::url('images/header-home.jpg') }}" alt="">
-                <div class="font-bold text-lg ml-10 mt-2"> TITRE </div>
-                <div class="ml-6 mt-2 h-mx-12 truncate"> Nous proposons des services d’assistance pour les gestes de la vie courante (courses, ménage, préparation des repas…) afin de faciliter le quotidien des seniors. 
-                    Elles peuvent également proposer un service d’accompagnement pour garantir l'accès aux soins et aux loisirs. </div>
-            </a>
-             
-            <a class="bg-white rounded-lg h-80 w-80 absolute mt-10 left-96">
-                <img class="w-full rounded-lg object-cover h-3/5" src="{{ Storage::url('images/header-home.jpg') }}" alt="">
-                <div class="font-bold text-lg ml-10 mt-2"> TITRE </div>
-                <div class="ml-6 mt-2 h-mx-12 truncate"> Nous proposons des services d’assistance pour les gestes de la vie courante (courses, ménage, préparation des repas…) afin de faciliter le quotidien des seniors. 
-                    Elles peuvent également proposer un service d’accompagnement pour garantir l'accès aux soins et aux loisirs. </div>
-            </a>
-        
-            <a class="bg-white rounded-lg h-80 w-80 absolute right-12 mt-10">
-                <img class="w-full rounded-lg object-cover h-3/5" src="{{ Storage::url('images/header-home.jpg') }}" alt="">
-                <div class="font-bold text-lg ml-10 mt-2"> TITRE </div>
-                <div class="ml-6 mt-2 h-mx-12 truncate"> Nous proposons des services d’assistance pour les gestes de la vie courante (courses, ménage, préparation des repas…) afin de faciliter le quotidien des seniors. 
-                    Elles peuvent également proposer un service d’accompagnement pour garantir l'accès aux soins et aux loisirs. </div>
-            </a>
-
-          </div> 
+          <div class="flex flex-row justify-center space-x-8 mt-12">
+            @foreach($actualites as $actualite)
+                <a class="bg-white rounded-lg max-w-xs h-80 flex flex-col" href="{{ route('actu', $actualite->id) }}">
+                    <img class="w-full rounded-lg object-cover h-3/5" src="{{ Storage::url($actualite->photo) }}" alt="{{ $actualite->titre }}">
+                    <div class="font-bold text-lg text-center px-2 mt-4 ">{{ $actualite->titre }}</div>
+                    <div class=" max-w-xs truncate mt-2 ml-4">{{ $actualite->contenu }}</div>
+                </a>
+            @endforeach
+        </div>
     </div>
 
     <div class="bg-bleu-clair h-3/5">

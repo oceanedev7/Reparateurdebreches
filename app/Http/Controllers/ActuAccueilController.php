@@ -20,9 +20,10 @@ class ActuAccueilController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function recentActus()
     {
-        //
+        $actualites = Actualite::orderBy('id', 'desc')->take(3)->get();
+        return view('appli.accueil', ['actualites' => $actualites]);
     }
 
     /**
