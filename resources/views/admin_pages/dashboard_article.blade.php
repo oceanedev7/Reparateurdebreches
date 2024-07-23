@@ -12,7 +12,7 @@
 <div class="flex justify-center mb-9 pr-1 ">
      <input class="block w-15 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file">
 </div>
-<form class="max-w-sm mx-auto" style="width:500px;" method="post" action="{{route('newArticle')}}">
+<form enctype="multipart/form-data" class="max-w-sm mx-auto" style="width:500px;" method="post" action="{{route('newArticle')}}">
     @csrf
     <div>
         <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Titre</label>
