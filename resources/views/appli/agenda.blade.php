@@ -22,7 +22,8 @@
 @section('main')
 
 
-    
+<a href="{{route('accueil')}}" class="underline text-bleu-fonce"><i class="fa-solid fa-arrow-left underline mt-8 ml-8 text-bleu-fonce"></i> Retour à la page d'accueil </a>
+
 
 <div class="grid grid-cols-3 gap-12 p-20 justify-center">
     @foreach ($evenements as $evenement)

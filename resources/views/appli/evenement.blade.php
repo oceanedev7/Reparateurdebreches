@@ -18,6 +18,7 @@
 
     
         @section('main')
+        <a href="{{route('agenda')}}" class="underline text-bleu-fonce"><i class="fa-solid fa-arrow-left underline mt-8 ml-8 text-bleu-fonce"></i> Retour à l'agenda </a>
 
         <div class="w-full flex justify-center">
             <div class="flex flex-col text-justify p-24 space-y-20 max-w-6xl">
