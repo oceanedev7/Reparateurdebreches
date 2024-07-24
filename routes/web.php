@@ -85,15 +85,11 @@ Route::post('/nouscontacter', [EmailController::class, 'store'])->name('contact'
 Route::get('/articles', [ArticleController::class, 'index'])->name('all-articles');
 
 //Routes adhérent
-Route::get('espaceadherent', function () {
-    return view('appli.espaceadherent');
-})->name('espaceadherent');
-Route::get('eventadherent', function () {
-    return view('appli.eventadherent');
-})->name('event');
 Route::get('/formulaire',[FormEventController::class, 'index'])->name('form');
 Route::post('/formulaire', [FormEventController::class, 'create'])->name('formulaire');
 Route::get('edit/{id}/delete', [FormEventController::class,'destroy'])->name('deleteinscrit');
+Route::get('eventadherent', [FormEventController::class,'showEvents'])->name('event');
+Route::get('formulaire/{id}', [FormEventController::class,'show'])->name('formulaire-inscrit');
 
 // Routes admin (page accueil +pages de gestion)
 

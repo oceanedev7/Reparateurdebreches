@@ -22,7 +22,7 @@
         
       
          
-        <div class="relative ml-3 z-10 flex  items-center md:order-2 space-x-2 md:space-x-0 rtl:space-x-reverse">
+        <div class="relative ml-3 z-10 flex items-center md:order-2 space-x-2 md:space-x-0 rtl:space-x-reverse">
           
         
          
