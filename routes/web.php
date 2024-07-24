@@ -6,6 +6,7 @@ use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\ParametreController;
+use App\Http\Controllers\AccueilArticleController;
 
 use App\Http\Controllers\AccueilController;
 
@@ -81,7 +82,8 @@ Route::get('eventadherent', [FormEventController::class,'showEvents'])->name('ev
 Route::get('formulaire/{id}', [FormEventController::class,'show'])->name('formulaire-inscrit');
 
 
+Route::get('/articles', [AccueilArticleController::class, 'index'])->name('all-articles');
+Route::get('/article/{id}', [AccueilArticleController::class, 'show'])->name('appli.article');
+Route::post('/article/{id}/commentaire', [AccueilArticleController::class, 'ajouterCommentaire'])->name('ajouterCommentaire');
 require __DIR__.'/auth.php';
 
-
-Route::get('/articles', [ArticleController::class, 'index'])->name('all-articles');
