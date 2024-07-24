@@ -31,6 +31,7 @@ use App\Http\Controllers\NewsletterController;
 // })->name('accueil');
 
 Route::get('/', [AccueilController::class, 'index'])->name('accueil');
+
 Route::get('/deveniradherent', function () {
     return view('appli.deveniradherent');
 })->name('deveniradherent');
