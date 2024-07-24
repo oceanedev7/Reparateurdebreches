@@ -41,6 +41,11 @@
                     Répondre à cette demande
                     <i class="fa-solid fa-envelope ml-2"></i>
                 </a>
+                <a href="{{route ('deleteContact', $contact->id)}}"
+                class="text-bleu-fonce font-semibold underline mt-4 inline-block flex items-center space-x-2">
+                Supprimer cette demande
+                <i class="fa-solid fa-trash"></i>
+            </a>
             </div>
         @endforeach
     @endif

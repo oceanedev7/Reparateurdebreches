@@ -77,6 +77,8 @@ class EmailController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $contact = Demandedecontact::findOrFail($id);
+        $contact->delete();
+        return redirect('/demandedecontact');
     }
 }

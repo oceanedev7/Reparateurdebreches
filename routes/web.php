@@ -78,6 +78,7 @@ Route::get('/nouscontacter', function () {
 })->name('contact');
 
 Route::get('/demandedecontact', [EmailController::class, 'index'])->name('contactmail');
+Route::get('/demandedecontact/delete/{id}', [EmailController::class, 'destroy'])->name('deleteContact');
 Route::post('/nouscontacter', [EmailController::class, 'store'])->name('contact');
 
 
