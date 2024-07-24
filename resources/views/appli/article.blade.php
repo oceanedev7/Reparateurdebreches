@@ -40,7 +40,7 @@
        
 <br>
 <br>
-<section class="commentaires">
+<div class="commentaires">
     <form action="{{route('commentaire')}}" method="POST">
         @csrf
     <h2>Laisser un commentaire...</h2>
@@ -68,7 +68,7 @@
 
     @endforeach
     @endif
-</section>
+</div>
 
 
 </body>
