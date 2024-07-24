@@ -25,7 +25,7 @@
 
             <div class="relative items-center mb-10 flex flex-row">
 
-                <div class="space-x-6 relative right-6 flex">
+                <div class="space-x-6 relative right-8 flex">
             <a href="{{route('accueil')}}"
                 class="text-bleu-fonce font-black space-x-48 text-xl font-sans flex justify-between"> ACCUEIL </a>
             <a href="{{ route('all-articles') }}"
