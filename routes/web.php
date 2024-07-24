@@ -20,7 +20,7 @@ use App\Http\Controllers\EventAccueilController;
 use App\Http\Controllers\InscriptionController;
 
 
-Route::get('/', [AccueilController::class, 'index'])->name('accueil');
+
 
 use App\Http\Controllers\NewsletterController;
 
@@ -30,6 +30,7 @@ use App\Http\Controllers\NewsletterController;
 //     return view('appli.accueil');
 // })->name('accueil');
 
+Route::get('/', [AccueilController::class, 'index'])->name('accueil');
 Route::get('/deveniradherent', function () {
     return view('appli.deveniradherent');
 })->name('deveniradherent');
