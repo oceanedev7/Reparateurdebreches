@@ -21,7 +21,7 @@
        {{-- <li> --}}
         <div class="A"> 
             {{-- {{ $article->titre }} --}}
-            <a href="{{ route('article') }}">
+            <a href="{{ route('article', $article->id) }}">
             <img class="h-auto w-[320px]  " src="{{ Storage::url('images/header-home.jpg') }}">
             {{-- <div class="bg-bleu w-[2px] "> --}}
             <div class="titre">

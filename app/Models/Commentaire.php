@@ -13,6 +13,7 @@ class Commentaire extends Model
         'commentaire',
         'id_user',
         'id_article',
+        'nom',
        
      ];
 

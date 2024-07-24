@@ -80,6 +80,7 @@ article img {
 .gris{
     background-color: rgb(206, 202, 202);
     border-radius: 4px;
+    padding: 8px;
 }
 
 .commentaire {

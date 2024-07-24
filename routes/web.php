@@ -2,8 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ArticleController;
-
+use App\Http\Controllers\AccueilArticleController;
+use App\Http\Controllers\CommentaireController;
 
 
 Route::get('/', function () {
@@ -23,5 +23,9 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 
-Route::get('/articles', [ArticleController::class, 'index'])->name('all-articles');
-Route::get('/article', [ArticleController::class, 'article'])->name('article');
+Route::get('/articles', [AccueilArticleController::class, 'index'])->name('all-articles');
+Route::get('/article/{id}', [AccueilArticleController::class, 'show'])->name('article');
+Route::post('/article/commentaire', [CommentaireController::class, 'store'])->name('commentaire');
+Route::get('/article', [CommentaireController::class, 'indexcommentaire'])->name('commentaire');
+Route::post('/article', [CommentaireController::class, 'indexcommentaire'])->name('commentaire');
+// Route::get('/article', [CommentaireController::class, 'index'])->name('commentairecréer');
