@@ -1,16 +1,13 @@
 <?php
 
-
+ 
+use App\Http\Controllers\DonationController;
 use App\Http\Controllers\ActuAccueilController;
 use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\ParametreController;
-
 use App\Http\Controllers\AccueilController;
-
-
-
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FormEventController;
 use Illuminate\Support\Facades\Route;
@@ -155,8 +152,10 @@ Route::get('eventadherent', [FormEventController::class,'showEvents'])->name('ev
 Route::get('formulaire/{id}', [FormEventController::class,'show'])->name('formulaire-inscrit');
 
 
-require __DIR__.'/auth.php';
+Route::get('/articles', [ArticleController::class, 'index'])->name('all-articles');
 
+Route::get('/donations/show', [DonationController::class, 'show'])->name('donations.show');
+Route::post('/donations', [DonationController::class, 'store'])->name('donations.store');
 
 require __DIR__ . '/auth.php';
 

@@ -15,9 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('id_user');
             $table->unsignedBigInteger('id_moyens_de_paiement');
-
-
-            $table->decimal('montant');
+            $table->decimal('montant',8, 2);
             $table->string('nom');
             $table->string('prenom');
             $table->string('adresse');
@@ -26,6 +24,7 @@ return new class extends Migration
             $table->string('ville');
             $table->string('pays');
             $table->string('telephone');
+            $table->string('stripe_payment_id');
             $table->timestamps();
 
 

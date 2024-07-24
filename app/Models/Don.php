@@ -12,16 +12,16 @@ class Don extends Model
     protected $fillable = [
        'montant',
        'nom',
-      'prenom',
-        'adresse',
-        'email',
+       'prenom',
+       'adresse',
+       'email',
        'code_postal',
-        'ville',
-        'pays',
-        'telephone',
+       'ville',
+       'pays',
+       'telephone',
     ];
 
-    
+
     public function user()
     {
         return $this->belongsTo(User::class);
