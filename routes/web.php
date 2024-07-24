@@ -84,5 +84,6 @@ Route::get('formulaire/{id}', [FormEventController::class,'show'])->name('formul
 Route::get('/articles', [AccueilArticleController::class, 'index'])->name('all-articles');
 Route::get('/article/{id}', [AccueilArticleController::class, 'show'])->name('appli.article');
 Route::post('/article/{id}/commentaire', [AccueilArticleController::class, 'ajouterCommentaire'])->name('ajouterCommentaire');
+
 require __DIR__.'/auth.php';
 
