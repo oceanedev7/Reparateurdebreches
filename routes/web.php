@@ -6,6 +6,7 @@ use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\ParametreController;
+use App\Http\Controllers\AccueilArticleController;
 
 use App\Http\Controllers\AccueilController;
 
@@ -83,7 +84,7 @@ Route::post('/nouscontacter', [EmailController::class, 'store'])->name('contact'
 
 
 
-Route::get('/articles', [ArticleController::class, 'index'])->name('all-articles');
+Route::get('/articles', [AccueilArticleController::class, 'index'])->name('all-articles');
 
 //Routes adhérent
 Route::get('espaceadherent', function () {
