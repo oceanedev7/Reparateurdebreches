@@ -51,7 +51,7 @@
                 </button>
 
                 <!-- Dropdown -->
-                <div class="relative ml-3 sm:hidden">
+                {{-- <div class="relative ml-3 sm:hidden">
                     <button type="button"
                         class="inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:ring-gray-400"
                         id="mobile-menu-button" aria-expanded="false" aria-haspopup="true">
@@ -62,7 +62,7 @@
                                 d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
                                 clip-rule="evenodd" />
                         </svg>
-                    </button>
+                    </button> --}}
 
                     <!--
                   Dropdown menu, show/hide based on menu state.
@@ -74,13 +74,13 @@
                     From: "transform opacity-100 scale-100"
                     To: "transform opacity-0 scale-95"
                 -->
-                    <div class=" flex flex-col  absolute right-0 z-10 -mr-1 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                    {{-- <div class=" flex flex-col  absolute right-0 z-10 -mr-1 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                         role="menu" aria-orientation="vertical" aria-labelledby="mobile-menu-button" tabindex="-1">
                         <!-- Active: "bg-gray-100", Not Active: "" -->
                         <a class=" text-bleu-fonce text-lg font-bold">Se connecter </a>
                         <a class=" text-bleu-fonce  text-lg font-bold">Devenir adhérent</a>
                         <a class="text-bleu-fonce text-lg font-bold">Faire un don</a>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -96,8 +96,7 @@
     <footer class="bg-bleu-fonce w-full h-80 flex flex-wrap items-center justify-between p-8 relative">
         <div class="absolute top-[-2.5rem] left-1/2 transform -translate-x-1/2 z-10 text-center">
             <div class="bg-bleu-clair h-20 p-4 rounded-lg  flex items-center justify-center space-x-4">
-                <p class="text-base font-bold text-bleu-fonce">Inscrivez-vous et restez <br /> informé de nos actualités
-                    !</p>
+                <p class="text-base font-bold text-bleu-fonce">Inscrivez-vous et restez <br /> informé de nos actualités !</p>
                 <form>
                     <input type="email" placeholder="Adresse email" class="p-2 rounded border-none " />
                     <button class="ml-3">
