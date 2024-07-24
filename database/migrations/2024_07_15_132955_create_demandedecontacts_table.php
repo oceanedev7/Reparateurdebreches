@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('demandedecontacts', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_user');
+            $table->unsignedBigInteger('id_user')->nullable();
 
             $table->string('nom');
             $table->string('prenom');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->text('message');
             $table->timestamps();
 
