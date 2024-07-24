@@ -2,3 +2,97 @@
 @tailwind components;
 @tailwind utilities;
 
+
+h3{
+    text-align: center;
+    /* background-color: blue; */
+    color: white;
+    padding: 10px 2px;
+    margin-top: -5px;
+    border-radius: 5px;
+
+    
+}
+
+.A{
+    /* position: relative; */
+}
+
+.titre{
+    background-color: blue;
+    width: 100px;
+display: flex;
+justify-content: center;
+border-radius: 4px;
+position: relative;
+margin-top: -20px;
+margin-left: 100px;
+
+
+}
+
+.user-text{
+    background-color: grey;
+}
+
+main {
+    padding: 20px;
+}
+
+article {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+}
+
+.h1 {
+    color: grey;
+    font-size: 14px;
+}
+
+article img {
+    height: auto;
+    width: 320px;
+    float: left;
+    margin: 0 20px 0 0;
+}
+
+.commentaires {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.commentaires h2 {
+    margin-top: 0;
+}
+
+.commentaires textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.gris{
+    background-color: rgb(206, 202, 202);
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.commentaire {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.commentaire .utilisateur {
+    font-weight: bold;
+}
+
+.commentaire .commentaire-texte {
+    margin: 5px 0 0 0;
+}
