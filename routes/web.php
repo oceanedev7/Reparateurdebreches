@@ -89,6 +89,9 @@ Route::get('/articles', [AccueilArticleController::class, 'index'])->name('all-a
 //Routes adhérent
 Route::get('espaceadherent', function () {
     return view('appli.espaceadherent');
+Route::get('/formulaire',[FormEventController::class, 'index'])->name('form');
+Route::post('/formulaire', [FormEventController::class, 'create'])->name('formulaire');
+Route::get('edit/{id}/delete', [FormEventController::class,'destroy'])->name('deleteinscrit');
 });
 
 // Routes admin (page accueil +pages de gestion)
