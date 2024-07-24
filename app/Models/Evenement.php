@@ -15,7 +15,7 @@ class Evenement extends Model
         'description',
         'date',
         'lieu',
-
+        'id_user',
     ];
 
     public function user()
