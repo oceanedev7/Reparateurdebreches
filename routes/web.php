@@ -19,12 +19,10 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\EventAccueilController;
 use App\Http\Controllers\InscriptionController;
+use App\Http\Controllers\NewsletterController;
 
 
 Route::get('/', [AccueilController::class, 'index'])->name('accueil');
-
-use App\Http\Controllers\NewsletterController;
-
 
 // Routes visiteur
 // Route::get('/', function () {
