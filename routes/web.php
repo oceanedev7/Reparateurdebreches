@@ -90,6 +90,9 @@ Route::post('/formulaire', [FormEventController::class, 'create'])->name('formul
 Route::get('edit/{id}/delete', [FormEventController::class,'destroy'])->name('deleteinscrit');
 Route::get('eventadherent', [FormEventController::class,'showEvents'])->name('event');
 Route::get('formulaire/{id}', [FormEventController::class,'show'])->name('formulaire-inscrit');
+Route::get('espaceadherent', function () {
+    return view('appli.espaceadherent');
+})->name('espaceadherent');
 
 // Routes admin (page accueil +pages de gestion)
 
