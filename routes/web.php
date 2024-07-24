@@ -128,7 +128,7 @@ Route::middleware('can:isAdmin')->group(
         Route::get('/dashboard/article/update/{id}', [ArticleController::class, 'update'])->name('updateArticle');
         Route::post('/dashboard/article/nouveau', [ArticleController::class, 'store'])->name('newArticle');
         Route::post('/dashboard/article/update/confirm/{id}', [ArticleController::class, 'updateConfirmArticle'])->name('updateConfirmArticle');
-        Route::post('/dashboard/article/delete/{id}', [ArticleController::class, 'updateConfirmArticle'])->name('updateConfirmArticle');
+        Route::get('/dashboard/article/delete/{id}', [ArticleController::class, 'delete'])->name('deleteArticle');
 
         Route::get('/dashboard/newsletter', [NewsletterController::class, 'index'])->name('dashboard_newsletter');
         Route::post('/dashboard/newsletter/nouveau',[NewsletterController::class,'store'])->name('newNewsletter');

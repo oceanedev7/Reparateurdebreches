@@ -44,7 +44,7 @@ class ArticleController extends Controller{
                     'photo' => $path,
                 ]);
     
-                return redirect()->back()->with('photoPath', $photoPath);
+                return  redirect('/dashboard/article');
             }
         }
 
@@ -53,6 +53,7 @@ class ArticleController extends Controller{
             $article = Article::findOrFail($id);
             return view('admin_pages.updateArticle', ['article' => $article]);
         }
+        
         public function updateConfirmArticle(Request $request, $id)
         {
             $post = Article::findOrFail($id);
@@ -63,6 +64,7 @@ class ArticleController extends Controller{
             ]);
             return redirect('/dashboard/article');
         }
+
         public function delete($id)
         {
             $article = Article::findOrFail($id);
