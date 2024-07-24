@@ -43,22 +43,22 @@ Route::get('/evenement/{id}', [EventAccueilController::class, 'show'])->name('ev
 
 
 
-// Route::get('/evenement', function () {
+// Route::get('/evenement', function (){
 //     return view('appli.evenement');
 // })->name('evenement');
 
-// Route::get('/les-actualites', function () {
+// Route::get('/les-actualites', function (){
 //     return view('appli.lesactus');
 // })->name('les-actus');
 Route::get('/les-actualites', [ActuAccueilController::class, 'index'])->name('les-actus');
 Route::get('/actualite/{id}', [ActuAccueilController::class, 'show'])->name('actu');
 
 
-// Route::get('/actualite', function () {
+// Route::get('/actualite', function (){
 //     return view('appli.actu');
 // })->name('actu');
 
-// Route::get('/validerunadherent', function () {
+// Route::get('/validerunadherent', function (){
 //     return view('admin_pages.validadherent');
 // })->name('validerunadherent');
 
