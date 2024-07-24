@@ -6,21 +6,91 @@ use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\ParametreController;
-use App\Http\Controllers\AccueilArticleController;
 
 use App\Http\Controllers\AccueilController;
 
 
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\FormEventController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
-
+use App\Http\Controllers\EmailController;
+use App\Http\Controllers\EventAccueilController;
+use App\Http\Controllers\InscriptionController;
 
 
 Route::get('/', [AccueilController::class, 'index'])->name('accueil');
 
+use App\Http\Controllers\NewsletterController;
+
+
+// Routes visiteur
+// Route::get('/', function () {
+//     return view('appli.accueil');
+// })->name('accueil');
+
+Route::get('/deveniradherent', function () {
+    return view('appli.deveniradherent');
+})->name('deveniradherent');
+
+
+// Route::get('/agenda', function () {
+//     return view('appli.agenda');
+// })->name('agenda');
+Route::get('/agenda', [EventAccueilController::class, 'index'])->name('agenda');
+Route::get('/evenement/{id}', [EventAccueilController::class, 'show'])->name('evenement');
+
+
+
+// Route::get('/evenement', function () {
+//     return view('appli.evenement');
+// })->name('evenement');
+
+// Route::get('/les-actualites', function () {
+//     return view('appli.lesactus');
+// })->name('les-actus');
+Route::get('/les-actualites', [ActuAccueilController::class, 'index'])->name('les-actus');
+Route::get('/actualite/{id}', [ActuAccueilController::class, 'show'])->name('actu');
+
+
+// Route::get('/actualite', function () {
+//     return view('appli.actu');
+// })->name('actu');
+
+// Route::get('/validerunadherent', function () {
+//     return view('admin_pages.validadherent');
+// })->name('validerunadherent');
+
+
+Route::get('/mentionslegales', function () {
+    return view('appli.mentionslegales');
+})->name('mentionslegales');
+
+Route::get('/cgv', function () {
+    return view('appli.cgv');
+})->name('cgv');
+
+Route::get('/confidentialites', function () {
+    return view('appli.confidentialites');
+})->name('confidentialites');
+
+Route::get('/nouscontacter', function () {
+    return view('appli.contact');
+})->name('contact');
+
+Route::get('/demandedecontact', [EmailController::class, 'index'])->name('contactmail');
+Route::post('/nouscontacter', [EmailController::class, 'store'])->name('contact');
+
+
+
+Route::get('/articles', [ArticleController::class, 'index'])->name('all-articles');
+
+//Routes adhérent
+Route::get('espaceadherent', function () {
+    return view('appli.espaceadherent');
+});
+
+// Routes admin (page accueil +pages de gestion)
 
 Route::get('/dashboard', function () {
     return view('dashboard2');
@@ -54,7 +124,7 @@ Route::middleware('can:isAdmin')->group(
         Route::get('/dashboard/article/update/{id}', [ArticleController::class, 'update'])->name('updateArticle');
         Route::post('/dashboard/article/nouveau', [ArticleController::class, 'store'])->name('newArticle');
         Route::post('/dashboard/article/update/confirm/{id}', [ArticleController::class, 'updateConfirmArticle'])->name('updateConfirmArticle');
-        Route::get('/dashboard/article/delete/{id}', [ArticleController::class, 'delete'])->name('deleteArticle');
+        Route::post('/dashboard/article/delete/{id}', [ArticleController::class, 'updateConfirmArticle'])->name('updateConfirmArticle');
 
         Route::get('/dashboard/newsletter', [NewsletterController::class, 'index'])->name('dashboard_newsletter');
         Route::post('/dashboard/newsletter/nouveau',[NewsletterController::class,'store'])->name('newNewsletter');
@@ -74,15 +144,4 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::get('/formulaire',[FormEventController::class, 'index'])->name('form');
-Route::post('/formulaire', [FormEventController::class, 'create'])->name('formulaire');
-Route::get('edit/{id}/delete', [FormEventController::class,'destroy'])->name('deleteinscrit');
-Route::get('eventadherent', [FormEventController::class,'showEvents'])->name('event');
-Route::get('formulaire/{id}', [FormEventController::class,'show'])->name('formulaire-inscrit');
-
-
-Route::get('/articles', [AccueilArticleController::class, 'index'])->name('all-articles');
-Route::get('/article/{id}', [AccueilArticleController::class, 'show'])->name('appli.article');
-Route::post('/article/{id}/commentaire', [AccueilArticleController::class, 'ajouterCommentaire'])->name('ajouterCommentaire');
-require __DIR__.'/auth.php';
-
+require __DIR__ . '/auth.php';
