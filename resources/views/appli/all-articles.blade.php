@@ -12,8 +12,8 @@
     <main>
 @section('content')
 <div class="flex items-center justify-center h-1/2 bg-bleu-fonce">
-<h1 class="font-bold text-6xl absolute text-white ">NOS ARTICLES</h1>
-<img class="h-96 w-full object-cover opacity-50" src="{{ Storage::url('images/header-home.jpg') }}" alt="">
+<h1 class="font-bold text-6xl absolute text-white  z-10">NOS ARTICLES</h1>
+<img class="h-96 w-full object-cover opacity-50" src="{{ Storage::url('images/journal.jpg') }}" alt="">
 </div>
 
 <div class="grid grid-cols-3 justify-items-center  gap-5 pt-5 pb-5 pr-0 pl-0" >
@@ -21,8 +21,8 @@
        {{-- <li> --}}
         <div class="A"> 
             {{-- {{ $article->titre }} --}}
-            <a href="{{ route('article', $article->id) }}">
-            <img class="h-auto w-[320px]  " src="{{ Storage::url('images/header-home.jpg') }}">
+            <a href="{{ route('appli.article', $article->id) }}">
+            <img class="h-auto w-[320px]  " src="{{ $article->photo }}">
             {{-- <div class="bg-bleu w-[2px] "> --}}
             <div class="titre">
             <h3>{{ $article->titre }}</h3>
