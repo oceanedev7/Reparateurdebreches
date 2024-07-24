@@ -73,7 +73,6 @@
             <h1 class="font-bold text-6xl absolute text-white z-10">ESPACE ADHERENT</h1>
                 <img class="h-96 w-full object-cover opacity-40" src="{{ Storage::url('images/maison.png') }}" alt="">
         </div>
-
         <div class="flex flex-col ml-32 mr-32 text-justify p-24 space-y-10 text-bleu-fonce">
             <div class="text-5xl font-black ml-10 space-y-6">Bienvenue sur votre <br> espace adhérent...
             </div>

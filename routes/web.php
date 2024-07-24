@@ -6,14 +6,13 @@ use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\ParametreController;
-use App\Http\Controllers\AccueilArticleController;
-use App\Http\Controllers\FormEventController;
 
 use App\Http\Controllers\AccueilController;
 
 
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\FormEventController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\EmailController;
@@ -44,22 +43,22 @@ Route::get('/evenement/{id}', [EventAccueilController::class, 'show'])->name('ev
 
 
 
-// Route::get('/evenement', function () {
+// Route::get('/evenement', function (){
 //     return view('appli.evenement');
 // })->name('evenement');
 
-// Route::get('/les-actualites', function () {
+// Route::get('/les-actualites', function (){
 //     return view('appli.lesactus');
 // })->name('les-actus');
 Route::get('/les-actualites', [ActuAccueilController::class, 'index'])->name('les-actus');
 Route::get('/actualite/{id}', [ActuAccueilController::class, 'show'])->name('actu');
 
 
-// Route::get('/actualite', function () {
+// Route::get('/actualite', function (){
 //     return view('appli.actu');
 // })->name('actu');
 
-// Route::get('/validerunadherent', function () {
+// Route::get('/validerunadherent', function (){
 //     return view('admin_pages.validadherent');
 // })->name('validerunadherent');
 
@@ -85,15 +84,18 @@ Route::post('/nouscontacter', [EmailController::class, 'store'])->name('contact'
 
 
 
-Route::get('/articles', [AccueilArticleController::class, 'index'])->name('all-articles');
+Route::get('/articles', [ArticleController::class, 'index'])->name('all-articles');
 
 //Routes adhérent
-Route::get('/espaceadherent', function () {
+Route::get('espaceadherent', function () {
     return view('appli.espaceadherent');
+})->name('espaceadherent');
+Route::get('eventadherent', function () {
+    return view('appli.eventadherent');
+})->name('event');
 Route::get('/formulaire',[FormEventController::class, 'index'])->name('form');
 Route::post('/formulaire', [FormEventController::class, 'create'])->name('formulaire');
 Route::get('edit/{id}/delete', [FormEventController::class,'destroy'])->name('deleteinscrit');
-});
 
 // Routes admin (page accueil +pages de gestion)
 
@@ -149,4 +151,14 @@ Route::middleware('auth')->group(function () {
 });
 
 
+
+
+require __DIR__.'/auth.php';
+
+
 require __DIR__ . '/auth.php';
+
+
+
+
+
