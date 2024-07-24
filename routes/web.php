@@ -30,5 +30,5 @@ require __DIR__.'/auth.php';
 
 Route::get('/articles', [ArticleController::class, 'index'])->name('all-articles');
 
-Route::get('/donations/create', [DonationController::class, 'create'])->name('donations.create');
+Route::get('/donations/create', [DonationController::class, 'show'])->name('donations.show');
 Route::post('/donations', [DonationController::class, 'store'])->name('donations.store');

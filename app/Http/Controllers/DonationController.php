@@ -9,10 +9,7 @@ use Stripe\Charge;
 
 class DonationController extends Controller
 {
-    public function create()
-    {
-        return view('donations.create');
-    }
+
 
     public function store(Request $request)
     {
@@ -23,10 +20,10 @@ class DonationController extends Controller
             'payment_method' => 'required',
             'stripeToken' => 'required',
         ]);
-
+        if ($request->payment_method == 'CB') {
         Stripe::setApiKey(env('STRIPE_SECRET'));
 
-        try {
+
             $charge = Charge::create([
                 'amount' => $request->input('amount') * 100, // montant en cents
                 'currency' => 'eur',
@@ -35,16 +32,21 @@ class DonationController extends Controller
                 'receipt_email' => $request->input('email'),
             ]);
 
+        } else if ($request->payment_method == 'PayPal') {
+            // Traiter le paiement PayPal
+        }
+// Enregistrez la donation dans la base de données
             $donation = new Donation();
             $donation->name = $request->name;
             $donation->email = $request->email;
             $donation->amount = $request->amount;
-            $donation->stripe_payment_id = $charge->id;
+            $donation->user_id = Auth::id();  // Relier la donation à l'utilisateur connecté
             $donation->save();
 
-            return redirect()->route('donation.form')->with('success', 'Merci pour votre don!');
-        } catch (\Exception $e) {
+
+            return redirect()->route('donation.form')->with('success', 'Merci pour votre don!');// Rediriger vers la page de confirmation ou afficher un message de succès
+
             return back()->withErrors(['message' => 'Erreur lors du traitement du paiement: ' . $e->getMessage()]);
         }
     }
-}
+
