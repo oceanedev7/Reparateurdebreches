@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\ParametreController;
 use App\Http\Controllers\AccueilArticleController;
+use App\Http\Controllers\FormEventController;
 
 use App\Http\Controllers\AccueilController;
 
@@ -87,7 +88,7 @@ Route::post('/nouscontacter', [EmailController::class, 'store'])->name('contact'
 Route::get('/articles', [AccueilArticleController::class, 'index'])->name('all-articles');
 
 //Routes adhérent
-Route::get('espaceadherent', function () {
+Route::get('/espaceadherent', function () {
     return view('appli.espaceadherent');
 Route::get('/formulaire',[FormEventController::class, 'index'])->name('form');
 Route::post('/formulaire', [FormEventController::class, 'create'])->name('formulaire');
