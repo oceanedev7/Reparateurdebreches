@@ -75,7 +75,7 @@
         </div>
     </main>
 
-    <form enctype="multipart/form-data" class="max-w-sm mx-auto" style="width:500px;" method="post" action="{{route('newArticleadherent')}}">
+    <form enctype="multipart/form-data" class="max-w-sm mx-auto" method="post" action="{{route('newArticleadherent')}}">
         @csrf
         
         <div class="flex justify-center mb-9 pr-1 ">
