@@ -13,7 +13,6 @@
         <a href="{{route('accueil')}}" class="underline"><i class="fa-solid fa-arrow-left underline"></i> Retour à la page d'accueil </a>
         <div class="p-6">
             <h1 class="text-3xl font-bold mb-4 text-bleu">Mentions Légales</h1>
-            
             <h2 class="text-2xl font-semibold mt-6 mb-2 text-bleu-fonce">1. Présentation de l'Association</h2>
             <p class="text-noir"><strong>Nom de l'association :</strong> Réparateurs de Brèche</p>
             <p class="text-noir"><strong>Forme juridique :</strong> Association loi 1901</p>
@@ -26,7 +25,6 @@
             456 Avenue des Serveurs, 75002 Paris, France<br>
             Téléphone : +33 1 23 45 67 89<br>
             Site web : www.webhost.com</p>
-            
             <h2 class="text-2xl font-semibold mt-6 mb-2 text-bleu-fonce">2. Propriété Intellectuelle</h2>
             <p class="text-noir">Le site internet est la propriété exclusive de l’association Réparateurs de Brèche. Tous les éléments du site (textes, images, graphismes, logos, etc.) sont protégés par les lois françaises et internationales sur la propriété intellectuelle. Toute reproduction, distribution, ou utilisation des contenus du site sans autorisation préalable est interdite.</p>
 
@@ -58,7 +56,6 @@
     <button onclick="backToTop()" id="bouton" class="fixed bottom-4 right-4 z-50 text-gris-fonce text-3xl"><i class="fa-solid fa-circle-arrow-up"></i></button>
 
     <script>
-    
 var bouton = document.getElementById("bouton");
 
 function scroll() {
@@ -70,7 +67,7 @@ function scroll() {
 }
 
 function backToTop() {
-  document.documentElement.scrollTop = 0; 
+  document.documentElement.scrollTop = 0;
 }
 </script>
 </body>

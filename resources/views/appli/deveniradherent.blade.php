@@ -6,11 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+    <title>@section('Devenir adhérent')</title>
 </head>
 <body>
-
-    @section('title', 'Devenir adhérent')
 
 @section('content')
 <div class="flex items-center justify-center bg-bleu-fonce">
@@ -21,19 +19,18 @@
 @endsection
 
 @section('main')
-<a href="{{route('accueil')}}" class="underline text-bleu-fonce"><i class="fa-solid fa-arrow-left underline mt-8 ml-8 text-bleu-fonce"></i> Retour à la page d'accueil </a>
 
 <div class="w-full ">
     <div class="flex flex-col ml-24 mr-24 text-justify p-24 space-y-20">
 
-        <div class="space-y-6"> 
+        <div class="space-y-6">
         <div class="text-bleu-fonce font-black text-xl ml-10"> QUI PEUT ADHÉRER ?</div>
         <div  class="text-bleu-fonce">
             L’adhésion peut s’effectuer par simple demande.
-            Généralement, les futurs membres sont tenus de prendre connaissance des statuts et du règlement intérieur de l’association. 
-            Une cotisation peut également être demandée à l’adhésion si les statuts le prévoient. 
+            Généralement, les futurs membres sont tenus de prendre connaissance des statuts et du règlement intérieur de l’association.
+            Une cotisation peut également être demandée à l’adhésion si les statuts le prévoient.
             Une association peut également demander à ce que les nouveaux membres remplissent un bulletin d’inscription.
-            Si les statuts ne prévoient aucune durée maximale d’adhésion avant laquelle cette dernière devra être renouvelée, 
+            Si les statuts ne prévoient aucune durée maximale d’adhésion avant laquelle cette dernière devra être renouvelée,
             les nouveaux membres sont alors considérés comme membres jusqu’à la dissolution de l’association ou le départ des membres.
         </div>
         </div>

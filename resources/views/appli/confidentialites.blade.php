@@ -76,7 +76,6 @@
     <button onclick="backToTop()" id="bouton" class="fixed bottom-4 right-4 z-50 text-gris-fonce text-3xl"><i class="fa-solid fa-circle-arrow-up"></i></button>
 
     <script>
-    
 var bouton = document.getElementById("bouton");
 
 function scroll() {
@@ -88,7 +87,7 @@ function scroll() {
 }
 
 function backToTop() {
-  document.documentElement.scrollTop = 0; 
+  document.documentElement.scrollTop = 0;
 }
 </script>
 </body>

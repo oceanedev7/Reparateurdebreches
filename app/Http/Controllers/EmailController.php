@@ -13,7 +13,7 @@ class EmailController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {   
+    {
         $afficheremails = Demandedecontact::all();
         // dd($afficheremails);
         return view('appli.contactmail', ['emails' => $afficheremails]);
@@ -42,9 +42,9 @@ class EmailController extends Controller
 
         $contact = Demandedecontact::create($request->all());
 
-        Mail::to('reparateurs@de-breches.org')->send(new Contact($request->except('_token')));
-      
-    
+        // Mail::to('reparateurs@de-breches.org')->send(new Contact($request->except('_token')));
+
+
         return view('appli.contact', ['emails' => [$contact]]);
     }
 
@@ -77,8 +77,6 @@ class EmailController extends Controller
      */
     public function destroy(string $id)
     {
-        $contact = Demandedecontact::findOrFail($id);
-        $contact->delete();
-        return redirect('/demandedecontact');
+        //
     }
 }
