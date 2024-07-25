@@ -27,7 +27,7 @@ class ArticleController extends Controller{
                 // $article ->description = $request->description;
                 // $article ->photo = $request->photo;
                 //  $article->save();
-                dd(auth()->user()->id,'newArticle',$request);
+                // dd(auth()->user()->id,'newArticle',$request);
 
             $post = Article::create([
                 'id_user' => auth()->user()->id,
