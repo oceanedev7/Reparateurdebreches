@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('layouts.vue')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +22,7 @@
         <div class="A"> 
             {{-- {{ $article->titre }} --}}
             <a href="{{ route('appli.article', $article->id) }}">
-            <img class="h-auto w-[320px]  " src="{{ $article->photo }}">
+            <img class="h-auto w-[320px]  " src="{{ Storage::url('images/journal.jpg') }}">
             {{-- <div class="bg-bleu w-[2px] "> --}}
             <div class="titre">
             <h3>{{ $article->titre }}</h3>
