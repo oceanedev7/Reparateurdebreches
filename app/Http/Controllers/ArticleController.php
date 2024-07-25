@@ -15,16 +15,45 @@ class ArticleController extends Controller{
         }
         public function store(Request $request)
         {
+            // dd(auth()->user()->id,'newArticle',$request);
+
+            $request->validate([
+                'titre' =>'required',
+                'description'=>'required',
+                'photo'=>'required'
+                ]);
+                // $article = new Article();
+                // $article ->titre = $request->titre;
+                // $article ->description = $request->description;
+                // $article ->photo = $request->photo;
+                //  $article->save();
+                dd(auth()->user()->id,'newArticle',$request);
 
             $post = Article::create([
-                'id_user' => auth()->id(),
+                'id_user' => auth()->user()->id,
                 'titre' => $request->input('titre'),
                 'contenu' => $request->input('contenu'),
                 'photo' => $request->input('photo'),
             ]);
-            return redirect('/dashboard/article');
+            return redirect('/dashboard/article')->with('status','article ajouté');
         }
 
+
+        // public function ajouter_article_nouveau(Request $request)
+        // {
+        //     $request->validate([
+        //         'titre' =>'required',
+        //         'description'=>'required',
+        //         'photo'=>'required'
+        //     ]);
+        //     $article = new Article();
+        //     $article ->titre = $request->titre;
+        //     $article ->description = $request->description;
+        //     $article ->photo = $request->photo;
+        //     $article->save();
+
+        //     return redirect('\article')->with('status','article ajouté');
+        // }
         public function update($id)
         {
             $article = Article::findOrFail($id);
