@@ -24,12 +24,12 @@
             </div>
 
             <a href="{{route('accueil')}}"
-                class="text-bleu-fonce font-black space-x-48 text-xl font-sans flex justify-between"> ACCUEIL </a>
+                class="text-blue-700 font-black space-x-48 text-xl font-sans flex justify-between"> ACCUEIL </a>
             <a href="{{ route('all-articles') }}"
-                class="text-bleu-fonce font-black space-x-48 text-xl font-sans flex justify-between"> ARTICLES</a>
+                class="text-blue-700 font-black space-x-48 text-xl font-sans flex justify-between"> ARTICLES</a>
 
             <a href="{{ route('contact') }}"
-                class="text-bleu-fonce font-black space-x-48 text-xl font-sans flex justify-between"> NOUS CONTACTER</a>
+                class="text-blue-700 font-black space-x-48 text-xl font-sans flex justify-between"> NOUS CONTACTER</a>
 
             <div class="mt-5 flex lg:ml-4 lg:mt-0 mr-12">
 
@@ -40,12 +40,12 @@
 
                 <button class="ml-3 hidden sm:block">
                     <a href="{{route('deveniradherent')}}"
-                        class="bg-bleu-fonce text-white py-2 px-4 text-center rounded text-lg font-bold"> DEVENIR
+                        class="text-blue-700 py-2 px-4 text-center rounded text-lg font-bold"> DEVENIR
                         ADHERENT</a>
                 </button>
 
                 <button class="sm:ml-3  hidden sm:block">
-                    <a href="" class="bg-bleu text-bleu-fonce py-2 px-4 text-center  rounded text-lg font-bold">FAIRE UN
+                    <a href="" class="bg-bleu text-blue-700 py-2 px-4 text-center  rounded text-lg font-bold">FAIRE UN
                         DON
                     </a>
                 </button>
