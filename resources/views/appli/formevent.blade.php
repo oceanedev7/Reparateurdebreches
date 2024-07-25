@@ -22,7 +22,7 @@
         
       
          
-        <div class="relative ml-3 z-10 flex  items-center md:order-2 space-x-2 md:space-x-0 rtl:space-x-reverse">
+        <div class="relative ml-3 z-10 flex items-center md:order-2 space-x-2 md:space-x-0 rtl:space-x-reverse">
           
         
          
@@ -65,7 +65,7 @@
             <span class="sr-only">Open main menu</span>
             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M1 1h15M1 7h15M1 13h15" />
+                d="M1 1h15M1 7h15M1 13h15"/>
             </svg>
           </button>
         </div>
@@ -122,7 +122,7 @@
                 <div class="">{{$form->nom}}</div>
                 <div>{{$form->prenom}}</div> 
                 <div>{{$form->email}}</div>
-                <div class="">{{$form->numero_telephone}} <a href="{{ route('deleteinscrit', $form->id) }}"><i class="fa-solid pl-4 fa-trash"></i></a></div>
+                <div class="">{{$form->numero_telephone}}<a href="{{ route('deleteinscrit', $form->id) }}"><i class="fa-solid pl-4 fa-trash"></i></a></div>
             </div>
         @endforeach
         @endif  

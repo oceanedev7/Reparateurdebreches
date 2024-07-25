@@ -31,7 +31,7 @@
                   class="block py-2 px-3 text-white bg-bleu-fonce rounded dark:bg-bleu-fonce" aria-current="page">Acceuil</a>
               </li>
               <li>
-                <a href="#"
+                <a href="{{route('articleadherent')}}"
                   class="block py-2 px-3 text-bleu-fonce rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
                   les articles</a>
               </li>
@@ -73,7 +73,6 @@
             <h1 class="font-bold text-6xl absolute text-white z-10">ESPACE ADHERENT</h1>
                 <img class="h-96 w-full object-cover opacity-40" src="{{ Storage::url('images/maison.png') }}" alt="">
         </div>
-
         <div class="flex flex-col ml-32 mr-32 text-justify p-24 space-y-10 text-bleu-fonce">
             <div class="text-5xl font-black ml-10 space-y-6">Bienvenue sur votre <br> espace adhérent...
             </div>
@@ -85,7 +84,7 @@
         </div>
 
         <div class="flex flex-row space-x-36 py-18 mb-20 max-w-full max-h-full justify-center">
-            <div class="w-[320px] h-[240px] hover:bg-bleu-fonce bg-bleu-fonce rounded-lg relative"><a href="">
+            <div class="w-[320px] h-[240px] hover:bg-bleu-fonce bg-bleu-fonce rounded-lg relative"><a href="{{ route('articleadherent') }}">
                 <img class="h-60 w-80 object-cover absolute" src="{{ Storage::url('images/article.png') }}" alt="">
                 <div class="font-bold w-full p-4 rounded-b-lg hover:bg-bleu-fonce text-3xl text-white bg-bleu-fonce pl-4 absolute bg-opacity-65 bottom-0">GERER LES <br> ARTICLES</div>
             </a></div>
