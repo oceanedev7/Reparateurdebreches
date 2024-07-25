@@ -100,6 +100,7 @@ return view('appli.espaceadherent');
 Route::get('/article', [ArticleadherentController::class, 'index'])->name('articleadherent');
 Route::get('/article/update/{id}', [ArticleadherentController::class, 'update'])->name('updateArticleadherent');
 Route::post('/article/nouveau', [ArticleadherentController::class, 'store'])->name('newArticleadherent');
+Route::get('edit/{id}/delete', [ArticleadherentController::class,'delete'])->name('deleteArticleadherent');
 Route::post('/article/update/confirm/{id}', [ArticleadherentController::class, 'updateConfirmArticle'])->name('updateConfirmArticleadherent');
 Route::post('/article/delete/{id}', [ArticleadherentController::class, 'updateConfirmArticle'])->name('updateConfirmArticleadherent');
 

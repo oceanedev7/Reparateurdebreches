@@ -104,7 +104,7 @@
             <img class="h-40 max-w-full rounded-lg" src="{{ Storage::url($article->photo) }}" alt="">
             <div> {{$article->description}} </div>
             <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-1 mr-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">modifier</a>
-            <a href="{{route ('deleteArticle', $article->id) }}" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-1 mr-1 dark:bg-red-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-red-800">supprimer</a>
+            <a href="{{route ('deleteArticleadherent', $article->id) }}" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-1 mr-1 dark:bg-red-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-red-800">supprimer</a>
         </div>
         </div>
 @endforeach
