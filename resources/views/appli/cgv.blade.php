@@ -10,17 +10,16 @@
     <title>CGV</title>
 </head>
 <body>
-    
 
     <div class="mx-auto p-6 mt-10">
         <a href="{{route('accueil')}}" class="underline"><i class="fa-solid fa-arrow-left underline"></i> Retour à la page d'accueil </a>
 
         <div class=" p-6 ">
             <h1 class="text-3xl font-bold mb-4 text-bleu">Conditions Générales de Vente</h1>
-            
+
             <h2 class="text-2xl font-semibold mt-6 mb-2 text-bleu-fonce">1. Introduction</h2>
             <p class="text-noir">Les présentes conditions générales de vente (CGV) régissent les relations entre l'association Réparateurs de Brèche et ses adhérents ou clients. Elles sont accessibles à tout moment sur le site internet de l'association.</p>
-            
+
             <h2 class="text-2xl font-semibold mt-6 mb-2 text-bleu-fonce">2. Objet</h2>
             <p class="text-noir">Les CGV décrivent les modalités d'achat et les conditions de vente des produits et services proposés par l'association. Elles s'appliquent à toutes les transactions réalisées sur le site.</p>
 
@@ -59,7 +58,6 @@
     <button onclick="backToTop()" id="bouton" class="fixed bottom-4 right-4 z-50 text-gris-fonce text-3xl"><i class="fa-solid fa-circle-arrow-up"></i></button>
 
     <script>
-    
 var bouton = document.getElementById("bouton");
 
 function scroll() {
@@ -71,7 +69,7 @@ function scroll() {
 }
 
 function backToTop() {
-  document.documentElement.scrollTop = 0; 
+  document.documentElement.scrollTop = 0;
 }
 </script>
 
