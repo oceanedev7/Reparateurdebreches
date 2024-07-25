@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('layouts.vue')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,14 +12,14 @@
     <main>
 @section('content')
 <div class="flex items-center justify-center h-1/2 bg-bleu-fonce">
-    <h1 class="font-bold text-6xl absolute text-white ">{{ $article->titre }}</h1>
+    <h1 class="font-bold text-6xl absolute text-white z-10">{{ $article->titre }}</h1>
     <img class="h-96 w-full object-cover opacity-50" src="{{ Storage::url('images/journal.jpg') }}" alt="">
 </div>
 
 <article>
-    <strong><h1>{{ $article->date }}</h1></strong>
+    <strong><h1>{{ $article->created_at }}</h1></strong>
     <br>
-    <img src="{{ $article->photo }}">
+    <img src="{{Storage::url('images/dominos.jpg')}}">
     <p>{{ $article->description }}</p>
 </article>
 
