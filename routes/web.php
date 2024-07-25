@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Http\Controllers\AccueilArticleController;
 use App\Http\Controllers\ActuAccueilController;
 use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
@@ -84,14 +85,14 @@ Route::get('/nouscontacter/delete/{id}', [EmailController::class, 'destroy'])->n
 
 
 
-Route::get('/articles', [ArticleController::class, 'index'])->name('all-articles');
+Route::get('/articles', [AccueilArticleController::class, 'index'])->name('all-articles');
 
 //Routes adhérent
-Route::get('/formulaire',[FormEventController::class, 'index'])->name('form');
+Route::get('/formulaire', [FormEventController::class, 'index'])->name('form');
 Route::post('/formulaire', [FormEventController::class, 'create'])->name('formulaire');
-Route::get('edit/{id}/delete', [FormEventController::class,'destroy'])->name('deleteinscrit');
-Route::get('eventadherent', [FormEventController::class,'showEvents'])->name('event');
-Route::get('formulaire/{id}', [FormEventController::class,'show'])->name('formulaire-inscrit');
+Route::get('edit/{id}/delete', [FormEventController::class, 'destroy'])->name('deleteinscrit');
+Route::get('eventadherent', [FormEventController::class, 'showEvents'])->name('event');
+Route::get('formulaire/{id}', [FormEventController::class, 'show'])->name('formulaire-inscrit');
 Route::get('espaceadherent', function () {
     return view('appli.espaceadherent');
 })->name('espaceadherent');
@@ -105,6 +106,7 @@ Route::get('/dashboard', function () {
 // Route admin des pages de gestion
 Route::middleware('can:isAdmin')->group(
     function () {
+
         Route::get('/dashboard/actualite', [ActualiteController::class, 'index'])->name('dashboard_actualite');
         Route::post('/dashboard/actualite/nouveau', [ActualiteController::class, 'store'])->name('newActualite');
         Route::get('/dashboard/actualite/update/{id}', [ActualiteController::class, 'update'])->name('updateActualite');
@@ -133,7 +135,7 @@ Route::middleware('can:isAdmin')->group(
         Route::post('/dashboard/article/delete/{id}', [ArticleController::class, 'updateConfirmArticle'])->name('updateConfirmArticle');
 
         Route::get('/dashboard/newsletter', [NewsletterController::class, 'index'])->name('dashboard_newsletter');
-        Route::post('/dashboard/newsletter/nouveau',[NewsletterController::class,'store'])->name('newNewsletter');
+        Route::post('/dashboard/newsletter/nouveau', [NewsletterController::class, 'store'])->name('newNewsletter');
         Route::post('/dashboard/newsletter/delete/{id}', [NewsletterController::class, 'updateConfirmNewsletter'])->name('updateConfirmNewsletter');
 
 
@@ -152,7 +154,7 @@ Route::middleware('auth')->group(function () {
 
 
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 
 require __DIR__ . '/auth.php';
