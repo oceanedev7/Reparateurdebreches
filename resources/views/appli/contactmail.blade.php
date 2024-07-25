@@ -36,7 +36,7 @@
                     $lienGmail = "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to={$expediteur}&su={$sujet}&body={$message}";
                 @endphp
                 <a href="{{ $lienGmail }}"
-                    class="text-bleu-fonce font-semibold underline mt-4 inline-block flex items-center space-x-2"
+                    class="text-bleu-fonce font-semibold underline mt-4 inline-block items-center space-x-2"
                     target="_blank">
                     Répondre à cette demande
                     <i class="fa-solid fa-envelope ml-2"></i>
