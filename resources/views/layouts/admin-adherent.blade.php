@@ -27,7 +27,6 @@
         <a class="bg-bleu text-bleu-fonce py-2 px-4 text-center  rounded text-lg font-bold">FAIRE UN DON </a>
        </div>
 </div>
-      
 
     </nav> --}}
     {{-- <div class="flex items-center justify-between h-24">
@@ -45,15 +44,15 @@
           <span class="hidden sm:block">
             <a href="" class="bg-bleu-fonce text-white py-2 ps-4 pe-4 rounded text-lg "><i class="fa-solid fa-user"></i> </a>
          </span>
-      
+
           <button class="ml-3 hidden sm:block">
             <a href="" class="bg-bleu-fonce text-white py-2 px-4 text-center rounded text-lg font-bold"> DEVENIR ADHERENT</a>
           </button>
-      
+
           <button class="sm:ml-3  hidden sm:block">
             <a href="" class="bg-bleu text-bleu-fonce py-2 px-4 text-center  rounded text-lg font-bold">FAIRE UN DON </a>
           </button>
-      
+
           <!-- Dropdown -->
           <div class="relative ml-3 sm:hidden">
             <button type="button" class="inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:ring-gray-400" id="mobile-menu-button" aria-expanded="false" aria-haspopup="true">
@@ -62,10 +61,10 @@
                 <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
               </svg>
             </button>
-      
+
             <!--
               Dropdown menu, show/hide based on menu state.
-      
+
               Entering: "transition ease-out duration-200"
                 From: "transform opacity-0 scale-95"
                 To: "transform opacity-100 scale-100"
@@ -82,7 +81,6 @@
           </div>
         </div>
       </div> --}}
-      
     <header class="">
 
         <div class="flex items-center justify-between h-5/5">
@@ -95,13 +93,13 @@
     <main>
         @yield('content')
     </main>
-        
+
     <footer class="bg-bleu-fonce w-full h-20 pt-6 mt-4 text-center text-white">
         &copy; Réparateurs de brèches 2024 | Tous droits réservés.
     </footer>
-    
-    
-    
+
+
+
 
 </body>
 </html>

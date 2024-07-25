@@ -67,7 +67,7 @@
         </div>
         <div
             class="my-14 max-w-md bg-white border border-bleu-fonce rounded-lg shadow-xl hover:bg-bleu focus:outline-none focus:ring-2 focus:ring-bleu-fonce dark:hover:bg-bleu dark:focus:ring-bleu-clair hover:scale-105">
-            <a href="{{route('dashboard_newsletter')}}">
+            <a href="#">
                 <img class="rounded-t-lg w-full object-cover" style="height:200px;"
                     src="{{ Storage::url('images/quisommesnous.png') }}" alt="reunion" />
 
@@ -80,7 +80,7 @@
         </div>
         <div
             class="my-14 max-w-md bg-white border border-bleu-fonce rounded-lg shadow-xl hover:bg-bleu focus:outline-none focus:ring-2 focus:ring-bleu-fonce dark:hover:bg-bleu dark:focus:ring-bleu-clair hover:scale-105">
-            <a href="{{route('dashboard_article')}}">
+            <a href="#">
                 <img class="rounded-t-lg w-full object-cover" style="height:200px;"
                     src="{{ Storage::url('images/quisommesnous.png') }}" alt="reunion" />
 
@@ -136,3 +136,6 @@
 
 
 @endsection
+
+
+

@@ -6,10 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@section('Agenda')</title>
+  
 </head>
 <body>
 
+    @section('title', 'Agenda')
 
 
     @section('content')
@@ -21,15 +22,21 @@
     
 @section('main')
 
+
+<a href="{{route('accueil')}}" class="underline text-bleu-fonce"><i class="fa-solid fa-arrow-left underline mt-8 ml-8 text-bleu-fonce"></i> Retour à la page d'accueil </a>
+
+
 <div class="grid grid-cols-3 gap-12 p-20 justify-center">
-    <a href="{{route('evenement')}}" class="bg-bleu-fonce rounded-lg h-60 w-80 relative overflow-hidden">
-        <img class="w-full rounded-lg object-cover h-full opacity-40" src="{{ Storage::url('images/header-home.jpg') }}" alt="">
+    @foreach ($evenements as $evenement)
+    <a href="{{route('evenement', $evenement->id)}}" class="bg-bleu-fonce rounded-lg h-60 w-80 relative overflow-hidden">
+        <img class="w-full rounded-lg object-cover h-full opacity-40" src="{{ Storage::url($evenement->photo) }}" alt="">
         <div class="relative bottom-44 left-4 mt-20 flex flex-col z-10">
-            <div class="text-white font-black text-2xl ml-6 mt-2"> TITRE </div>
-            <div class="text-white font-bold ml-6 text-2xl h-mx-12 truncate">12/08/2024 </div>
+            <div class="text-white font-black text-xl ml-6 mt-2"> {{$evenement->titre}} </div>
+            <div class="text-white font-bold ml-6 text-xl h-mx-12 truncate">{{$evenement->date}} </div>
         </div>
         <div class="overlay"></div>
     </a>
+    @endforeach
 </div>
 
 

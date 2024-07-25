@@ -1,51 +1,33 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Mail;
-use App\Mail\Contact;
-use App\Models\Demandedecontact;
+
+use App\Models\Actualite;
 use Illuminate\Http\Request;
 
-
-class EmailController extends Controller
+class ActuAccueilController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
-    {
-        $afficheremails = Demandedecontact::all();
-        // dd($afficheremails);
-        return view('appli.contactmail', ['emails' => $afficheremails]);
+    { 
+        $actualites = Actualite::all();
+    //    dd($actualites);
+        return view('appli.lesactus', ['actualites' => $actualites]);
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Request $request)
-    {
-        //
-    }
+
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-
-        $request->validate([
-            'nom' => 'required|string',
-            'prenom' => 'required|string',
-            'email' => 'required|email',
-            'message' => 'required|string',
-        ]);
-
-        $contact = Demandedecontact::create($request->all());
-
-        // Mail::to('reparateurs@de-breches.org')->send(new Contact($request->except('_token')));
-
-
-        return view('appli.contact', ['emails' => [$contact]]);
+        //
     }
 
     /**
@@ -53,7 +35,8 @@ class EmailController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $actualite = Actualite::findOrFail($id);
+        return view('appli.actu', compact('actualite'));
     }
 
     /**

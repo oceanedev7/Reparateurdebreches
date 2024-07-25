@@ -24,7 +24,7 @@
             <div class="mt-5 flex lg:ml-4 lg:mt-0 mr-12">
 
               <span class="hidden sm:block">
-                <a href="" class="bg-bleu-fonce text-white py-2 ps-4 pe-4 rounded text-lg "><i class="fa-solid fa-user"></i> </a>
+                <a href="{{route('login')}}" class="bg-bleu-fonce text-white py-2 ps-4 pe-4 rounded text-lg "><i class="fa-solid fa-user"></i> </a>
              </span>
 
               <button class="ml-3 hidden sm:block">

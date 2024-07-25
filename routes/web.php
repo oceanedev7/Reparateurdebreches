@@ -1,43 +1,70 @@
 <?php
 
+
+// use App\Http\Controllers\AccueilArticleController;
+use App\Http\Controllers\ActuAccueilController;
 use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\ParametreController;
+
+use App\Http\Controllers\AccueilArticleController;
+// use App\Http\Controllers\EmailController;
+
+use App\Http\Controllers\ArticleadherentController;
+
+
+use App\Http\Controllers\AccueilController;
+// use App\Http\Controllers\EventAccueilController;
+// use App\Http\Controllers\InscriptionController;
+
+
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\FormEventController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\EmailController;
+use App\Http\Controllers\EventAccueilController;
 use App\Http\Controllers\InscriptionController;
 use App\Http\Controllers\NewsletterController;
 
+
+Route::get('/', [AccueilController::class, 'index'])->name('accueil');
+
 // Routes visiteur
-Route::get('/', function () {
-    return view('appli.accueil');
-})->name('accueil');
+// Route::get('/', function () {
+//     return view('appli.accueil');
+// })->name('accueil');
 
 Route::get('/deveniradherent', function () {
     return view('appli.deveniradherent');
 })->name('deveniradherent');
 
 
-Route::get('/agenda', function () {
-    return view('appli.agenda');
-})->name('agenda');
+// Route::get('/agenda', function () {
+//     return view('appli.agenda');
+// })->name('agenda');
+Route::get('/agenda', [EventAccueilController::class, 'index'])->name('agenda');
+Route::get('/evenement/{id}', [EventAccueilController::class, 'show'])->name('evenement');
 
-Route::get('/evenement', function () {
-    return view('appli.evenement');
-})->name('evenement');
 
-Route::get('/les-actualites', function () {
-    return view('appli.lesactus');
-})->name('les-actus');
 
-Route::get('/actualite', function () {
-    return view('appli.actu');
-})->name('actu');
+// Route::get('/evenement', function (){
+//     return view('appli.evenement');
+// })->name('evenement');
 
-// Route::get('/validerunadherent', function () {
+// Route::get('/les-actualites', function (){
+//     return view('appli.lesactus');
+// })->name('les-actus');
+Route::get('/les-actualites', [ActuAccueilController::class, 'index'])->name('les-actus');
+Route::get('/actualite/{id}', [ActuAccueilController::class, 'show'])->name('actu');
+
+
+// Route::get('/actualite', function (){
+//     return view('appli.actu');
+// })->name('actu');
+
+// Route::get('/validerunadherent', function (){
 //     return view('admin_pages.validadherent');
 // })->name('validerunadherent');
 
@@ -60,15 +87,26 @@ Route::get('/nouscontacter', function () {
 
 Route::get('/demandedecontact', [EmailController::class, 'index'])->name('contactmail');
 Route::post('/nouscontacter', [EmailController::class, 'store'])->name('contact');
+Route::get('/nouscontacter/delete/{id}', [EmailController::class, 'destroy'])->name('deleteContact');
 
 
-
-Route::get('/articles', [ArticleController::class, 'index'])->name('all-articles');
 
 //Routes adhérent
+Route::get('/formulaire', [FormEventController::class, 'index'])->name('form');
+Route::post('/formulaire', [FormEventController::class, 'create'])->name('formulaire');
+Route::get('edit/{id}/delete', [FormEventController::class, 'destroy'])->name('deleteinscrit');
+Route::get('eventadherent', [FormEventController::class, 'showEvents'])->name('event');
+Route::get('formulaire/{id}', [FormEventController::class, 'show'])->name('formulaire-inscrit');
 Route::get('espaceadherent', function () {
     return view('appli.espaceadherent');
-});
+})->name('espaceadherent');
+
+Route::get('/article', [ArticleadherentController::class, 'index'])->name('articleadherent');
+Route::get('/article/update/{id}', [ArticleadherentController::class, 'update'])->name('updateArticleadherent');
+Route::post('/article/nouveau', [ArticleadherentController::class, 'store'])->name('newArticleadherent');
+Route::get('formulaire/delete/{id}', [ArticleadherentController::class,'delete'])->name('deleteArticleadherent');
+Route::post('/article/update/confirm/{id}', [ArticleadherentController::class, 'updateConfirmArticle'])->name('updateConfirmArticleadherent');
+Route::post('/article/delete/{id}', [ArticleadherentController::class, 'updateConfirmArticle'])->name('updateConfirmArticleadherent');
 
 // Routes admin (page accueil +pages de gestion)
 
@@ -79,6 +117,7 @@ Route::get('/dashboard', function () {
 // Route admin des pages de gestion
 Route::middleware('can:isAdmin')->group(
     function () {
+
         Route::get('/dashboard/actualite', [ActualiteController::class, 'index'])->name('dashboard_actualite');
         Route::post('/dashboard/actualite/nouveau', [ActualiteController::class, 'store'])->name('newActualite');
         Route::get('/dashboard/actualite/update/{id}', [ActualiteController::class, 'update'])->name('updateActualite');
@@ -107,7 +146,7 @@ Route::middleware('can:isAdmin')->group(
         Route::post('/dashboard/article/delete/{id}', [ArticleController::class, 'delete'])->name('deleteArticle');
 
         Route::get('/dashboard/newsletter', [NewsletterController::class, 'index'])->name('dashboard_newsletter');
-        Route::post('/dashboard/newsletter/nouveau',[NewsletterController::class,'store'])->name('newNewsletter');
+        Route::post('/dashboard/newsletter/nouveau', [NewsletterController::class, 'store'])->name('newNewsletter');
         Route::post('/dashboard/newsletter/delete/{id}', [NewsletterController::class, 'updateConfirmNewsletter'])->name('updateConfirmNewsletter');
 
 
@@ -124,8 +163,76 @@ Route::middleware('auth')->group(function () {
 });
 
 
+
+
+
+Route::get('/articles', [AccueilArticleController::class, 'index'])->name('all-articles');
+Route::get('/article/{id}', [AccueilArticleController::class, 'show'])->name('appli.article');
+Route::post('/article/{id}/commentaire', [AccueilArticleController::class, 'ajouterCommentaire'])->name('ajouterCommentaire');
+
+
+// Route::get('/deveniradherent', function () {
+//     return view('appli.deveniradherent');
+// })->name('deveniradherent');
+
+
+// //Routes adhérent
+// Route::get('espaceadherent', function () {
+//     return view('appli.espaceadherent');
+// });
+
+
+// // Route::get('/agenda', function () {
+// //     return view('appli.agenda');
+// // })->name('agenda');
+// Route::get('/agenda', [EventAccueilController::class, 'index'])->name('agenda');
+// Route::get('/evenement/{id}', [EventAccueilController::class, 'show'])->name('evenement');
+
+
+
+// // Route::get('/evenement', function () {
+// //     return view('appli.evenement');
+// // })->name('evenement');
+
+// // Route::get('/les-actualites', function () {
+// //     return view('appli.lesactus');
+// // })->name('les-actus');
+// Route::get('/les-actualites', [ActuAccueilController::class, 'index'])->name('les-actus');
+// Route::get('/actualite/{id}', [ActuAccueilController::class, 'show'])->name('actu');
+
+
+// // Route::get('/actualite', function () {
+// //     return view('appli.actu');
+// // })->name('actu');
+
+// // Route::get('/validerunadherent', function () {
+// //     return view('admin_pages.validadherent');
+// // })->name('validerunadherent');
+
+
+// Route::get('/mentionslegales', function () {
+//     return view('appli.mentionslegales');
+// })->name('mentionslegales');
+
+// Route::get('/cgv', function () {
+//     return view('appli.cgv');
+// })->name('cgv');
+
+// Route::get('/confidentialites', function () {
+//     return view('appli.confidentialites');
+// })->name('confidentialites');
+
+// Route::get('/nouscontacter', function () {
+//     return view('appli.contact');
+// })->name('contact');
+
+// Route::get('/demandedecontact', [EmailController::class, 'index'])->name('contactmail');
+// Route::post('/nouscontacter', [EmailController::class, 'store'])->name('contact');
+
+
+// require __DIR__.'/auth.php';
+
+// require __DIR__ . '/auth.php';
+
+
 require __DIR__ . '/auth.php';
-
-
-
-

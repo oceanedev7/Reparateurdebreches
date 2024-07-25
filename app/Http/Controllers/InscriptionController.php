@@ -34,11 +34,11 @@ class InscriptionController extends Controller
            'ville' => 'required|string',
            'code_postal' => 'required|string',
            'pays' => 'required|string',
-     
+
         ]);
-    
+
         User::create($request->all());
-        
+
         return view('appli.deveniradherent');
     }
 
