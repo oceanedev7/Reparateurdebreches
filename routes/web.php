@@ -236,15 +236,3 @@ Route::post('/article/{id}/commentaire', [AccueilArticleController::class, 'ajou
 
 
 require __DIR__ . '/auth.php';
-
-
-
-
-
-
-
-
-
-
-
-

@@ -23,7 +23,7 @@
     </div>
     
 
-    <div class="text-bleu-fonce text-base flex items-center max-w-lg ml-40 mt-12">
+    <div class="text-bleu-fonce text-base flex items-center max-w-lg ml-40 mt-12"> 
 
         L’association “Réparateurs de Brèches Martinique” par leur dynamisme intervient au domicile des seniors mais aussi à l’hôpital ou encore en maison de retraite/EHPAD pour leur apporter de la compagnie, faire de la lecture, jouer à des jeux de société pour personnes âgées ou l’organisation de sorties. 
         Nous participons à l'animation de la vie locale en proposant des actions et des activités sociales, culturelles, sportives, environnementales. Nous contribuons à une vie locale citoyenne et solidaire.
@@ -127,7 +127,7 @@
 
 <div class="h-2/4"> 
 <button>
-    <a href="{{route('agenda')}}" class="bg-bleu-clair text-bleu-fonce py-2 px-4 text-center rounded text-lg font-bold absolute right-12 mt-36">+ voir tous les évènements</a>
+    <a href="{{route('agenda')}}" class="bg-bleu-clair text-bleu-fonce py-2 px-4 text-center rounded text-lg font-bold absolute right-12 mt-40">+ voir tous les évènements</a>
   </button>
 </div>
 </div>
@@ -164,7 +164,7 @@
     </main>
 
     <script>
-
+        
 var bouton = document.getElementById("bouton");
 
 function scroll() {

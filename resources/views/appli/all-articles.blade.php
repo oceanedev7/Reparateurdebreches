@@ -30,8 +30,8 @@
             </a>
         {{-- </div> --}}
         </div> 
-         
-            
+
+
              @csrf
         {{-- </li>        --}}
         @endforeach
