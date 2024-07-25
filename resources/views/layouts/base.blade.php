@@ -84,43 +84,37 @@
                 les liens sociaux avec nos aînés. Ensemble, construisons un avenir solidaire et bienveillant.
             </div>
 
-            <div class="flex flex-row space-x-8 mt-8 lg:mt-0 mr-16">
+            <div class="flex flex-row space-x-8 mt-8 lg:mt-0 mr-16" >
                 <div class="mr-6">
-                    <div class="flex flex-col items-center lg:items-start">
-                        <div class="font-black text-white text-lg mb-4">Contact</div>
-
-                        <div class="flex items-center mb-2">
-                            <div class="w-8 h-8 text-white rounded-md flex items-center justify-center mr-2">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                            <div class="text-base text-white">12 Rue des Colibris,<br />Quartier Paradis, 97232 Lamentin
-                            </div>
+                <div class="flex flex-col items-center lg:items-start">
+                    <div class="font-black text-white text-lg mb-4">Contact</div>
+                    <div class="flex items-center mb-2">
+                        <div class="w-8 h-8 text-white rounded-md flex items-center justify-center mr-2">
+                            <i class="fa-solid fa-location-dot"></i>
                         </div>
-
-                        <div class="flex items-center mb-2">
-                            <div class="w-8 h-8 text-white rounded-md flex items-center justify-center mr-2">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
-                            <div class="text-base text-white">0596 65 87 95</div>
+                        <div class="text-base text-white">12 Rue des Colibris,<br/>Quartier Paradis, 97232 Lamentin</div>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <div class="w-8 h-8 text-white rounded-md flex items-center justify-center mr-2">
+                            <i class="fa-solid fa-phone"></i>
                         </div>
-
-                        <div class="flex items-center">
-                            <div class="w-8 h-8 text-white rounded-md flex items-center justify-center mr-2">
-                                <i class="fa-solid fa-envelope"></i>
-                            </div>
+                        <div class="text-base text-white">0596 65 87 95</div>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 text-white rounded-md flex items-center justify-center mr-2">
+                            <i class="fa-solid fa-envelope"></i>
                         </div>
+                        <div class="text-base text-white">reparateurs@de-breches.org</div>
                     </div>
                 </div>
-
+                </div>
                 <div class="flex flex-col items-center">
                     <div class="font-bold text-white text-lg mb-4">Suivez-nous</div>
                     <div class="flex space-x-2">
-                        <a href="https://www.facebook.com"
-                            class="w-8 h-8 bg-white text-white bg-opacity-30 rounded-md flex items-center justify-center">
+                        <a href="https://www.facebook.com" class="w-8 h-8 bg-white text-white bg-opacity-30 rounded-md flex items-center justify-center">
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
-                        <a href="https://www.instagram.com"
-                            class="w-8 h-8 bg-white text-white bg-opacity-30 rounded-md flex items-center justify-center">
+                        <a href="https://www.instagram.com" class="w-8 h-8 bg-white text-white bg-opacity-30 rounded-md flex items-center justify-center">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
                     </div>
