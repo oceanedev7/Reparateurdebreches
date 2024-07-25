@@ -25,7 +25,7 @@ class AccueilArticleController extends Controller{
     // //     // dd($commentaires);
     // //     return view('appli.article', compact('commentaires'));
     // // }
-  
+
     // public function show(string $id)
     // {
     //     $article = Article::findOrFail($id);
@@ -38,7 +38,7 @@ class AccueilArticleController extends Controller{
     //         'nom' => 'required|string',
     //         'commentaire' => 'required|string',
     //         'article_id' => 'required|exists:articles,id',
-            
+
     //     ]);
 
     //     Commentaire::create($request->all());
