@@ -93,10 +93,10 @@
         @yield('content')
     </main>
 
-    <footer class="bg-bleu-fonce w-full h-80 flex flex-wrap items-center justify-between p-8 relative">
+    <footer class="bg-blue-700 w-full h-80 flex flex-wrap items-center justify-between p-8 relative">
         <div class="absolute top-[-2.5rem] left-1/2 transform -translate-x-1/2 z-10 text-center">
-            <div class="bg-bleu-clair h-20 p-4 rounded-lg  flex items-center justify-center space-x-4">
-                <p class="text-base font-bold text-bleu-fonce">Inscrivez-vous et restez <br /> informé de nos actualités
+            <div class="bg-blue-500 h-20 p-4 rounded-lg  flex items-center justify-center space-x-4">
+                <p class="text-base font-bold text-blue-800">Inscrivez-vous et restez <br /> informé de nos actualités
                     !</p>
                 <form>
                     <input type="email" placeholder="Adresse email" class="p-2 rounded border-none " />
@@ -161,7 +161,7 @@
             </div>
         </div>
 
-        <div class="absolute bottom-0 left-0 space-x-32 w-full text-center py-4 bg-bleu-fonce">
+        <div class="absolute bottom-0 left-0 space-x-32 w-full text-center py-4 bg-blue-700">
             <a href="{{ route('mentionslegales') }}" class="text-sm text-white mx-2">Mentions légales</a>
             <a href="{{ route('cgv') }}" class="text-sm text-white mx-2">CGV</a>
             <a href="{{ route('confidentialites') }}" class="text-sm text-white mx-2">Confidentialités</a>

@@ -32,7 +32,7 @@
 
             <div class="mb-5 flex items-end justify-end">
                 <button type="submit"
-                    class=" my-10 text-white bg-bleu-fonce hover:bg-bleu-clair focus:ring-4 focus:outline-none focus:ring-bleu  rounded-lg text-xl font-bold w-full sm:w-auto px-5 py-2.5 text-center dark:bg-bleu-fonce dark:hover:bg-bleu-fonce dark:focus:ring-bleu">Ajouter</button>
+                    class=" my-10 text-white bg-blue-700 hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-bleu  rounded-lg text-xl font-bold w-full sm:w-auto px-5 py-2.5 text-center dark:bg-bleu-fonce dark:hover:bg-bleu-fonce dark:focus:ring-bleu">Ajouter</button>
             </div>
         </form>
 

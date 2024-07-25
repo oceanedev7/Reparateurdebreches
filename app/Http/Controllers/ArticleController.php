@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller{
 
@@ -15,56 +16,42 @@ class ArticleController extends Controller{
         }
         public function store(Request $request)
         {
-            // dd(auth()->user()->id,'newArticle',$request);
+            //   dd(auth()->user()->id,'newArticle',$request->photo);
 
-            $request->validate([
-                'titre' =>'required',
-                'description'=>'required',
-                'photo'=>'required'
-                ]);
-                // $article = new Article();
-                // $article ->titre = $request->titre;
-                // $article ->description = $request->description;
-                // $article ->photo = $request->photo;
-                //  $article->save();
+              $request->validate([
+                'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+                'titre' => 'required|string',
+                'description' => 'required|string',
+            ]);
+            if ($request->hasFile('photo')){
+                $path = $request->file('photo')->store('public/images');
+                $photoPath = Storage::url($path);
+
                 // dd(auth()->user()->id,'newArticle',$request);
 
-            $post = Article::create([
-                'id_user' => auth()->user()->id,
-                'titre' => $request->input('titre'),
-                'contenu' => $request->input('contenu'),
-                'photo' => $request->input('photo'),
-            ]);
-            return redirect('/dashboard/article')->with('status','article ajouté');
-        }
+                $post = Article::create([
+                    'id_user' => auth()->id(),
+                    'titre' => $request->input('titre'),
+                    'description' => $request->input('description'),
+                    'photo' => $path,
+                ]);
+
+                return  redirect('/dashboard/article');
+        }}
 
 
-        // public function ajouter_article_nouveau(Request $request)
-        // {
-        //     $request->validate([
-        //         'titre' =>'required',
-        //         'description'=>'required',
-        //         'photo'=>'required'
-        //     ]);
-        //     $article = new Article();
-        //     $article ->titre = $request->titre;
-        //     $article ->description = $request->description;
-        //     $article ->photo = $request->photo;
-        //     $article->save();
 
-        //     return redirect('\article')->with('status','article ajouté');
-        // }
         public function update($id)
         {
             $article = Article::findOrFail($id);
-            return view('admin_pages.updateArticle', ['article' => $article]);
+            return view('admin_pages.updateArticle', ['article'=>$article]);
         }
         public function updateConfirmArticle(Request $request, $id)
         {
             $post = Article::findOrFail($id);
             $post->update([
                 'titre' => $request->input('titre'),
-                'contenu' => $request->input('contenu'),
+                'description' => $request->input('description'),
                 'photo' => $request->input('photo')
             ]);
             return redirect('/dashboard/article');
