@@ -6,9 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@section('Actualités')</title>
+
 </head>
 <body>
+    @section('title', 'Les actualités')
 
     @section('content')
     <div class="flex items-center justify-center bg-bleu-fonce">
@@ -16,19 +17,22 @@
         <img class="h-96 w-full object-cover opacity-40" src="{{ Storage::url('images/actus.jpg') }}" alt="">
     </div>
     @endsection
-
+    
 
 @section('main')
+<a href="{{route('accueil')}}" class="underline text-bleu-fonce"><i class="fa-solid fa-arrow-left underline mt-8 ml-8 text-bleu-fonce"></i> Retour à la page d'accueil </a>
 
 <div class="grid grid-cols-3 gap-12 p-20 justify-center ">
 
-            <a  href="{{route('actu')}}" class="bg-bleu-fonce rounded-lg h-80 w-80 ">
-                <img class="w-full rounded-lg object-cover h-3/5" src="{{ Storage::url('images/header-home.jpg') }}" alt="">
-                <div class="font-bold text-lg ml-10 mt-2"> TITRE </div>
-                <div class="ml-6 mt-2 h-mx-12 truncate"> Nous proposons des services d’assistance pour les gestes de la vie courante (courses, ménage, préparation des repas…) afin de faciliter le quotidien des seniors.
-                    Elles peuvent également proposer un service d’accompagnement pour garantir l'accès aux soins et aux loisirs. </div>
-            </a>
+           @foreach ($actualites as $actualite)
 
+           <a href="{{ route('actu', $actualite->id) }}" class="bg-bleu-fonce rounded-lg h-80 w-80 flex flex-col">
+            <img class="w-full rounded-t-lg object-cover h-3/5" src="{{ Storage::url($actualite->photo) }}">
+            <div class="font-black text-center text-lg mt-2 text-white mx-4 px-2 flex-1 flex items-center justify-center">
+                {{ $actualite->titre }}
+            </div>
+        </a>
+@endforeach
 </div>
 
 
