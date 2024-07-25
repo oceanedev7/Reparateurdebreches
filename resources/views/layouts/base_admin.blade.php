@@ -121,10 +121,5 @@
 
   </div>
 </footer>
-
-
-
-
 </body>
-
 </html>
