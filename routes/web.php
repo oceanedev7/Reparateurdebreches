@@ -80,6 +80,8 @@ Route::get('/nouscontacter', function () {
 
 Route::get('/demandedecontact', [EmailController::class, 'index'])->name('contactmail');
 Route::post('/nouscontacter', [EmailController::class, 'store'])->name('contact');
+Route::get('/nouscontacter/delete/{id}', [EmailController::class, 'destroy'])->name('deleteContact');
+
 
 
 
