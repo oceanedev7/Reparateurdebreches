@@ -61,9 +61,9 @@ class AccueilArticleController extends Controller{
         ]);
 
         $commentaire = new Commentaire();
-        $commentaire->nom = $request->input('nom');
-        $commentaire->commentaire = $request->input('commentaire');
-        $commentaire->id_article = $id;
+        $commentaire->'nom' = $request->input('nom');
+        $commentaire->'commentaire' = $request->input('commentaire');
+        $commentaire->'id_article' = $id;
         $commentaire->save();
 
         return redirect()->route('appli.article', ['id' => $id]);

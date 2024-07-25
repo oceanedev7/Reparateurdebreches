@@ -88,7 +88,7 @@ Route::get('/nouscontacter/delete/{id}', [EmailController::class, 'destroy'])->n
 
 Route::get('/articles', [AccueilArticleController::class, 'index'])->name('all-articles');
 Route::get('/articles/unique/{id}', [AccueilArticleController::class, 'show'])->name('appli.article');
-Route::get('/articles/unique/commentaire/{id}', [AccueilArticleController::class, 'ajouterCommentaire'])->name('ajouterCommentaire');
+Route::post('/articles/unique/commentaire/{id}', [AccueilArticleController::class, 'ajouterCommentaire'])->name('ajouterCommentaire');
 //Routes adhérent
 Route::get('/formulaire', [FormEventController::class, 'index'])->name('form');
 Route::post('/formulaire', [FormEventController::class, 'create'])->name('formulaire');

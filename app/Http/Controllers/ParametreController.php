@@ -11,7 +11,7 @@ class ParametreController extends Controller
     {
         $id = auth()->id();
         $parametre = User::findOrFail($id);
-        return view('admin_pages.dashboard_paramètre', ['parametre' => $parametre]);
+        return view('admin_pages.dashboard_parametre', ['parametre' => $parametre]);
     }
     public function updateConfirmParametre(Request $request)
     {
