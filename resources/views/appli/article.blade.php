@@ -19,7 +19,7 @@
 <article>
     <strong><h1>{{ $article->created_at }}</h1></strong>
     <br>
-    <img src="{{Storage::url('images/dominos.jpg')}}">
+    <img src="{{Storage::url($article->photo)}}">
     <p>{{ $article->description }}</p>
 </article>
 
