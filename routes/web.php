@@ -87,7 +87,8 @@ Route::get('/nouscontacter/delete/{id}', [EmailController::class, 'destroy'])->n
 
 
 Route::get('/articles', [AccueilArticleController::class, 'index'])->name('all-articles');
-
+Route::get('/articles/unique/{id}', [AccueilArticleController::class, 'show'])->name('appli.article');
+Route::get('/articles/unique/commentaire/{id}', [AccueilArticleController::class, 'ajouterCommentaire'])->name('ajouterCommentaire');
 //Routes adhérent
 Route::get('/formulaire', [FormEventController::class, 'index'])->name('form');
 Route::post('/formulaire', [FormEventController::class, 'create'])->name('formulaire');
@@ -101,7 +102,7 @@ Route::get('espaceadherent', function () {
 Route::get('/article', [ArticleadherentController::class, 'index'])->name('articleadherent');
 Route::get('/article/update/{id}', [ArticleadherentController::class, 'update'])->name('updateArticleadherent');
 Route::post('/article/nouveau', [ArticleadherentController::class, 'store'])->name('newArticleadherent');
-Route::get('edit/{id}/delete', [ArticleadherentController::class,'delete'])->name('deleteArticleadherent');
+Route::get('edit/{id}/delete', [ArticleadherentController::class, 'delete'])->name('deleteArticleadherent');
 Route::post('/article/update/confirm/{id}', [ArticleadherentController::class, 'updateConfirmArticle'])->name('updateConfirmArticleadherent');
 Route::post('/article/delete/{id}', [ArticleadherentController::class, 'updateConfirmArticle'])->name('updateConfirmArticleadherent');
 
@@ -140,7 +141,7 @@ Route::middleware('can:isAdmin')->group(
         Route::get('/dashboard/article/update/{id}', [ArticleController::class, 'update'])->name('updateArticle');
         Route::post('/dashboard/article/nouveau', [ArticleController::class, 'store'])->name('newArticle');
         Route::post('/dashboard/article/update/confirm/{id}', [ArticleController::class, 'updateConfirmArticle'])->name('updateConfirmArticle');
-        Route::post('/dashboard/article/delete/{id}', [ArticleController::class, 'updateConfirmArticle'])->name('updateConfirmArticle');
+        Route::post('/dashboard/article/delete/{id}', [ArticleController::class, 'delete'])->name('deleteArticle');
 
         Route::get('/dashboard/newsletter', [NewsletterController::class, 'index'])->name('dashboard_newsletter');
         Route::post('/dashboard/newsletter/nouveau', [NewsletterController::class, 'store'])->name('newNewsletter');

@@ -1,6 +1,6 @@
 @extends('layouts.base_admin')
 
-@section('title', 'Dashboard-Gérer les articles')
+@section('title', 'Dashboard-Gérer les artualités')
 
 @section('content')
 
@@ -10,13 +10,14 @@
             GESTION DES ACTUALITES</h2>
 
 
-        <form enctype="multipart/form-data" class="max-w-md mx-auto" style="width:500px;" method="post" action="{{route('newActualite')}}">
+        <form enctype="multipart/form-data" class="max-w-md mx-auto" style="width:500px;" method="post"
+            action="{{route('newActualite')}}">
             @csrf
 
             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="photo"></label>
             <input
                 class="block w-full text-xl font-bold text-bleu-fonce  border-bleu-fonce rounded-lg cursor-pointer bg-white dark:text-bleu-fonce focus:outline-none dark:bg-white dark:border-gray-600 dark:placeholder-bleu-fonce"
-                aria-describedby="user_avatar_help" id="photo" name="photo" type="file" accept="image/*"/>
+                aria-describedby="user_avatar_help" id="photo" name="photo" type="file" accept="image/*" />
 
 
             <label for="titre" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
@@ -41,15 +42,16 @@
         @foreach ($actualites as $actualite)
             <div class="bg-white rounded-lg">
                 <a href="#">
-                    <img class="rounded-t-lg w-full object-cover" style="height:200px;" src="{{ Storage::url($actualite->photo) }}" alt="photo actualite" />
-                    
+                    <img class="rounded-t-lg w-full object-cover" style="height:200px;"
+                        src="{{ Storage::url($actualite->photo) }}" alt="photo actualite" />
+
                     <div class="p-5 bg-bleu-fonce">
                         <h5 class="mb-2 text-xl font-bold tracking-tight text-white">
                             {{ $actualite->titre }}
                         </h5>
                     </div>
                 </a>
-    
+
                 <div class="flex justify-center gap-2 p-4 bg-white border-t border-gray-200">
                     <a type="button" href="{{ route('updateActualite', $actualite->id) }}"
                         class="text-white bg-bleu-fonce font-medium rounded-lg text-sm px-4 py-2.5 text-center">Modifier</a>
