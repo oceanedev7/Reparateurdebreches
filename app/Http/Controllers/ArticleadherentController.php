@@ -7,14 +7,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 
-class ArticleController extends Controller{
+class ArticleadherentController extends Controller{
 
     public function index()
     {
 // afficher la page gérer les articles
             $articles = Article::all();
             // dd($articles);
-            return view('admin_pages.dashboard_article', compact('articles'));
+            return view('appli.articleadherent', compact('articles'));
         }
         public function store(Request $request)
         {
@@ -33,7 +33,7 @@ class ArticleController extends Controller{
                 'description' => 'required|string',
             ]);
     
-            if ($request->hasFile('photo')){
+            if ($request->hasFile('photo')) {
                 $path = $request->file('photo')->store('public/images');
                 $photoPath = Storage::url($path);
     
@@ -72,3 +72,4 @@ class ArticleController extends Controller{
             return redirect('/dashboard/article');
         }
     };
+

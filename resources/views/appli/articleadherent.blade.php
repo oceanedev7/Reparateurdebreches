@@ -9,9 +9,9 @@
     <title>@yield('title')</title>
 </head>
 <body>
-    <div class="flex items-center justify-between	h-44">
+    <div class="flex items-center justify-between h-44">
 
-        <div class="h-44 w-48 ml-12 py-6 z-10 ">
+        <div class="h-44 w-48 ml-12 py-6 z-10">
           <img class="h-44 w-48 rounded shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]"
             src="{{ Storage::url('images/logonavbar.png') }}" alt="logo">
         </div>
@@ -73,30 +73,45 @@
             <h1 class="font-bold text-6xl absolute text-white z-10">ESPACE ADHERENT</h1>
                 <img class="h-96 w-full object-cover opacity-40" src="{{ Storage::url('images/maison.png') }}" alt="">
         </div>
-
-        <h1 class="font-bold text-4xl text-bleu-fonce text-center py-10">GESTION DES EVENEMENTS</h1>
-
-        <h1 class="font-bold text-3xl px-20 py-4">JUILLET</h1>  @foreach ($events as $event)
-        <div class="grid grid-cols-3 gap-12 px-16 justify-center">
-            <a href="{{ route('formulaire', $event->id) }}" class="bg-bleu-fonce rounded-lg h-60 w-80 absolute overflow-hidden">
-                <img class="w-full rounded-lg object-cover h-full opacity-40" src="{{ Storage::url($event->photo) }}" alt=""></a>
-                <div class="bottom-44 left-4 mt-20 flex flex-col z-10"><a href="{{ route('formulaire') }}">
-                    <div class="text-white font-black text-2xl ml-6 mt-20"> {{$event->titre}} </div>
-                    <div class="text-white font-bold ml-6 text-2xl h-mx-12 truncate">{{$event->date}} </div></a>
-            <div class="text-center py-8">
-                <a href="{{ route('formulaire') }}"><button type="button" class=" bg-bleu hover:bg-blue-800 w-30 focus:ring-4 focus:ring-blue-300 font-bold rounded px-5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">AJOUTER UN PARTICIPANT</button></a>
-            </div>
-                </div>
-                <div class="overlay">
-                </div>
-
-          
-        </div>@endforeach
     </main>
 
+    <form enctype="multipart/form-data" class="max-w-sm mx-auto" style="width:500px;" method="post" action="{{route('newArticleadherent')}}">
+        @csrf
+        
+        <div class="flex justify-center mb-9 pr-1 ">
+             <input name="photo" class="block w-15 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file"  accept="image/*">
+        </div>
+            <div>
+                <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Titre</label>
+                <input name="titre" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            </div>
+        
+            <div class="mb-5">
+                <label for="large-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
+                <textarea name="description" id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Description"></textarea>
+            </div>
+            <div class="flex justify-center mb-5 pr-1">
+        
+                <button  type="submit" class="  text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Ajouter</button>
+        
+            </div>
+        </form>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-5 justify-items-center ">
+@if (isset($articles)&& count($articles)>0)
+@foreach ($articles as $article)
+        <div>
+            <h5 class="text-center text-lg">{{$article->titre}}</h5>
+            <img class="h-40 max-w-full rounded-lg" src="{{ Storage::url($article->photo) }}" alt="">
+            <div> {{$article->description}} </div>
+            <a href="#" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-1 mr-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">modifier</a>
+            <a href="{{route ('deleteArticle', $article->id) }}" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-1 mr-1 dark:bg-red-600 dark:hover:bg-red-700 focus:outline-none dark:focus:ring-red-800">supprimer</a>
+        </div>
+        </div>
+@endforeach
+@endif
 
-    <footer class="bg-bleu-fonce w-full h-20 pt-6 mt-4 text-center text-white">
-        &copy; Réparateurs de brèches 2024 | Tous droits réservés.
-    </footer>
+<footer class="bg-bleu-fonce w-full h-20 pt-6 mt-4 text-center text-white">
+         &copy; Réparateurs de brèches 2024 | Tous droits réservés.
+</footer>
 </body>
 </html>

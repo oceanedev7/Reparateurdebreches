@@ -6,6 +6,7 @@ use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\ParametreController;
+use App\Http\Controllers\ArticleadherentController;
 
 use App\Http\Controllers\AccueilController;
 
@@ -90,13 +91,19 @@ Route::post('/formulaire', [FormEventController::class, 'create'])->name('formul
 Route::get('edit/{id}/delete', [FormEventController::class,'destroy'])->name('deleteinscrit');
 Route::get('eventadherent', [FormEventController::class,'showEvents'])->name('event');
 Route::get('formulaire/{id}', [FormEventController::class,'show'])->name('formulaire-inscrit');
-Route::get('espaceadherent', function () {
-    return view('appli.espaceadherent');
+Route::get('espaceadherent', function (){
+return view('appli.espaceadherent');
 })->name('espaceadherent');
+
+Route::get('/article', [ArticleadherentController::class, 'index'])->name('articleadherent');
+Route::get('/article/update/{id}', [ArticleadherentController::class, 'update'])->name('updateArticleadherent');
+Route::post('/article/nouveau', [ArticleadherentController::class, 'store'])->name('newArticleadherent');
+Route::post('/article/update/confirm/{id}', [ArticleadherentController::class, 'updateConfirmArticle'])->name('updateConfirmArticleadherent');
+Route::post('/article/delete/{id}', [ArticleadherentController::class, 'updateConfirmArticle'])->name('updateConfirmArticleadherent');
 
 // Routes admin (page accueil +pages de gestion)
 
-Route::get('/dashboard', function () {
+Route::get('/dashboard', function (){
     return view('dashboard2');
 })->middleware(['auth', 'verified'])->middleware('can:isAdmin')->name('dashboard2');
 
