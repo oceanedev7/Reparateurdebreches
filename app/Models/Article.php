@@ -14,7 +14,6 @@ class Article extends Model
         'photo',
         'titre',
         'description',
-        'id_user',
     ];
 
     public function user()
