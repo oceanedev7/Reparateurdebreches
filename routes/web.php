@@ -7,6 +7,7 @@ use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\ParametreController;
+use App\Http\Controllers\ArticleadherentController;
 
 use App\Http\Controllers\AccueilController;
 
@@ -96,6 +97,12 @@ Route::get('formulaire/{id}', [FormEventController::class, 'show'])->name('formu
 Route::get('espaceadherent', function () {
     return view('appli.espaceadherent');
 })->name('espaceadherent');
+
+Route::get('/article', [ArticleadherentController::class, 'index'])->name('articleadherent');
+Route::get('/article/update/{id}', [ArticleadherentController::class, 'update'])->name('updateArticleadherent');
+Route::post('/article/nouveau', [ArticleadherentController::class, 'store'])->name('newArticleadherent');
+Route::post('/article/update/confirm/{id}', [ArticleadherentController::class, 'updateConfirmArticle'])->name('updateConfirmArticleadherent');
+Route::post('/article/delete/{id}', [ArticleadherentController::class, 'updateConfirmArticle'])->name('updateConfirmArticleadherent');
 
 // Routes admin (page accueil +pages de gestion)
 

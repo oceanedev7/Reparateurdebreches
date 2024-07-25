@@ -31,7 +31,7 @@
                   class="block py-2 px-3 text-white bg-bleu-fonce rounded dark:bg-bleu-fonce" aria-current="page">Acceuil</a>
               </li>
               <li>
-                <a href="#"
+                <a href="{{route('articleadherent')}}"
                   class="block py-2 px-3 text-bleu-fonce rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Gérer
                   les articles</a>
               </li>
@@ -84,7 +84,7 @@
         </div>
 
         <div class="flex flex-row space-x-36 py-18 mb-20 max-w-full max-h-full justify-center">
-            <div class="w-[320px] h-[240px] hover:bg-bleu-fonce bg-bleu-fonce rounded-lg relative"><a href="">
+            <div class="w-[320px] h-[240px] hover:bg-bleu-fonce bg-bleu-fonce rounded-lg relative"><a href="{{ route('articleadherent') }}">
                 <img class="h-60 w-80 object-cover absolute" src="{{ Storage::url('images/article.png') }}" alt="">
                 <div class="font-bold w-full p-4 rounded-b-lg hover:bg-bleu-fonce text-3xl text-white bg-bleu-fonce pl-4 absolute bg-opacity-65 bottom-0">GERER LES <br> ARTICLES</div>
             </a></div>

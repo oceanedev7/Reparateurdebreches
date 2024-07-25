@@ -23,7 +23,7 @@
     </div>
     
 
-    <div class="text-bleu-fonce text-base flex items-center max-w-lg ml-40 mt-12"> 
+    <div class="text-bleu-fonce text-base flex items-center max-w-lg ml-40 mt-12">
 
         L’association “Réparateurs de Brèches Martinique” par leur dynamisme intervient au domicile des seniors mais aussi à l’hôpital ou encore en maison de retraite/EHPAD pour leur apporter de la compagnie, faire de la lecture, jouer à des jeux de société pour personnes âgées ou l’organisation de sorties. 
         Nous participons à l'animation de la vie locale en proposant des actions et des activités sociales, culturelles, sportives, environnementales. Nous contribuons à une vie locale citoyenne et solidaire.
