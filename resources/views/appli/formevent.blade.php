@@ -7,6 +7,7 @@
     @vite(['resources/css/app.css','resources/js/app.js'])
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>@yield('title')</title>
+    @livewireStyles
 </head>
 <body>
 
@@ -80,8 +81,9 @@
 
         <h1 class="font-bold text-4xl text-bleu-fonce text-center py-10 mb-4">INSCRIRE UN(E) PARTICIPANT(E)</h1>
 
-        
-        <form method="POST" action="{{ route('formulaire') }}">
+        <livewire:registration />
+
+        {{-- <form method="POST" action="{{ route('formulaire') }}">
             @csrf
             <div class="max-w-sm mx-auto">
                 <div class="flex flex-row space-x-10 justify-center mb-6">
@@ -104,7 +106,8 @@
                     <button type="submit" class="text-white mt-6 mb-20 border-none bg-bleu-fonce hover:bg-bleu-fonce focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 text-center mb-2 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 placeholder-bleu-fonce dark:focus:ring-blue-800 hover:opacity-80">AJOUTER</button>
                 </div>
             </div>
-        </form>
+        </form> --}}
+
     <div class="flex justify-center pb-20">
         <div class="bg-bleu-fonce w-[750px] text-center rounded-lg pt-4">
             <h2 class="text-white text-2xl font-bold pb-2">LISTE DES INSCRITS</h2>
@@ -116,16 +119,16 @@
                 <span>Numéro de téléphone</span>
             </div>
             <div class="border-t border-white w-3/4 mx-auto p-4"></div>
-            @if (isset($inscrits) && count($inscrits)>0)
+            {{-- @if (isset($inscrits) && count($inscrits)>0) --}}
             @foreach ($inscrits as $form)
             <div class="text-white grid grid-cols-4 justify-center pr-10 mb-2">
-                <div class="">{{$form->nom}}</div>
-                <div>{{$form->prenom}}</div> 
-                <div>{{$form->email}}</div>
-                <div class="">{{$form->numero_telephone}}<a href="{{ route('deleteinscrit', $form->id) }}"><i class="fa-solid pl-4 fa-trash"></i></a></div>
+                <div class="">{{$form->$nom}}</div>
+                <div>{{$form->$prenom}}</div> 
+                <div>{{$form->$email}}</div>
+                <div class="">{{$form->$numero_telephone}}<a href="{{ route('deleteinscrit', $form->id) }}"><i class="fa-solid pl-4 fa-trash"></i></a></div>
             </div>
-        @endforeach
-        @endif  
+         @endforeach
+        {{-- @endif   --}}
         </div>
     </div>
 
@@ -134,5 +137,7 @@
     <footer class="bg-bleu-fonce w-full h-20 pt-6 mt-4 text-center text-white">
         &copy; Réparateurs de brèches 2024 | Tous droits réservés.
     </footer>
+
+    @livewireScripts
 </body>
 </html>
